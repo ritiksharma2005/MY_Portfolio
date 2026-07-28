@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ritik Kumar Sharma | Data Analyst Portfolio</title>
+    <meta name="description" content="Portfolio of Ritik Kumar Sharma - Data Analyst, Power BI Developer, and B.Tech student at NIT Surat. Showcasing projects in Power BI, SQL, Python, and data insights.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="dark-theme">
+    <!-- Background Glow Blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <!-- Navigation Header -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo" id="nav-logo">
+                <span class="gradient-text">Ritik.</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#home" class="nav-link active" id="link-home">Home</a></li>
+                    <li><a href="#about" class="nav-link" id="link-about">Resume & About</a></li>
+                    <li><a href="#projects" class="nav-link" id="link-projects">Projects</a></li>
+                    <li><a href="#contact" class="nav-link" id="link-contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Theme Toggle Button -->
+                <button class="btn-icon" id="theme-toggle" aria-label="Toggle dark/light mode">
+                    <i data-lucide="sun" class="sun-icon"></i>
+                    <i data-lucide="moon" class="moon-icon"></i>
+                </button>
+                <!-- Mobile Hamburger Menu Button -->
+                <button class="btn-icon mobile-menu-toggle" id="menu-toggle" aria-label="Open mobile menu">
+                    <i data-lucide="menu" class="open-icon"></i>
+                    <i data-lucide="x" class="close-icon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div class="hero-content">
+                <span class="hero-greeting animate-reveal">Hello! I am</span>
+                <h1 class="hero-title animate-reveal">Ritik Kumar Sharma</h1>
+                <h2 class="hero-subtitle animate-reveal">
+                    I'm a <span id="typing-text" class="gradient-text"></span><span class="cursor">|</span>
+                </h2>
+                <p class="hero-desc animate-reveal">
+                    B.Tech Student in Electrical Engineering at NIT Surat and an aspiring Data Analyst. Specialized in Power BI, SQL, Python, and building data-driven dashboards to solve complex business problems.
+                </p>
+                <div class="hero-actions animate-reveal">
+                    <a href="#projects" class="btn btn-primary" id="hero-btn-work">View Dashboards</a>
+                    <a href="#about" class="btn btn-secondary" id="hero-btn-contact">View Resume</a>
+                </div>
+                <div class="hero-socials animate-reveal">
+                    <a href="https://github.com/ritiksharma2005" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                        <i data-lucide="github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                    <a href="mailto:ritikknit96@gmail.com" class="social-link" aria-label="Email">
+                        <i data-lucide="mail"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual animate-reveal-right">
+                <div class="avatar-container">
+                    <div class="avatar-bg"></div>
+                    <img src="assets/avatar.jpg" alt="Ritik Kumar Sharma Avatar" class="avatar-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Resume Section -->
+        <section class="about-section" id="about">
+            <div class="section-header">
+                <span class="section-tagline">My Journey & Skills</span>
+                <h2 class="section-title">Resume & About Me</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="about-grid">
+                <!-- Profile / Bio Card -->
+                <div class="card glass-card bio-card">
+                    <h3 class="card-title"><i data-lucide="user"></i> Professional Bio</h3>
+                    <p class="bio-text">
+                        I am currently pursuing my B.Tech in Electrical Engineering from NIT Surat. I have a strong interest in Data Analytics, Business Intelligence, and databases. I specialize in translating raw data into beautiful, interactive, and actionable dashboards. My internships at Fashion 1972NE and Tata Group have equipped me with hands-on experience in OMS, ERP workflows, data cleaning, and KPI modeling.
+                    </p>
+                    <div class="bio-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Location</span>
+                            <span class="detail-value">Thane, Mumbai / Surat</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Email</span>
+                            <span class="detail-value">ritikknit96@gmail.com</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Phone</span>
+                            <span class="detail-value">+91-9594396048</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">College</span>
+                            <span class="detail-value">NIT Surat (SVNIT)</span>
+                        </div>
+                    </div>
+                    <div class="bio-cta">
+                        <a href="javascript:window.print();" class="btn btn-secondary btn-sm" id="btn-print-resume">
+                            <i data-lucide="printer"></i> Print/Save Resume
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Skills Card -->
+                <div class="card glass-card skills-card">
+                    <h3 class="card-title"><i data-lucide="cpu"></i> Technical Skills</h3>
+                    <div class="skills-container">
+                        <!-- Skill Group 1 -->
+                        <div class="skill-group">
+                            <h4 class="skill-group-title">Programming & Databases</h4>
+                            <div class="skill-bars">
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar-info">
+                                        <span>SQL (MySQL)</span>
+                                        <span>88%</span>
+                                    </div>
+                                    <div class="skill-bar"><div class="skill-progress" style="width: 88%"></div></div>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar-info">
+                                        <span>Python (Pandas, NumPy)</span>
+                                        <span>82%</span>
+                                    </div>
+                                    <div class="skill-bar"><div class="skill-progress" style="width: 82%"></div></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Skill Group 2 -->
+                        <div class="skill-group">
+                            <h4 class="skill-group-title">BI & Data Tools</h4>
+                            <div class="skill-bars">
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar-info">
+                                        <span>Power BI (DAX, Modeling)</span>
+                                        <span>92%</span>
+                                    </div>
+                                    <div class="skill-bar"><div class="skill-progress" style="width: 92%"></div></div>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar-info">
+                                        <span>Excel & Google Sheets</span>
+                                        <span>90%</span>
+                                    </div>
+                                    <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar-info">
+                                        <span>Supabase / Web Dev Basics</span>
+                                        <span>75%</span>
+                                    </div>
+                                    <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skills Badges (Other tools) -->
+                    <div class="skills-badges">
+                        <span class="badge">DAX</span>
+                        <span class="badge">OMS & ERP</span>
+                        <span class="badge">Data Cleaning</span>
+                        <span class="badge">Exploratory Data Analysis (EDA)</span>
+                        <span class="badge">Matplotlib & Seaborn</span>
+                        <span class="badge">API Integration</span>
+                        <span class="badge">Jupyter Notebook</span>
+                        <span class="badge">Git & GitHub</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resume Timeline -->
+            <div class="timeline-container">
+                <h3 class="timeline-heading"><i data-lucide="briefcase"></i> Experience & Internships</h3>
+                <div class="timeline">
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">May 2026 - July 2026</div>
+                        <div class="timeline-content card glass-card">
+                            <h4 class="timeline-title">Data Analyst Intern</h4>
+                            <h5 class="timeline-subtitle">Fashion 1972NE | Surat, Gujarat</h5>
+                            <ul class="timeline-bullets" style="list-style-type: disc; padding-left: 1.2rem; color: var(--text-secondary); font-size: 0.95rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                                <li>Worked on Order Management System (OMS) and ERP workflows, building a production inventory management dashboard in Power BI to track stock levels, reorder points, and production flow in real time.</li>
+                                <li>Optimized working capital allocation and stock levels using SQL to query and analyze inventory data, improving stock turnover.</li>
+                                <li>Consolidated data from Google Sheets and Excel into a sales and stock performance dashboard for daily reporting.</li>
+                                <li>Built a web-based frontend with API integration, storing live data in a Supabase database.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Oct 2025</div>
+                        <div class="timeline-content card glass-card">
+                            <h4 class="timeline-title">Data Analyst</h4>
+                            <h5 class="timeline-subtitle">Tata Global Internship | Remote</h5>
+                            <ul class="timeline-bullets" style="list-style-type: disc; padding-left: 1.2rem; color: var(--text-secondary); font-size: 0.95rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                                <li>Analyzed large-scale datasets from Tata Group, performed extensive data cleaning, and built an interactive business-insights dashboard.</li>
+                                <li>Identified key business trends and KPIs that informed new business strategies, contributing to a 5-6% revenue increase.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Timeline -->
+            <div class="timeline-container" style="margin-top: 4rem;">
+                <h3 class="timeline-heading"><i data-lucide="graduation-cap"></i> Education</h3>
+                <div class="timeline">
+                    <!-- Education 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2023 - Present</div>
+                        <div class="timeline-content card glass-card">
+                            <h4 class="timeline-title">B.Tech in Electrical Engineering</h4>
+                            <h5 class="timeline-subtitle">National Institute of Technology, Surat (SVNIT)</h5>
+                            <p class="timeline-text">Currently pursuing Bachelor of Technology. Developing analytical skills, problem-solving, and building a foundation in engineering mathematics alongside data science interests.</p>
+                        </div>
+                    </div>
+
+                    <!-- Education 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2023</div>
+                        <div class="timeline-content card glass-card">
+                            <h4 class="timeline-title">Senior Secondary (Class XII)</h4>
+                            <h5 class="timeline-subtitle">Maharashtra Board</h5>
+                            <p class="timeline-text">Completed high school with a focus on Physics, Chemistry, and Mathematics.</p>
+                        </div>
+                    </div>
+
+                    <!-- Education 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2021</div>
+                        <div class="timeline-content card glass-card">
+                            <h4 class="timeline-title">Secondary (Class X)</h4>
+                            <h5 class="timeline-subtitle">Maharashtra Board</h5>
+                            <p class="timeline-text">Completed matriculation with stellar academic record.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievements & Extra Sections Grid -->
+            <div class="about-grid" style="margin-top: 5rem;">
+                <!-- Achievements Card -->
+                <div class="card glass-card">
+                    <h3 class="card-title"><i data-lucide="trophy"></i> Achievements</h3>
+                    <ul style="color: var(--text-secondary); display: flex; flex-direction: column; gap: 1rem; font-size: 0.95rem;">
+                        <li>
+                            <strong style="color: var(--text-primary);">Finalist</strong> at the National-Level <strong style="color: var(--primary-color);">MANTHAN Data Analysis Competition</strong> (AGROVON 2K25).
+                        </li>
+                        <li>
+                            <strong style="color: var(--text-primary);">Sales Achievement:</strong> Generated <strong style="color: var(--cyan-glow);">Rs. 3,00,000</strong> in sales within 5 days using digital social media and marketing strategies.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Positions of Responsibility -->
+                <div class="card glass-card">
+                    <h3 class="card-title"><i data-lucide="award"></i> Positions of Responsibility</h3>
+                    <ul style="color: var(--text-secondary); display: flex; flex-direction: column; gap: 1rem; font-size: 0.95rem;">
+                        <li>
+                            <strong style="color: var(--text-primary);">Chief Manager</strong> - Alumni and Training Placement Council, NIT Surat. Managed corporate communications and alumni placement relations.
+                        </li>
+                        <li>
+                            <strong style="color: var(--text-primary);">Senior Executive</strong> - National Service Scheme (NSS), NIT Surat. Led community social work campaigns and student drives.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Grid Section -->
+        <section class="projects-section" id="projects">
+            <div class="section-header">
+                <span class="section-tagline">My Dashboards & Analyses</span>
+                <h2 class="section-title">Projects Showcase</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <!-- Project Filters -->
+            <div class="project-filters">
+                <button class="btn btn-filter active" data-filter="all">All Projects</button>
+                <button class="btn btn-filter" data-filter="powerbi">Power BI Dashboards</button>
+                <button class="btn btn-filter" data-filter="data-analysis">Data Analysis</button>
+                <button class="btn btn-filter" data-filter="sql-db">SQL & Databases</button>
+            </div>
+
+            <!-- Dynamic Project Grid -->
+            <div class="project-grid" id="project-grid-container">
+                <div class="loading-spinner">Loading projects...</div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="section-header">
+                <span class="section-tagline">Let's Connect</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact info cards -->
+                <div class="contact-info">
+                    <div class="card glass-card info-card">
+                        <div class="info-icon-box">
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Email Me</h4>
+                            <p><a href="mailto:ritikknit96@gmail.com">ritikknit96@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="card glass-card info-card">
+                        <div class="info-icon-box">
+                            <i data-lucide="map-pin"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Location</h4>
+                            <p>Thane, Mumbai / Surat</p>
+                        </div>
+                    </div>
+
+                    <div class="card glass-card info-card">
+                        <div class="info-icon-box">
+                            <i data-lucide="phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Call Me</h4>
+                            <p>+91 95943 96048</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form Card -->
+                <div class="card glass-card contact-form-card">
+                    <h3 class="card-title">Send a Message</h3>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="form-name" required placeholder=" ">
+                            <label for="form-name">Full Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="form-email" required placeholder=" ">
+                            <label for="form-email">Email Address</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="form-subject" required placeholder=" ">
+                            <label for="form-subject">Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="form-message" required rows="5" placeholder=" "></textarea>
+                            <label for="form-message">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="btn-submit">
+                            <span>Send Message</span>
+                            <i data-lucide="send"></i>
+                        </button>
+                    </form>
+                    <div class="form-status" id="form-status"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Ritik Kumar Sharma. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#home">Back to Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Details Modal -->
+    <div class="modal" id="project-modal" aria-hidden="true" role="dialog">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-wrapper">
+            <button class="modal-close" id="modal-close" aria-label="Close details popup">
+                <i data-lucide="x"></i>
+            </button>
+            <div class="modal-content glass-card" id="modal-body">
+                <!-- Populated dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
