@@ -9,6 +9,19 @@
 // ==========================================================================
 const PROJECTS_DATA = [
     {
+        id: "proj-sustainability",
+        title: "GHG Emission Analytics (Sustainability)",
+        category: "powerbi",
+        shortDesc: "Power BI dashboard analyzing Scope 1, Scope 2, and Scope 3 Greenhouse Gas emissions for a rubber manufacturer.",
+        fullDesc: "Developed an interactive Greenhouse Gas (GHG) emission analytics dashboard in Power BI for a rubber manufacturing industry. Established a consolidated view tracking direct fuels (Scope 1: diesel, LPG, petrol), indirect purchased grid electricity vs. solar energy offsets (Scope 2), and value chain parameters (Scope 3: upstream logistics, business travel, waste). Engineered advanced DAX measures to calculate department emissions and cumulative offsets, transforming raw operational datasets into strategic ESG compliance insights.",
+        techStack: ["Power BI", "Excel", "Power Query", "DAX", "ESG Reporting"],
+        image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?fit=crop&w=800&h=500&q=80",
+        liveUrl: "https://github.com/ritiksharma2005/sustainability_powerBI",
+        githubUrl: "https://github.com/ritiksharma2005/sustainability_powerBI",
+        client: "GitHub Project",
+        date: "July 2026"
+    },
+    {
         id: "proj-phonepe",
         title: "PhonePe Annual Report Analysis",
         category: "powerbi",
@@ -72,19 +85,6 @@ const PROJECTS_DATA = [
         githubUrl: "https://github.com/ritiksharma2005/Music-store---SQL",
         client: "GitHub Project",
         date: "December 2025"
-    },
-    {
-        id: "proj-sustainability",
-        title: "Sustainability Dashboard",
-        category: "powerbi",
-        shortDesc: "Power BI dashboard tracking green indicators, carbon levels, and environmental metrics.",
-        fullDesc: "Conceptualized and built a Power BI dashboard focused on energy transition metrics and green indicators. Compiled global dataset sources on carbon emissions, renewable energy usage levels, and waste indicators. Designed clean reports to track key corporate sustainability KPIs in real time.",
-        techStack: ["Power BI", "Excel", "Data Modeling", "Sustainability KPIs", "Data Visualization"],
-        image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?fit=crop&w=800&h=500&q=80",
-        liveUrl: "https://github.com/ritiksharma2005/sustainability_powerBI",
-        githubUrl: "https://github.com/ritiksharma2005/sustainability_powerBI",
-        client: "GitHub Project",
-        date: "July 2026"
     }
 ];
 
