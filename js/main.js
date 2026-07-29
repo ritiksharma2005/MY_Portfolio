@@ -22,6 +22,19 @@ const PROJECTS_DATA = [
         date: "July 2026"
     },
     {
+        id: "proj-supplychain",
+        title: "Supply Chain Performance Analytics",
+        category: "powerbi",
+        shortDesc: "Power BI dashboard analyzing transaction data (2015-2017) to audit sales trends vs. pricing mix.",
+        fullDesc: "Developed an interactive Power BI dashboard analyzing DataCo's smart supply chain transactions from 2015 to 2017. Investigated the critical business paradox: why overall sales and volume declined in 2017 while total profit remained stable. Applied DAX measures to track customer repeat purchases, product margins, and pricing dynamics. Revealed that a strategic shift towards premium high-priced products successfully offset volume reductions, and provided actionable recommendations to optimize supply chain inventory levels and target marketing campaigns.",
+        techStack: ["Power BI", "SQL", "DAX", "Power Query", "Data Analytics"],
+        image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?fit=crop&w=800&h=500&q=80",
+        liveUrl: "https://github.com/ritiksharma2005/Supply-Chain-dashboard",
+        githubUrl: "https://github.com/ritiksharma2005/Supply-Chain-dashboard",
+        client: "GitHub Project",
+        date: "July 2026"
+    },
+    {
         id: "proj-phonepe",
         title: "PhonePe Annual Report Analysis",
         category: "powerbi",
