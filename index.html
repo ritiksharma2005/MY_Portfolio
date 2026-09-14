@@ -19,6 +19,37 @@
 </head>
 <body class="dark-theme">
 
+    <!-- 3D INTRO SPLASH ANIMATION SCREEN -->
+    <div id="splash-screen" class="splash-screen">
+        <canvas id="splash-canvas" class="splash-canvas"></canvas>
+        <div class="splash-content">
+            <div class="splash-logo-box">
+                <div class="splash-3d-ring ring-analytics"></div>
+                <div class="splash-3d-ring ring-electrical"></div>
+                <div class="splash-core-icon">
+                    <i data-lucide="cpu" class="splash-icon-pulse"></i>
+                </div>
+            </div>
+
+            <h1 class="splash-title">RITIK SHARMA</h1>
+            <p class="splash-subtitle">B.Tech Electrical Engineering • NIT Surat</p>
+
+            <div class="splash-tags-row">
+                <span class="splash-tag tag-analytics"><i data-lucide="bar-chart-3"></i> Data Analytics</span>
+                <span class="splash-spark">•</span>
+                <span class="splash-tag tag-electrical"><i data-lucide="zap"></i> Power Systems</span>
+            </div>
+
+            <div class="splash-loader-bar">
+                <div class="splash-loader-progress"></div>
+            </div>
+
+            <button id="splash-enter-btn" class="btn btn-splash-enter">
+                <span>Enter Portfolio</span> <i data-lucide="arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
     <!-- Ambient Visual Glow Elements for Data & Electrical -->
     <div class="ambient-glow glow-data"></div>
     <div class="ambient-glow glow-electrical"></div>
@@ -44,6 +75,10 @@
                     <i data-lucide="sun" class="sun-icon"></i>
                     <i data-lucide="moon" class="moon-icon"></i>
                 </button>
+                <!-- Replay Splash Screen -->
+                <button class="btn-icon" id="replay-splash" aria-label="Replay intro animation" title="Replay 3D Intro">
+                    <i data-lucide="sparkles"></i>
+                </button>
                 <!-- Mobile Menu Button -->
                 <button class="btn-icon mobile-menu-toggle" id="menu-toggle" aria-label="Open mobile menu">
                     <i data-lucide="menu" class="open-icon"></i>
@@ -58,7 +93,7 @@
         <!-- Hero Landing Section -->
         <section class="hero-landing-section" id="home">
             <!-- Header Profile Card -->
-            <div class="profile-header-card card">
+            <div class="profile-header-card card tilt-3d-card">
                 <div class="profile-avatar-box">
                     <img src="assets/profile.jpg" alt="Ritik Sharma Real Photograph" class="profile-img">
                 </div>
@@ -92,7 +127,7 @@
                 </div>
             </div>
 
-            <!-- Compact Square Domain Choice Cards (Side-by-Side Parallel Row) -->
+            <!-- Compact Square Domain Choice Cards (Side-by-Side Parallel Row with 3D Tilt) -->
             <div class="track-choice-container">
                 <div class="choice-header">
                     <h2 class="choice-title">Select a Portfolio Domain</h2>
@@ -101,7 +136,7 @@
 
                 <div class="choice-grid-square">
                     <!-- SQUARE BOX 1: DATA ANALYST -->
-                    <div class="square-card square-analytics">
+                    <div class="square-card square-analytics tilt-3d-card">
                         <div class="square-header">
                             <div class="square-icon-box analytics-glow-box">
                                 <i data-lucide="bar-chart-3" class="animated-icon"></i>
@@ -126,7 +161,7 @@
                     </div>
 
                     <!-- SQUARE BOX 2: ELECTRICAL ENGINEER -->
-                    <div class="square-card square-electrical">
+                    <div class="square-card square-electrical tilt-3d-card">
                         <div class="square-header">
                             <div class="square-icon-box electrical-glow-box">
                                 <i data-lucide="zap" class="animated-icon-spark"></i>

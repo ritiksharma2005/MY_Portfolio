@@ -1,15 +1,63 @@
 /**
  * RITIK SHARMA PORTFOLIO ENGINE
- * Supporting index.html, data-analyst.html, and electrical-engineering.html
+ * 3D Intro Animation Canvas + 3D Tilt Engine + Multi-Page Navigation
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Initialize Lucide Icons
+    // 1. Initialize Icons
     if (window.lucide) {
         window.lucide.createIcons();
     }
 
-    // 2. Theme Toggle Handler
+    // 2. 3D Intro Splash Screen Engine
+    const splashScreen = document.getElementById("splash-screen");
+    const splashEnterBtn = document.getElementById("splash-enter-btn");
+    const replaySplashBtn = document.getElementById("replay-splash");
+    const progressBar = document.querySelector(".splash-loader-progress");
+
+    if (splashScreen) {
+        // Run particle canvas animation
+        initSplashCanvas();
+
+        // Animate loader bar
+        if (progressBar) {
+            setTimeout(() => { progressBar.style.width = "100%"; }, 100);
+        }
+
+        // Auto transition after 2.8s
+        let autoDismiss = setTimeout(() => {
+            dismissSplash();
+        }, 2800);
+
+        if (splashEnterBtn) {
+            splashEnterBtn.addEventListener("click", () => {
+                clearTimeout(autoDismiss);
+                dismissSplash();
+            });
+        }
+    }
+
+    if (replaySplashBtn) {
+        replaySplashBtn.addEventListener("click", () => {
+            if (splashScreen) {
+                splashScreen.classList.remove("hidden");
+                if (progressBar) progressBar.style.width = "0%";
+                setTimeout(() => { if (progressBar) progressBar.style.width = "100%"; }, 100);
+                setTimeout(() => { dismissSplash(); }, 2800);
+            }
+        });
+    }
+
+    function dismissSplash() {
+        if (splashScreen) {
+            splashScreen.classList.add("hidden");
+        }
+    }
+
+    // 3. 3D Tilt Effect on Cards
+    init3DTilt();
+
+    // 4. Theme Toggle Handler
     const themeToggleBtn = document.getElementById("theme-toggle");
     const savedTheme = localStorage.getItem("portfolio_theme") || "dark-theme";
     document.body.className = savedTheme;
@@ -28,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 3. Mobile Navigation Menu Toggle
+    // 5. Mobile Navigation Menu Toggle
     const menuToggleBtn = document.getElementById("menu-toggle");
     const navMenu = document.getElementById("nav-menu");
     const navLinks = document.querySelectorAll(".nav-link");
@@ -47,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 4. Navbar Scroll Effect
+    // 6. Navbar Scroll Effect
     const navbar = document.getElementById("navbar");
     window.addEventListener("scroll", () => {
         if (window.scrollY > 40) {
@@ -58,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
         highlightActiveNavLink();
     });
 
-    // 5. Contact Form Handler
+    // 7. Contact Form Handler
     const contactForm = document.getElementById("contact-form");
     const formStatus = document.getElementById("form-status");
     if (contactForm) {
@@ -79,6 +127,112 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+/**
+ * Interactive 3D Particle Canvas for Splash Screen
+ */
+function initSplashCanvas() {
+    const canvas = document.getElementById("splash-canvas");
+    if (!canvas) return;
+
+    const ctx = canvas.getContext("2d");
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+
+    window.addEventListener("resize", () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+    });
+
+    // Dual particle streams (cyan data & amber electrical)
+    const particles = [];
+    const numParticles = 60;
+
+    for (let i = 0; i < numParticles; i++) {
+        const isData = i % 2 === 0;
+        particles.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            z: Math.random() * 2 + 0.5,
+            radius: Math.random() * 2.5 + 1,
+            color: isData ? "#00b4d8" : "#f59e0b",
+            vx: (Math.random() - 0.5) * 1.5,
+            vy: (Math.random() - 0.5) * 1.5
+        });
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, width, height);
+
+        // Connect nearby particles with glowing lines
+        for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+
+                if (dist < 130) {
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.strokeStyle = particles[i].color;
+                    ctx.globalAlpha = (1 - dist / 130) * 0.25;
+                    ctx.lineWidth = 1;
+                    ctx.stroke();
+                }
+            }
+        }
+
+        // Draw and move particles
+        particles.forEach(p => {
+            p.x += p.vx;
+            p.y += p.vy;
+
+            if (p.x < 0 || p.x > width) p.vx *= -1;
+            if (p.y < 0 || p.y > height) p.vy *= -1;
+
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.radius * p.z, 0, Math.PI * 2);
+            ctx.fillStyle = p.color;
+            ctx.globalAlpha = 0.8;
+            ctx.shadowBlur = 12;
+            ctx.shadowColor = p.color;
+            ctx.fill();
+            ctx.shadowBlur = 0;
+        });
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+}
+
+/**
+ * 3D Tilt Hover Effect for Square Cards
+ */
+function init3DTilt() {
+    const tiltCards = document.querySelectorAll(".tilt-3d-card");
+
+    tiltCards.forEach(card => {
+        card.addEventListener("mousemove", (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = ((y - centerY) / centerY) * -10;
+            const rotateY = ((x - centerX) / centerX) * 10;
+
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+        });
+
+        card.addEventListener("mouseleave", () => {
+            card.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
+        });
+    });
+}
 
 /**
  * Highlights active navbar link on scroll
