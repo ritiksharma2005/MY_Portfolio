@@ -1102,7 +1102,10 @@ section {
 /* Footer */
 .footer { border-top: 1px solid var(--card-border); padding: 1.75rem 1.5rem; background: var(--bg-secondary); }
 .footer-content { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; color: var(--text-secondary); font-size: 0.875rem; }
+.footer-links { display: inline-flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+.footer-links a { display: inline-flex; align-items: center; gap: 0.35rem; transition: color 0.2s ease; }
 .footer-links a:hover { color: var(--primary-color); }
+.footer-icon { width: 16px; height: 16px; stroke-width: 2px; vertical-align: middle; }
 
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
