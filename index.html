@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ritik Sharma | Dual Specialization (Data Analyst & Electrical Engineer)</title>
-    <meta name="description" content="Portfolio of Ritik Sharma - Electrical Engineering graduate from NIT Surat with dual specialization in Data Analytics (Power BI, SQL, Python) and Electrical Engineering (Power Systems, Substation Automation).">
+    <title>Ritik Sharma | Portfolio Landing Page</title>
+    <meta name="description" content="Official portfolio of Ritik Sharma - Electrical Engineering graduate from NIT Surat (SVNIT) featuring dedicated Data Analyst and Electrical Engineering portfolios.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,17 +22,15 @@
     <!-- Navigation Header -->
     <header class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#home" class="logo" id="nav-logo">
+            <a href="index.html" class="logo" id="nav-logo">
                 Ritik <span class="logo-accent">Sharma</span>
             </a>
             
             <nav class="nav-menu" id="nav-menu">
                 <ul>
-                    <li><a href="#home" class="nav-link active" id="link-home">Home</a></li>
-                    <li><a href="#about" class="nav-link" id="link-about">About & Skills</a></li>
-                    <li><a href="#experience" class="nav-link" id="link-experience">Experience</a></li>
-                    <li><a href="#projects" class="nav-link" id="link-projects">Projects</a></li>
-                    <li><a href="#contact" class="nav-link" id="link-contact">Contact</a></li>
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="data-analyst.html" target="_blank" class="nav-link">Data Analyst</a></li>
+                    <li><a href="electrical-engineering.html" target="_blank" class="nav-link">Electrical Eng.</a></li>
                 </ul>
             </nav>
 
@@ -55,10 +53,10 @@
     <main>
         <!-- Hero Landing Section -->
         <section class="hero-landing-section" id="home">
-            <!-- Profile Header Box -->
+            <!-- Basic Info Header Card with Real Photo -->
             <div class="profile-header-card card">
                 <div class="profile-avatar-box">
-                    <img src="assets/profile.jpg" alt="Ritik Sharma Profile" class="profile-img">
+                    <img src="assets/profile.jpg" alt="Ritik Sharma Real Photograph" class="profile-img">
                 </div>
                 <div class="profile-info-box">
                     <span class="institution-badge">
@@ -66,7 +64,7 @@
                     </span>
                     <h1 class="profile-name">Ritik Sharma</h1>
                     <p class="profile-tagline">
-                        Dual Specialization: <span id="typing-text" class="typing-highlight"></span><span class="cursor">|</span>
+                        Dual Portfolio: Data Analyst & Electrical Engineer
                     </p>
                     <div class="contact-pills">
                         <a href="mailto:ritiksharmaddhs2005@gmail.com" class="pill-link">
@@ -82,519 +80,62 @@
                 </div>
             </div>
 
-            <!-- Track Choice Selector Area -->
+            <!-- Parallel Platform Choice Area -->
             <div class="track-choice-container">
                 <div class="choice-header">
-                    <h2 class="choice-title">Select Portfolio Specialization</h2>
-                    <p class="choice-subtitle">Click a domain below to filter my experience, skills, projects, and resume</p>
+                    <h2 class="choice-title">Select a Domain to Explore</h2>
+                    <p class="choice-subtitle">Clicking a domain will open a dedicated full portfolio in a new tab</p>
                 </div>
 
+                <!-- Parallel Grid (Data Analyst 1st, Electrical Engineering 2nd) -->
                 <div class="choice-grid">
-                    <!-- Option 1: Data Analyst Card -->
-                    <div class="choice-card choice-analytics" id="card-choice-analytics" data-track="analytics">
+                    <!-- SECTION 1: DATA ANALYST (Shows 1st on Mobile & Parallel on Desktop) -->
+                    <div class="choice-card choice-analytics">
                         <div class="choice-icon-box">
                             <i data-lucide="bar-chart-3"></i>
                         </div>
                         <div class="choice-content">
-                            <div class="choice-badge">Analytics Specialization</div>
+                            <div class="choice-badge">Domain 1</div>
                             <h3 class="choice-card-title">Data Analyst</h3>
                             <p class="choice-card-desc">
-                                Power BI, SQL, Python, Excel, Tableau & Data Modeling. Business intelligence analytics & interactive KPI dashboards.
+                                Specializing in Power BI, SQL, Python, Excel & Tableau. Transforming complex data into actionable business intelligence dashboards.
                             </p>
                             <div class="choice-highlights">
-                                <span><i data-lucide="check-circle"></i> Fashion 1972NE & Tata Global Internships</span>
-                                <span><i data-lucide="check-circle"></i> Sustainability & Supply Chain Power BI Dashboards</span>
+                                <span><i data-lucide="check-circle"></i> Internships: Fashion 1972NE & Tata Global</span>
+                                <span><i data-lucide="check-circle"></i> Projects: Sustainability & Supply Chain Power BI</span>
+                                <span><i data-lucide="check-circle"></i> Skills: DAX, ETL, Data Modeling, EDA</span>
                             </div>
                         </div>
                         <div class="choice-action">
-                            <button class="btn btn-primary btn-track-select" data-track="analytics">
-                                View Data Analyst Profile <i data-lucide="arrow-right"></i>
-                            </button>
+                            <a href="data-analyst.html" target="_blank" class="btn btn-primary btn-analytics-link">
+                                Open Data Analyst Portfolio <i data-lucide="external-link"></i>
+                            </a>
                         </div>
                     </div>
 
-                    <!-- Option 2: Electrical Engineering Card -->
-                    <div class="choice-card choice-electrical" id="card-choice-electrical" data-track="electrical">
+                    <!-- SECTION 2: ELECTRICAL ENGINEERING (Shows 2nd on Mobile & Parallel on Desktop) -->
+                    <div class="choice-card choice-electrical">
                         <div class="choice-icon-box">
                             <i data-lucide="zap"></i>
                         </div>
                         <div class="choice-content">
-                            <div class="choice-badge">Engineering Specialization</div>
+                            <div class="choice-badge">Domain 2</div>
                             <h3 class="choice-card-title">Electrical Engineering</h3>
                             <p class="choice-card-desc">
-                                Power Systems, Substation Automation (33/11kV), SCADA, MATLAB/Simulink & Protective Relay Coordination.
+                                Core Electrical Engineering from NIT Surat. Specialized in Power Systems, 33/11kV Substation Automation, SCADA & MATLAB.
                             </p>
                             <div class="choice-highlights">
-                                <span><i data-lucide="check-circle"></i> Tata Power Company Ltd. (Kalyan) Internship</span>
-                                <span><i data-lucide="check-circle"></i> IEEE 80 Ground Grid Calculator & Hardware Projects</span>
+                                <span><i data-lucide="check-circle"></i> Internship: Tata Power Company Ltd. (Kalyan)</span>
+                                <span><i data-lucide="check-circle"></i> Projects: IEEE 80 Ground Grid & BC547 Circuit</span>
+                                <span><i data-lucide="check-circle"></i> Skills: Substation Automation, Relays, DGA</span>
                             </div>
                         </div>
                         <div class="choice-action">
-                            <button class="btn btn-primary btn-track-select" data-track="electrical">
-                                View Electrical Profile <i data-lucide="arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Combined Dual View Option -->
-                <div class="choice-combined-bar">
-                    <span>Prefer to see everything together?</span>
-                    <button class="btn btn-secondary btn-sm btn-track-select" data-track="all">
-                        <i data-lucide="layers"></i> View Combined Dual Profile (All)
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Active View Status Notification Bar -->
-        <div class="active-track-banner" id="track-status-banner">
-            <div class="banner-container">
-                <span id="banner-text">Viewing: <strong>Combined Dual Profile (All Domains)</strong></span>
-                <div class="banner-controls">
-                    <button class="btn-track-pill" data-track="all">All</button>
-                    <button class="btn-track-pill" data-track="analytics">📊 Data Analyst</button>
-                    <button class="btn-track-pill" data-track="electrical">⚡ Electrical Eng.</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- About & Skills Section -->
-        <section class="about-section" id="about">
-            <div class="section-header">
-                <span class="section-tagline">Background & Capabilities</span>
-                <h2 class="section-title">About Me & Skills</h2>
-                <div class="section-line"></div>
-            </div>
-
-            <div class="about-grid">
-                <!-- Bio Card -->
-                <div class="card bio-card">
-                    <h3 class="card-title"><i data-lucide="user-check"></i> Professional Summary</h3>
-                    <p class="bio-text" id="bio-dynamic-text">
-                        Graduating in Electrical Engineering from Sardar Vallabhbhai National Institute of Technology (NIT Surat). I hold strong analytical and engineering problem-solving capabilities, applying BI dashboards, SQL querying, and Python to business operations, as well as hands-on substation automation and power equipment diagnostics.
-                    </p>
-                    <div class="bio-details">
-                        <div class="detail-item">
-                            <span class="detail-label">University</span>
-                            <span class="detail-value">NIT Surat (SVNIT)</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Degree</span>
-                            <span class="detail-value">B.Tech in Electrical Engineering</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Specializations</span>
-                            <span class="detail-value" id="bio-spec-label">Data Analytics & Power Systems</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Email</span>
-                            <span class="detail-value">ritiksharmaddhs2005@gmail.com</span>
-                        </div>
-                    </div>
-                    <div class="bio-cta" id="resume-buttons-container">
-                        <!-- Dynamic Resume Buttons -->
-                        <a href="https://drive.google.com/file/d/1um7afF5KSfjYhZzs-Ka3cfsNegnuMcz5/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm resume-btn-analytics" id="btn-resume-data">
-                            <i data-lucide="file-text"></i> Data Analyst Resume
-                        </a>
-                        <a href="https://drive.google.com/file/d/1um7afF5KSfjYhZzs-Ka3cfsNegnuMcz5/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm resume-btn-electrical" id="btn-resume-ee">
-                            <i data-lucide="cpu"></i> Electrical Resume
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Technical Skills Card -->
-                <div class="card skills-card">
-                    <h3 class="card-title"><i data-lucide="sliders"></i> Technical Skills</h3>
-                    
-                    <div class="skills-container">
-                        <!-- Data Analytics Skills -->
-                        <div class="skill-group skill-track-item" data-track="analytics">
-                            <h4 class="skill-group-title">
-                                <span>Data Analytics & BI</span>
-                                <span class="badge badge-analytics">Analytics</span>
-                            </h4>
-                            <div class="skill-bars">
-                                <div class="skill-bar-wrapper">
-                                    <div class="skill-bar-info">
-                                        <span>Power BI & DAX (Data Modeling & Reports)</span>
-                                        <span>92%</span>
-                                    </div>
-                                    <div class="skill-bar"><div class="skill-progress analytics" style="width: 92%"></div></div>
-                                </div>
-                                <div class="skill-bar-wrapper">
-                                    <div class="skill-bar-info">
-                                        <span>SQL (MySQL, Joins, Query Optimization)</span>
-                                        <span>88%</span>
-                                    </div>
-                                    <div class="skill-bar"><div class="skill-progress analytics" style="width: 88%"></div></div>
-                                </div>
-                                <div class="skill-bar-wrapper">
-                                    <div class="skill-bar-info">
-                                        <span>Python (Pandas, NumPy, EDA)</span>
-                                        <span>85%</span>
-                                    </div>
-                                    <div class="skill-bar"><div class="skill-progress analytics" style="width: 85%"></div></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Electrical Engineering Skills -->
-                        <div class="skill-group skill-track-item" data-track="electrical">
-                            <h4 class="skill-group-title">
-                                <span>Electrical Engineering</span>
-                                <span class="badge badge-electrical">Electrical</span>
-                            </h4>
-                            <div class="skill-bars">
-                                <div class="skill-bar-wrapper">
-                                    <div class="skill-bar-info">
-                                        <span>Power Systems & Substation Automation (33/11kV)</span>
-                                        <span>90%</span>
-                                    </div>
-                                    <div class="skill-bar"><div class="skill-progress electrical" style="width: 90%"></div></div>
-                                </div>
-                                <div class="skill-bar-wrapper">
-                                    <div class="skill-bar-info">
-                                        <span>Electrical Machines & Transformer Diagnostics</span>
-                                        <span>86%</span>
-                                    </div>
-                                    <div class="skill-bar"><div class="skill-progress electrical" style="width: 86%"></div></div>
-                                </div>
-                                <div class="skill-bar-wrapper">
-                                    <div class="skill-bar-info">
-                                        <span>MATLAB / Simulink & Control Systems</span>
-                                        <span>82%</span>
-                                    </div>
-                                    <div class="skill-bar"><div class="skill-progress electrical" style="width: 82%"></div></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Technology Badges -->
-                    <div class="skills-badges">
-                        <span class="badge">Excel / VLOOKUP</span>
-                        <span class="badge">Tableau</span>
-                        <span class="badge">IEEE 80-2013</span>
-                        <span class="badge">SCADA Systems</span>
-                        <span class="badge">GIS Mapping</span>
-                        <span class="badge">Relay Coordination</span>
-                        <span class="badge">Teamwork</span>
-                        <span class="badge">Technical Writing</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Education & Positions of Responsibility Grid -->
-            <div class="info-row-grid">
-                <div class="card">
-                    <h3 class="card-title"><i data-lucide="graduation-cap"></i> Education</h3>
-                    <div class="edu-item">
-                        <div class="item-header">
-                            <span class="item-title">Bachelor of Technology (B.Tech)</span>
-                            <span class="item-meta">2021 - 2025</span>
-                        </div>
-                        <div class="item-sub">Electrical Engineering — SVNIT / NIT Surat</div>
-                        <p class="item-desc">CGPA: 6.0 / 10. Comprehensive coursework in Electrical Power Systems, Substation Protection, Control Automation, and Data Analytics.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h3 class="card-title"><i data-lucide="award"></i> Positions of Responsibility</h3>
-                    <div class="por-item">
-                        <div class="item-header">
-                            <span class="item-title">Chief Manager</span>
-                            <span class="item-meta">TPC</span>
-                        </div>
-                        <p class="item-desc">Led student technical placement and industry coordination operations.</p>
-                    </div>
-                    <div class="por-item">
-                        <div class="item-header">
-                            <span class="item-title">Convener</span>
-                            <span class="item-meta">RIAC</span>
-                        </div>
-                        <p class="item-desc">Directed innovation initiatives and research project symposiums.</p>
-                    </div>
-                    <div class="por-item">
-                        <div class="item-header">
-                            <span class="item-title">Senior Executive</span>
-                            <span class="item-meta">NSS</span>
-                        </div>
-                        <p class="item-desc">Managed community development, social awareness drives, and sustainability campaigns.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Timeline Section -->
-        <section class="experience-section" id="experience">
-            <div class="section-header">
-                <span class="section-tagline">Professional Experience</span>
-                <h2 class="section-title">Internship History</h2>
-                <div class="section-line"></div>
-            </div>
-
-            <div class="timeline">
-                <!-- Electrical Internship: Tata Power Kalyan -->
-                <div class="timeline-item" data-track="electrical">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Summer Intern</div>
-                    <div class="timeline-content card">
-                        <div class="timeline-header-row">
-                            <div>
-                                <h4 class="timeline-title">Electrical Engineering Intern</h4>
-                                <div class="timeline-subtitle">Tata Power Company Ltd. — Kalyan, Maharashtra</div>
-                            </div>
-                            <span class="badge badge-electrical">Electrical Eng.</span>
-                        </div>
-                        <p class="timeline-text">
-                            Gained practical field experience in 33/11kV distribution substation operations, automation systems, and SCADA control monitoring.
-                        </p>
-                        <ul class="timeline-bullet-list">
-                            <li>Studied 33/11kV substation single line diagrams (SLDs), protective relay coordination schemes, and switchgear operation.</li>
-                            <li>Assisted engineering teams with transformer health diagnostics including Dissolved Gas Analysis (DGA), insulation resistance, and turns ratio testing.</li>
-                            <li>Monitored SCADA telemetry transmission and Geographic Information System (GIS) asset mapping for power grids.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Analytics Internship 1: Fashion 1972NE -->
-                <div class="timeline-item" data-track="analytics">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Data Intern</div>
-                    <div class="timeline-content card">
-                        <div class="timeline-header-row">
-                            <div>
-                                <h4 class="timeline-title">Business Intelligence Analyst Intern</h4>
-                                <div class="timeline-subtitle">Fashion 1972NE</div>
-                            </div>
-                            <span class="badge badge-analytics">Data Analytics</span>
-                        </div>
-                        <p class="timeline-text">
-                            Engineered BI dashboards and SQL reporting tools to streamline sales tracking and inventory turnover.
-                        </p>
-                        <ul class="timeline-bullet-list">
-                            <li>Formulated advanced Power BI dashboards with DAX measures to evaluate sales velocity and customer retention rates.</li>
-                            <li>Optimized SQL data extraction scripts, reducing automated reporting turnaround by 30%.</li>
-                            <li>Identified inventory bottleneck trends, delivering data insights that improved stock management efficiency by 15%.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Analytics Internship 2: Tata Global -->
-                <div class="timeline-item" data-track="analytics">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Analytics Intern</div>
-                    <div class="timeline-content card">
-                        <div class="timeline-header-row">
-                            <div>
-                                <h4 class="timeline-title">Data Analyst Intern</h4>
-                                <div class="timeline-subtitle">Tata Global</div>
-                            </div>
-                            <span class="badge badge-analytics">Data Analytics</span>
-                        </div>
-                        <p class="timeline-text">
-                            Executed exploratory data analysis and executive dashboarding for multi-region sales performance.
-                        </p>
-                        <ul class="timeline-bullet-list">
-                            <li>Executed exploratory data analysis (EDA) using Python (Pandas, NumPy) on multi-region sales datasets (100k+ rows).</li>
-                            <li>Constructed executive Power BI dashboards showing sales variance, profit margins, and churn rates across territories.</li>
-                            <li>Delivered quantitative analytics summaries to leadership to support data-driven strategy decisions.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Showcase Section -->
-        <section class="projects-section" id="projects">
-            <div class="section-header">
-                <span class="section-tagline">Technical Work</span>
-                <h2 class="section-title">Projects Showcase</h2>
-                <div class="section-line"></div>
-            </div>
-
-            <!-- Project Filters -->
-            <div class="project-filters">
-                <button class="btn btn-filter active" data-filter="all">All Projects</button>
-                <button class="btn btn-filter" data-filter="analytics">Data Analytics</button>
-                <button class="btn btn-filter" data-filter="electrical">Electrical Engineering</button>
-            </div>
-
-            <!-- Project Grid -->
-            <div class="project-grid" id="project-grid-container">
-                <!-- Sustainability Power BI -->
-                <div class="card project-card" data-track="analytics" data-category="analytics">
-                    <div class="project-img-box">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?fit=crop&w=800&h=500&q=80" alt="Sustainability Power BI Dashboard" class="project-img">
-                    </div>
-                    <div class="project-details-box">
-                        <div class="project-title-row">
-                            <h4 class="project-card-title">Sustainability Power BI Dashboard</h4>
-                        </div>
-                        <p class="project-desc">
-                            Corporate ESG analytics dashboard evaluating carbon emission trends, energy efficiency metrics, and sustainability compliance indicators.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Power BI</span>
-                            <span class="tag">DAX</span>
-                            <span class="tag">ESG Metrics</span>
-                            <span class="tag">Data Modeling</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/ritiksharma2005/sustainability_powerBI" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-                                <i data-lucide="github"></i> View Repository
+                            <a href="electrical-engineering.html" target="_blank" class="btn btn-primary btn-electrical-link">
+                                Open Electrical Portfolio <i data-lucide="external-link"></i>
                             </a>
                         </div>
                     </div>
-                </div>
-
-                <!-- Supply Chain Operations -->
-                <div class="card project-card" data-track="analytics" data-category="analytics">
-                    <div class="project-img-box">
-                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?fit=crop&w=800&h=500&q=80" alt="Supply Chain Operations Dashboard" class="project-img">
-                    </div>
-                    <div class="project-details-box">
-                        <div class="project-title-row">
-                            <h4 class="project-card-title">Supply Chain Operations Dashboard</h4>
-                        </div>
-                        <p class="project-desc">
-                            Logistics analytics platform tracking shipment lead times, inventory turnover rates, order fulfillment accuracy, and supplier performance metrics.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">Power BI</span>
-                            <span class="tag">SQL</span>
-                            <span class="tag">Supply Chain</span>
-                            <span class="tag">KPI Analytics</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/ritiksharma2005/Supply-Chain-dashboard" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-                                <i data-lucide="github"></i> View Repository
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Earthing Grid Calculator -->
-                <div class="card project-card" data-track="electrical" data-category="electrical">
-                    <div class="project-img-box">
-                        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?fit=crop&w=800&h=500&q=80" alt="Substation Ground Grid Calculator" class="project-img">
-                    </div>
-                    <div class="project-details-box">
-                        <div class="project-title-row">
-                            <h4 class="project-card-title">Substation Ground Grid Calculator</h4>
-                        </div>
-                        <p class="project-desc">
-                            Engineering calculator tool implementing IEEE 80-2013 formulas for substation grounding grid design, step/touch voltage safety limits, and conductor sizing.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">IEEE 80-2013</span>
-                            <span class="tag">MATLAB</span>
-                            <span class="tag">Power Systems</span>
-                            <span class="tag">Safety Design</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="#contact" class="btn btn-secondary btn-sm">
-                                <i data-lucide="info"></i> Project Details
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Water Level Indicator -->
-                <div class="card project-card" data-track="electrical" data-category="electrical">
-                    <div class="project-img-box">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?fit=crop&w=800&h=500&q=80" alt="Smart Water Level Controller" class="project-img">
-                    </div>
-                    <div class="project-details-box">
-                        <div class="project-title-row">
-                            <h4 class="project-card-title">Smart Water Level Controller</h4>
-                        </div>
-                        <p class="project-desc">
-                            Hardware electronics project built with BC547 NPN transistors, probe arrays, LED indicators, and automated buzzer alarms for reservoir monitoring.
-                        </p>
-                        <div class="project-tags">
-                            <span class="tag">BC547 Circuit</span>
-                            <span class="tag">Power Electronics</span>
-                            <span class="tag">Sensors</span>
-                            <span class="tag">Automation</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="#contact" class="btn btn-secondary btn-sm">
-                                <i data-lucide="info"></i> Project Details
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="contact-section" id="contact">
-            <div class="section-header">
-                <span class="section-tagline">Get In Touch</span>
-                <h2 class="section-title">Contact Me</h2>
-                <div class="section-line"></div>
-            </div>
-
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="card info-card">
-                        <div class="info-icon-box">
-                            <i data-lucide="mail"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>Email</h4>
-                            <p><a href="mailto:ritiksharmaddhs2005@gmail.com">ritiksharmaddhs2005@gmail.com</a></p>
-                        </div>
-                    </div>
-
-                    <div class="card info-card">
-                        <div class="info-icon-box">
-                            <i data-lucide="graduation-cap"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>Institution</h4>
-                            <p>SVNIT / NIT Surat, Gujarat, India</p>
-                        </div>
-                    </div>
-
-                    <div class="card info-card">
-                        <div class="info-icon-box">
-                            <i data-lucide="github"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>GitHub Repositories</h4>
-                            <p><a href="https://github.com/ritiksharma2005" target="_blank" rel="noopener noreferrer">github.com/ritiksharma2005</a></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card contact-form-card">
-                    <h3 class="card-title">Send a Message</h3>
-                    <form id="contact-form" class="contact-form">
-                        <div class="form-group">
-                            <label for="form-name">Your Name</label>
-                            <input type="text" id="form-name" required placeholder="Enter your full name">
-                        </div>
-                        <div class="form-group">
-                            <label for="form-email">Your Email</label>
-                            <input type="email" id="form-email" required placeholder="Enter your email address">
-                        </div>
-                        <div class="form-group">
-                            <label for="form-subject">Subject</label>
-                            <input type="text" id="form-subject" required placeholder="e.g. Hiring Inquiry / Technical Project">
-                        </div>
-                        <div class="form-group">
-                            <label for="form-message">Message</label>
-                            <textarea id="form-message" required rows="4" placeholder="Write your message here..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" id="btn-submit">
-                            <span>Send Message</span>
-                            <i data-lucide="send"></i>
-                        </button>
-                    </form>
-                    <div class="form-status" id="form-status"></div>
                 </div>
             </div>
         </section>
@@ -603,9 +144,9 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2026 Ritik Sharma. Electrical Engineer & Data Analyst (NIT Surat).</p>
+            <p>&copy; 2026 Ritik Sharma. B.Tech Electrical Engineering (NIT Surat).</p>
             <div class="footer-links">
-                <a href="#home">Back to Top ↑</a>
+                <a href="mailto:ritiksharmaddhs2005@gmail.com">Contact Ritik</a>
             </div>
         </div>
     </footer>
