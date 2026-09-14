@@ -777,6 +777,9 @@ button, input, textarea {
     transition: var(--transition-smooth);
     position: relative;
     overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 
 .square-analytics { border-color: rgba(0, 180, 216, 0.3); }
