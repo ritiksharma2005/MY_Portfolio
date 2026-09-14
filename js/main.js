@@ -3,11 +3,21 @@
  * 3D Intro Animation Canvas + 3D Tilt Engine + Multi-Page Navigation
  */
 
-document.addEventListener("DOMContentLoaded", () => {
-    // 1. Initialize Icons
-    if (window.lucide) {
+function initLucideIcons() {
+    if (window.lucide && typeof window.lucide.createIcons === "function") {
         window.lucide.createIcons();
     }
+}
+
+// Initialize immediately and setup fallbacks
+initLucideIcons();
+window.addEventListener("load", initLucideIcons);
+setTimeout(initLucideIcons, 300);
+setTimeout(initLucideIcons, 1000);
+
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. Initialize Icons
+    initLucideIcons();
 
     // 2. 3D Intro Splash Screen Engine
     const splashScreen = document.getElementById("splash-screen");

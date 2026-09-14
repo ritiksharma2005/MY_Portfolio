@@ -680,6 +680,15 @@ button, input, textarea {
     border: 1px solid var(--card-border);
 }
 
+.pill-link svg, .pill-text svg, .pill-link i, .pill-text i {
+    width: 16px;
+    height: 16px;
+    stroke-width: 2px;
+    flex-shrink: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .pill-link:hover {
     color: var(--primary-color);
     border-color: var(--primary-color);
