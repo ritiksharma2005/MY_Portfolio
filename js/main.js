@@ -1,368 +1,268 @@
-const PROJECTS_DATA = [
-    {
-        id: "proj-1",
-        title: "OmniShop E-Commerce",
-        category: "web",
-        shortDesc: "A premium full-stack Next.js 14 e-commerce platform with real-time inventory management and Stripe integrations.",
-        fullDesc: "OmniShop is a high-performance e-commerce platform featuring Server Actions, App Router, and incremental static regeneration. It includes a user-friendly custom checkout funnel via Stripe, real-time inventory updates using Supabase subscriptions, and an automated admin analytics dashboard showcasing sales, active carts, and product performance.",
-        techStack: ["Next.js 14", "React", "Supabase", "Stripe", "TailwindCSS"],
-        image: "https://images.unsplash.com/photo-1557821552-17105176677c?fit=crop&w=800&h=500&q=80",
-        liveUrl: "https://example.com",
-        githubUrl: "https://github.com",
-        client: "Personal Project",
-        date: "May 2025"
+/**
+ * RITIK SHARMA PORTFOLIO - DUAL TRACK ENGINE
+ * Data Analytics & Electrical Engineering
+ */
+
+const TRACK_CONFIG = {
+    all: {
+        typingTitles: ["Data Analyst & Electrical Engineer", "Power BI & SQL Specialist", "Power Systems & SCADA Engineer"],
+        heroDesc: "Engineering graduate from NIT Surat bridging data-driven analytics with core electrical engineering systems. Specialized in Power BI, SQL, Python, Power Systems & Substation Automation.",
+        bioText: "Graduating in Electrical Engineering from Sardar Vallabhbhai National Institute of Technology (NIT Surat). I hold strong analytical and engineering problem-solving capabilities, applying BI dashboards, SQL querying, and Python to business operations, as well as hands-on substation automation and power equipment diagnostics."
     },
-    {
-        id: "proj-2",
-        title: "Distributed Task Scheduler",
-        category: "backend",
-        shortDesc: "Highly available redis-backed distributed task queue and cron scheduler written in Go.",
-        fullDesc: "A scalable, asynchronous task queue system that processes heavy workloads out-of-band. Built using Go, Redis streams, and PostgreSQL. Features dynamic worker autoscaling, dead-letter queue routing for failed tasks, visual workflow tracking UI, and micro-second accuracy for recurring cron triggers.",
-        techStack: ["Go", "Redis", "PostgreSQL", "Docker", "gRPC"],
-        image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?fit=crop&w=800&h=500&q=80",
-        liveUrl: "https://example.com",
-        githubUrl: "https://github.com",
-        client: "DevInnovations Ltd.",
-        date: "Jan 2025"
+    analytics: {
+        typingTitles: ["Data Analyst", "Business Intelligence Engineer", "Power BI & SQL Specialist", "Python Data Analyst"],
+        heroDesc: "Data Analyst specialized in business intelligence, SQL querying, financial/ESG metrics dashboards, and Python exploratory data analysis.",
+        bioText: "Experienced in Data Analytics through internships at Fashion 1972NE and Tata Global. Proficient in transforming raw transactional databases into executive Power BI reports, automating SQL pipelines, and conducting quantitative business analysis."
     },
-    {
-        id: "proj-3",
-        title: "DocuSense AI Agent",
-        category: "ml",
-        shortDesc: "Retrieval-Augmented Generation (RAG) pipeline to query complex PDF reports with structured source attributions.",
-        fullDesc: "DocuSense is a specialized AI application that processes and indexes multi-hundred page PDF documents. It utilizes LangChain, OpenAI embeddings, and ChromaDB vector store. Features semantic hybrid search, chat history context preservation, and precise markdown source formatting with citations to target page sections.",
-        techStack: ["Python", "LangChain", "OpenAI API", "ChromaDB", "FastAPI"],
-        image: "https://images.unsplash.com/photo-1677442136019-21780efad99a?fit=crop&w=800&h=500&q=80",
-        liveUrl: "https://example.com",
-        githubUrl: "https://github.com",
-        client: "TechCraft Labs",
-        date: "Nov 2024"
-    },
-    {
-        id: "proj-4",
-        title: "Collaborative Workspace Editor",
-        category: "web",
-        shortDesc: "Real-time collaborative markdown workspace editor using CRDTs and WebSockets.",
-        fullDesc: "An interactive, rich-text markdown board where users can edit documents simultaneously. Powered by Yjs CRDT library, WebSockets sync server, and React. Includes cursor-tracking bubbles showing users' viewport coordinates, folder-nested directory structures, and a history timeline allowing rollbacks to past versions.",
-        techStack: ["React", "Node.js", "WebSockets", "Yjs CRDT", "Express"],
-        image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?fit=crop&w=800&h=500&q=80",
-        liveUrl: "https://example.com",
-        githubUrl: "https://github.com",
-        client: "Personal Project",
-        date: "Aug 2024"
-    },
-    {
-        id: "proj-5",
-        title: "Metrics Dashboard Engine",
-        category: "backend",
-        shortDesc: "Custom analytics agent parsing logs and serving server metrics via a lightweight JSON API.",
-        fullDesc: "A lightweight server monitoring tool designed to consume stdout log streams from microservices, parse logs for metrics (response times, error rates, system memory), and store aggregated data in TimescaleDB. Exposes low-latency JSON endpoints and integrates directly with Grafana dashboards.",
-        techStack: ["Node.js", "TimescaleDB", "Grafana", "Docker", "Linux Shell"],
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?fit=crop&w=800&h=500&q=80",
-        liveUrl: "https://example.com",
-        githubUrl: "https://github.com",
-        client: "TechCraft Solutions",
-        date: "Apr 2024"
-    },
-    {
-        id: "proj-6",
-        title: "VisionScan Object Tracker",
-        category: "ml",
-        shortDesc: "Real-time multi-object tracking model utilizing YOLOv8 and OpenCV for automated retail checkout systems.",
-        fullDesc: "VisionScan utilizes computer vision models to identify and track items on a retail conveyer belt. Implemented YOLOv8 classification layers fine-tuned on custom product datasets, coupled with DeepSORT tracking filters. Processes video frames at 30+ FPS and communicates detected items to POS registers via MQTT.",
-        techStack: ["Python", "PyTorch", "YOLOv8", "OpenCV", "MQTT"],
-        image: "https://images.unsplash.com/photo-1527474305487-b87b222841cc?fit=crop&w=800&h=500&q=80",
-        liveUrl: "https://example.com",
-        githubUrl: "https://github.com",
-        client: "Research Project",
-        date: "Dec 2023"
+    electrical: {
+        typingTitles: ["Electrical Engineer", "Power Systems Engineer", "Substation Automation Specialist", "Control Systems Engineer"],
+        heroDesc: "Electrical Engineer with hands-on experience in 33/11kV substation operations, SCADA systems, transformer health testing, and IEEE 80 grounding design.",
+        bioText: "Strong background in core Electrical Engineering from NIT Surat. Hands-on experience from Tata Power Company Ltd. (Kalyan) in substation single-line diagrams, relay coordination, DGA transformer diagnostics, MATLAB/Simulink modeling, and IEEE grounding standards."
     }
-];
+};
+
+let currentTrack = "all";
+let typingIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typingTimeout = null;
 
 document.addEventListener("DOMContentLoaded", () => {
-    const themeToggleBtn = document.getElementById("theme-toggle");
-    const menuToggleBtn = document.getElementById("menu-toggle");
-    const navMenu = document.getElementById("nav-menu");
-    const navbar = document.getElementById("navbar");
-    const typingTextSpan = document.getElementById("typing-text");
-    const projectGridContainer = document.getElementById("project-grid-container");
-    const filterButtons = document.querySelectorAll(".btn-filter");
-    
-    const projectModal = document.getElementById("project-modal");
-    const modalCloseBtn = document.getElementById("modal-close");
-    const modalOverlay = document.getElementById("modal-overlay");
-    
-    const contactForm = document.getElementById("contact-form");
-    const formStatus = document.getElementById("form-status");
-
+    // 1. Initialize Icons
     if (window.lucide) {
         window.lucide.createIcons();
     }
 
-    const currentTheme = localStorage.getItem("theme") || "dark-theme";
-    document.body.className = currentTheme;
+    // 2. Theme Toggle Setup
+    const themeToggleBtn = document.getElementById("theme-toggle");
+    const savedTheme = localStorage.getItem("portfolio_theme") || "dark-theme";
+    document.body.className = savedTheme;
 
-    themeToggleBtn.addEventListener("click", () => {
-        if (document.body.classList.contains("dark-theme")) {
-            document.body.classList.remove("dark-theme");
-            document.body.classList.add("light-theme");
-            localStorage.setItem("theme", "light-theme");
-        } else {
-            document.body.classList.remove("light-theme");
-            document.body.classList.add("dark-theme");
-            localStorage.setItem("theme", "dark-theme");
-        }
-    });
-
-    menuToggleBtn.addEventListener("click", () => {
-        menuToggleBtn.classList.toggle("active");
-        navMenu.classList.toggle("open");
-        
-        if (navMenu.classList.contains("open")) {
-            document.body.style.overflow = "hidden";
-        } else {
-            document.body.style.overflow = "";
-        }
-    });
-
-    const navLinks = document.querySelectorAll(".nav-link");
-    navLinks.forEach(link => {
-        link.addEventListener("click", () => {
-            menuToggleBtn.classList.remove("active");
-            navMenu.classList.remove("open");
-            document.body.style.overflow = "";
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener("click", () => {
+            if (document.body.classList.contains("light-theme")) {
+                document.body.classList.remove("light-theme");
+                document.body.classList.add("dark-theme");
+                localStorage.setItem("portfolio_theme", "dark-theme");
+            } else {
+                document.body.classList.remove("dark-theme");
+                document.body.classList.add("light-theme");
+                localStorage.setItem("portfolio_theme", "light-theme");
+            }
         });
-    });
+    }
 
+    // 3. Mobile Navigation Menu Toggle
+    const menuToggleBtn = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav-menu");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    if (menuToggleBtn && navMenu) {
+        menuToggleBtn.addEventListener("click", () => {
+            navMenu.classList.toggle("open");
+            menuToggleBtn.classList.toggle("active");
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                navMenu.classList.remove("open");
+                menuToggleBtn.classList.remove("active");
+            });
+        });
+    }
+
+    // 4. Navbar Scroll Effect
+    const navbar = document.getElementById("navbar");
     window.addEventListener("scroll", () => {
-        if (window.scrollY > 50) {
+        if (window.scrollY > 40) {
             navbar.classList.add("scrolled");
         } else {
             navbar.classList.remove("scrolled");
         }
+        highlightActiveNavLink();
     });
 
-    const words = ["Software Developer", "Frontend Expert", "Backend Engineer", "Problem Solver"];
-    let wordIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let typingSpeed = 100;
-
-    function type() {
-        const currentWord = words[wordIndex];
-        
-        if (isDeleting) {
-            typingTextSpan.textContent = currentWord.substring(0, charIndex - 1);
-            charIndex--;
-            typingSpeed = 50;
-        } else {
-            typingTextSpan.textContent = currentWord.substring(0, charIndex + 1);
-            charIndex++;
-            typingSpeed = 100;
-        }
-
-        if (!isDeleting && charIndex === currentWord.length) {
-            typingSpeed = 2000;
-            isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            wordIndex = (wordIndex + 1) % words.length;
-            typingSpeed = 500;
-        }
-
-        setTimeout(type, typingSpeed);
-    }
-
-    if (typingTextSpan) {
-        type();
-    }
-
-    function renderProjects(projects) {
-        if (!projectGridContainer) return;
-        
-        projectGridContainer.innerHTML = "";
-        
-        if (projects.length === 0) {
-            projectGridContainer.innerHTML = `<div class="loading-spinner">No projects found. Check back soon!</div>`;
-            return;
-        }
-
-        projects.forEach(project => {
-            const card = document.createElement("div");
-            card.className = "card glass-card project-card";
-            card.setAttribute("data-id", project.id);
-
-            const tagsHTML = project.techStack.slice(0, 3).map(tech => `<span class="project-tag">#${tech}</span>`).join(" ");
-
-            card.innerHTML = `
-                <div class="project-img-box">
-                    <img src="${project.image}" alt="${project.title}" class="project-img" loading="lazy">
-                    <div class="project-overlay">
-                        <button class="project-info-btn" aria-label="View Project Details">
-                            <i data-lucide="external-link"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="project-details-box">
-                    <div class="project-title-row">
-                        <h4 class="project-card-title">${project.title}</h4>
-                    </div>
-                    <p class="project-desc">${project.shortDesc}</p>
-                    <div class="project-tags">
-                        ${tagsHTML}
-                    </div>
-                </div>
-            `;
-
-            card.addEventListener("click", () => {
-                openProjectModal(project);
-            });
-
-            projectGridContainer.appendChild(card);
+    // 5. Track Switcher Logic
+    const trackButtons = document.querySelectorAll(".btn-track");
+    trackButtons.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            const track = btn.getAttribute("data-track");
+            applyTrackView(track);
         });
+    });
 
-        if (window.lucide) {
-            window.lucide.createIcons();
-        }
-    }
-
-    renderProjects(PROJECTS_DATA);
-
+    // 6. Project Filter Buttons
+    const filterButtons = document.querySelectorAll(".btn-filter");
     filterButtons.forEach(btn => {
         btn.addEventListener("click", () => {
             filterButtons.forEach(b => b.classList.remove("active"));
             btn.classList.add("active");
-
-            const filterValue = btn.getAttribute("data-filter");
-            
-            if (filterValue === "all") {
-                renderProjects(PROJECTS_DATA);
-            } else {
-                const filtered = PROJECTS_DATA.filter(p => p.category === filterValue);
-                renderProjects(filtered);
-            }
+            const filterCategory = btn.getAttribute("data-filter");
+            filterProjects(filterCategory);
         });
     });
 
-    function openProjectModal(project) {
-        const modalBody = document.getElementById("modal-body");
-        if (!modalBody || !projectModal) return;
-
-        const techBadgesHTML = project.techStack.map(tech => `<span class="badge">${tech}</span>`).join("");
-
-        modalBody.innerHTML = `
-            <img src="${project.image}" alt="${project.title}" class="modal-hero-img">
-            <div class="modal-details">
-                <h3 class="modal-title">${project.title}</h3>
-                
-                <div class="modal-meta">
-                    <div class="modal-meta-item">
-                        <i data-lucide="user"></i>
-                        <span>Client/Context: <strong>${project.client}</strong></span>
-                    </div>
-                    <div class="modal-meta-item">
-                        <i data-lucide="calendar"></i>
-                        <span>Completed: <strong>${project.date}</strong></span>
-                    </div>
-                </div>
-
-                <div class="modal-description">
-                    <p>${project.fullDesc}</p>
-                </div>
-
-                <h4 style="font-size: 1.1rem; margin-top: 0.5rem;">Tech Stack Used</h4>
-                <div class="modal-tags">
-                    ${techBadgesHTML}
-                </div>
-
-                <div class="modal-actions">
-                    <a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                        <span>Live Demo</span>
-                        <i data-lucide="globe"></i>
-                    </a>
-                    <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                        <span>Source Code</span>
-                        <i data-lucide="github"></i>
-                    </a>
-                </div>
-            </div>
-        `;
-
-        if (window.lucide) {
-            window.lucide.createIcons();
-        }
-
-        projectModal.classList.add("open");
-        projectModal.setAttribute("aria-hidden", "false");
-        document.body.style.overflow = "hidden";
-    }
-
-    function closeDetailsModal() {
-        if (!projectModal) return;
-        projectModal.classList.remove("open");
-        projectModal.setAttribute("aria-hidden", "true");
-        document.body.style.overflow = "";
-    }
-
-    if (modalCloseBtn) {
-        modalCloseBtn.addEventListener("click", closeDetailsModal);
-    }
-    if (modalOverlay) {
-        modalOverlay.addEventListener("click", closeDetailsModal);
-    }
-
-    document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape" && projectModal.classList.contains("open")) {
-            closeDetailsModal();
-        }
-    });
-
-    const sections = document.querySelectorAll("section[id]");
-    
-    function makeNavActiveOnScroll() {
-        const scrollPosition = window.scrollY + 150;
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            const sectionId = section.getAttribute("id");
-            const correspondingNavLink = document.getElementById(`link-${sectionId}`);
-
-            if (correspondingNavLink) {
-                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                    navLinks.forEach(link => link.classList.remove("active"));
-                    correspondingNavLink.classList.add("active");
-                }
-            }
-        });
-    }
-
-    window.addEventListener("scroll", makeNavActiveOnScroll);
-
+    // 7. Contact Form Handler
+    const contactForm = document.getElementById("contact-form");
+    const formStatus = document.getElementById("form-status");
     if (contactForm) {
         contactForm.addEventListener("submit", (e) => {
             e.preventDefault();
-            
-            const submitBtn = contactForm.querySelector("#btn-submit");
-            const originalBtnHTML = submitBtn.innerHTML;
-            
+            const submitBtn = document.getElementById("btn-submit");
             submitBtn.disabled = true;
-            submitBtn.innerHTML = `<span>Sending...</span><i class="spinner-loader" style="display:inline-block; width:12px; height:12px; border:2px solid currentColor; border-top-color:transparent; border-radius:50%; animation:spin 0.6s linear infinite;"></i>`;
-            
-            formStatus.className = "form-status";
-            formStatus.style.display = "none";
+            submitBtn.innerHTML = `<span>Sending...</span>`;
 
             setTimeout(() => {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalBtnHTML;
+                formStatus.className = "form-status success";
+                formStatus.innerText = "Thank you! Your message has been sent successfully. Ritik will reach out soon.";
                 contactForm.reset();
-                formStatus.textContent = "Thank you! Your message has been sent successfully. I will get back to you shortly.";
-                formStatus.classList.add("success");
-            }, 1800);
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = `<span>Send Message</span> <i data-lucide="send"></i>`;
+                if (window.lucide) window.lucide.createIcons();
+            }, 1200);
         });
     }
+
+    // Initialize default track view
+    applyTrackView("all");
 });
 
-const spinnerStyle = document.createElement('style');
-spinnerStyle.textContent = `@keyframes spin { to { transform: rotate(360deg); } }`;
-document.head.appendChild(spinnerStyle);
+/**
+ * Applies track filter view ('all', 'analytics', 'electrical')
+ */
+function applyTrackView(track) {
+    currentTrack = track || "all";
+    const config = TRACK_CONFIG[currentTrack] || TRACK_CONFIG.all;
+
+    // Update Track Buttons State
+    document.querySelectorAll(".btn-track").forEach(btn => {
+        if (btn.getAttribute("data-track") === currentTrack) {
+            btn.classList.add("active");
+        } else {
+            btn.classList.remove("active");
+        }
+    });
+
+    // Update Hero & Bio Descriptions
+    const heroDesc = document.getElementById("hero-desc-text");
+    const bioText = document.getElementById("bio-dynamic-text");
+    if (heroDesc) heroDesc.innerText = config.heroDesc;
+    if (bioText) bioText.innerText = config.bioText;
+
+    // Filter Timeline Experience Items
+    const timelineItems = document.querySelectorAll(".timeline-item");
+    timelineItems.forEach(item => {
+        const itemTrack = item.getAttribute("data-track");
+        if (currentTrack === "all" || itemTrack === currentTrack) {
+            item.classList.remove("hidden-by-track");
+        } else {
+            item.classList.add("hidden-by-track");
+        }
+    });
+
+    // Filter Skill Groups
+    const skillGroups = document.querySelectorAll(".skill-track-item");
+    skillGroups.forEach(group => {
+        const groupTrack = group.getAttribute("data-track");
+        if (currentTrack === "all" || groupTrack === currentTrack) {
+            group.style.display = "block";
+        } else {
+            group.style.display = "none";
+        }
+    });
+
+    // Filter Projects
+    const projectCards = document.querySelectorAll(".project-card");
+    projectCards.forEach(card => {
+        const cardTrack = card.getAttribute("data-track");
+        if (currentTrack === "all" || cardTrack === currentTrack) {
+            card.classList.remove("hidden-by-track");
+        } else {
+            card.classList.add("hidden-by-track");
+        }
+    });
+
+    // Reset Typing Animation
+    resetTypingAnimation(config.typingTitles);
+}
+
+/**
+ * Filters projects based on filter buttons ('all', 'analytics', 'electrical')
+ */
+function filterProjects(category) {
+    const projectCards = document.querySelectorAll(".project-card");
+    projectCards.forEach(card => {
+        const cardCategory = card.getAttribute("data-category");
+        const cardTrack = card.getAttribute("data-track");
+
+        const matchesCategory = (category === "all" || cardCategory === category);
+        const matchesTrack = (currentTrack === "all" || cardTrack === currentTrack);
+
+        if (matchesCategory && matchesTrack) {
+            card.classList.remove("hidden-by-track");
+        } else {
+            card.classList.add("hidden-by-track");
+        }
+    });
+}
+
+/**
+ * Handles typing animation in hero section
+ */
+function resetTypingAnimation(titles) {
+    if (typingTimeout) clearTimeout(typingTimeout);
+    typingIndex = 0;
+    charIndex = 0;
+    isDeleting = false;
+    typeTitle(titles);
+}
+
+function typeTitle(titles) {
+    const typingSpan = document.getElementById("typing-text");
+    if (!typingSpan || !titles || titles.length === 0) return;
+
+    const currentTitle = titles[typingIndex % titles.length];
+
+    if (isDeleting) {
+        charIndex--;
+        typingSpan.innerText = currentTitle.substring(0, charIndex);
+    } else {
+        charIndex++;
+        typingSpan.innerText = currentTitle.substring(0, charIndex);
+    }
+
+    let delay = isDeleting ? 40 : 80;
+
+    if (!isDeleting && charIndex === currentTitle.length) {
+        delay = 2000;
+        isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        typingIndex++;
+        delay = 500;
+    }
+
+    typingTimeout = setTimeout(() => typeTitle(titles), delay);
+}
+
+/**
+ * Highlights active navbar link on scroll
+ */
+function highlightActiveNavLink() {
+    const sections = document.querySelectorAll("section[id]");
+    const scrollY = window.pageYOffset;
+
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 100;
+        const sectionId = current.getAttribute("id");
+        const navLink = document.querySelector(`.nav-link[href*="${sectionId}"]`);
+
+        if (navLink) {
+            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                document.querySelectorAll(".nav-link").forEach(link => link.classList.remove("active"));
+                navLink.classList.add("active");
+            }
+        }
+    });
+}

@@ -3,34 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creative Portfolio | Ritik Sharma</title>
-    <meta name="description" content="Portfolio of Ritik Sharma - Showcasing modern web development projects, skills, education, and professional experience. Ready for new opportunities.">
+    <title>Ritik Sharma | Dual-Track Portfolio (Data Analytics & Electrical Engineering)</title>
+    <meta name="description" content="Professional portfolio of Ritik Sharma - Showcasing dual expertise in Data Analytics (SQL, Power BI, Python) and Electrical Engineering (Power Systems, Substation Automation, MATLAB).">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    
     <!-- Style Sheets -->
     <link rel="stylesheet" href="css/style.css">
+    
     <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="dark-theme">
-    <!-- Background Glow Blobs -->
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
 
     <!-- Navigation Header -->
     <header class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#home" class="logo" id="nav-logo">
-                <span class="gradient-text">Ritik.</span>
+                Ritik <span class="logo-accent">Sharma</span>
             </a>
             
             <nav class="nav-menu" id="nav-menu">
                 <ul>
                     <li><a href="#home" class="nav-link active" id="link-home">Home</a></li>
-                    <li><a href="#about" class="nav-link" id="link-about">Resume & About</a></li>
+                    <li><a href="#about" class="nav-link" id="link-about">About & Skills</a></li>
+                    <li><a href="#experience" class="nav-link" id="link-experience">Experience</a></li>
                     <li><a href="#projects" class="nav-link" id="link-projects">Projects</a></li>
                     <li><a href="#contact" class="nav-link" id="link-contact">Contact</a></li>
                 </ul>
@@ -38,11 +38,11 @@
 
             <div class="nav-actions">
                 <!-- Theme Toggle Button -->
-                <button class="btn-icon" id="theme-toggle" aria-label="Toggle dark/light mode">
+                <button class="btn-icon" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle Mode">
                     <i data-lucide="sun" class="sun-icon"></i>
                     <i data-lucide="moon" class="moon-icon"></i>
                 </button>
-                <!-- Mobile Hamburger Menu Button -->
+                <!-- Mobile Menu Button -->
                 <button class="btn-icon mobile-menu-toggle" id="menu-toggle" aria-label="Open mobile menu">
                     <i data-lucide="menu" class="open-icon"></i>
                     <i data-lucide="x" class="close-icon"></i>
@@ -51,202 +51,316 @@
         </div>
     </header>
 
-    <!-- Main Content Container -->
+    <!-- Main Content -->
     <main>
         <!-- Hero Section -->
         <section class="hero-section" id="home">
             <div class="hero-content">
-                <span class="hero-greeting animate-reveal">Hello, World! I am</span>
-                <h1 class="hero-title animate-reveal">Ritik Sharma</h1>
-                <h2 class="hero-subtitle animate-reveal">
-                    I'm a <span id="typing-text" class="gradient-text"></span><span class="cursor">|</span>
-                </h2>
-                <p class="hero-desc animate-reveal">
-                    A passionate developer focused on building modern, high-performance web applications with clean, premium design aesthetics and user-centric interfaces.
-                </p>
-                <div class="hero-actions animate-reveal">
-                    <a href="#projects" class="btn btn-primary" id="hero-btn-work">View Projects</a>
-                    <a href="#contact" class="btn btn-secondary" id="hero-btn-contact">Get In Touch</a>
+                <!-- Track Switcher Control -->
+                <div class="hero-track-badge">
+                    <div class="track-switcher-box" role="group" aria-label="Specialization Track Switcher">
+                        <button class="btn-track active" data-track="all">
+                            <i data-lucide="layers"></i> Dual View (All)
+                        </button>
+                        <button class="btn-track" data-track="analytics">
+                            <i data-lucide="bar-chart-3"></i> Data Analyst
+                        </button>
+                        <button class="btn-track" data-track="electrical">
+                            <i data-lucide="zap"></i> Electrical Eng.
+                        </button>
+                    </div>
                 </div>
-                <div class="hero-socials animate-reveal">
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+
+                <span class="hero-greeting">Welcome to my portfolio</span>
+                <h1 class="hero-title">Ritik Sharma</h1>
+                <h2 class="hero-subtitle">
+                    I am a <span id="typing-text" class="typing-highlight"></span><span class="cursor">|</span>
+                </h2>
+                <p class="hero-desc" id="hero-desc-text">
+                    Engineering graduate from NIT Surat bridging data-driven decision making with core electrical engineering systems. Specialized in Power BI, SQL, Python, Power Systems & Substation Automation.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">
+                        <i data-lucide="folder-git-2"></i> View Projects
+                    </a>
+                    <a href="https://drive.google.com/file/d/1um7afF5KSfjYhZzs-Ka3cfsNegnuMcz5/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                        <i data-lucide="file-text"></i> Data Analyst Resume
+                    </a>
+                    <a href="https://drive.google.com/file/d/1um7afF5KSfjYhZzs-Ka3cfsNegnuMcz5/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                        <i data-lucide="cpu"></i> Electrical Resume
+                    </a>
+                </div>
+
+                <div class="hero-socials">
+                    <a href="https://github.com/ritiksharma2005" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
                         <i data-lucide="github"></i>
                     </a>
                     <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
                         <i data-lucide="linkedin"></i>
                     </a>
-                    <a href="mailto:ritik.sharma@example.com" class="social-link" aria-label="Email">
+                    <a href="mailto:ritiksharmaddhs2005@gmail.com" class="social-link" aria-label="Email">
                         <i data-lucide="mail"></i>
                     </a>
                 </div>
             </div>
-            <div class="hero-visual animate-reveal-right">
-                <div class="avatar-container">
-                    <div class="avatar-bg"></div>
-                    <img src="assets/avatar.jpg" alt="Ritik Sharma Avatar" class="avatar-image">
+
+            <div class="hero-visual">
+                <div class="avatar-wrapper">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=600&h=600&q=80" alt="Ritik Sharma Profile" class="avatar-image">
+                    <div class="avatar-status-pill">
+                        <span class="status-dot"></span> B.Tech EE • NIT Surat
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- About & Resume Section -->
+        <!-- About & Skills Section -->
         <section class="about-section" id="about">
             <div class="section-header">
-                <span class="section-tagline">My Journey & Expertise</span>
-                <h2 class="section-title">Resume & About Me</h2>
+                <span class="section-tagline">Background & Capabilities</span>
+                <h2 class="section-title">About Me & Skills</h2>
                 <div class="section-line"></div>
             </div>
 
             <div class="about-grid">
-                <!-- Profile / Bio Card -->
-                <div class="card glass-card bio-card">
-                    <h3 class="card-title"><i data-lucide="user"></i> Professional Bio</h3>
-                    <p class="bio-text">
-                        I specialize in creating pixel-perfect, highly interactive web experiences. With a strong background in software engineering principles, I combine frontend aesthetics with robust backend design. My goal is to build scalable codebases while never compromising on user interface design.
+                <!-- Bio Card -->
+                <div class="card bio-card">
+                    <h3 class="card-title"><i data-lucide="user-check"></i> Executive Profile</h3>
+                    <p class="bio-text" id="bio-dynamic-text">
+                        Graduating in Electrical Engineering from Sardar Vallabhbhai National Institute of Technology (NIT Surat). I hold strong analytical and engineering problem-solving capabilities, applying BI dashboards, SQL querying, and Python to business operations, as well as hands-on substation automation and power equipment diagnostics.
                     </p>
                     <div class="bio-details">
                         <div class="detail-item">
-                            <span class="detail-label">Location</span>
-                            <span class="detail-value">New Delhi, India</span>
+                            <span class="detail-label">Institution</span>
+                            <span class="detail-value">NIT Surat (SVNIT)</span>
                         </div>
                         <div class="detail-item">
-                            <span class="detail-label">Email</span>
-                            <span class="detail-value">ritik.sharma@example.com</span>
+                            <span class="detail-label">Degree</span>
+                            <span class="detail-value">B.Tech in Electrical Engineering</span>
                         </div>
                         <div class="detail-item">
-                            <span class="detail-label">Role</span>
-                            <span class="detail-value">Software Developer</span>
+                            <span class="detail-label">Specializations</span>
+                            <span class="detail-value">Data Analytics & Power Systems</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Contact</span>
+                            <span class="detail-value">ritiksharmaddhs2005@gmail.com</span>
                         </div>
                     </div>
                     <div class="bio-cta">
-                        <a href="javascript:window.print();" class="btn btn-secondary btn-sm" id="btn-print-resume">
-                            <i data-lucide="printer"></i> Print/Save Resume
-                        </a>
+                        <a href="#contact" class="btn btn-primary btn-sm">Get In Touch</a>
+                        <a href="javascript:window.print();" class="btn btn-secondary btn-sm">Print Portfolio</a>
                     </div>
                 </div>
 
-                <!-- Skills Card -->
-                <div class="card glass-card skills-card">
-                    <h3 class="card-title"><i data-lucide="cpu"></i> Technical Skills</h3>
-                    <div class="skills-container">
-                        <!-- Skill Group 1 -->
-                        <div class="skill-group">
-                            <h4 class="skill-group-title">Frontend</h4>
+                <!-- Technical Skills Card -->
+                <div class="card skills-card">
+                    <h3 class="card-title"><i data-lucide="sliders"></i> Technical Proficiency</h3>
+                    
+                    <div class="skills-container" id="skills-bars-container">
+                        <!-- Data Analytics Skills -->
+                        <div class="skill-group skill-track-item" data-track="analytics">
+                            <h4 class="skill-group-title">
+                                <span>Data Analytics & BI</span>
+                                <span class="badge badge-analytics">Analytics</span>
+                            </h4>
                             <div class="skill-bars">
                                 <div class="skill-bar-wrapper">
                                     <div class="skill-bar-info">
-                                        <span>HTML5 & CSS3 (Flexbox/Grid)</span>
-                                        <span>95%</span>
+                                        <span>Power BI & DAX (Data Modeling & KPIs)</span>
+                                        <span>92%</span>
                                     </div>
-                                    <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
+                                    <div class="skill-bar"><div class="skill-progress analytics" style="width: 92%"></div></div>
                                 </div>
                                 <div class="skill-bar-wrapper">
                                     <div class="skill-bar-info">
-                                        <span>JavaScript (ES6+)</span>
-                                        <span>90%</span>
+                                        <span>SQL (MySQL, Joins, Aggregations)</span>
+                                        <span>88%</span>
                                     </div>
-                                    <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                                    <div class="skill-bar"><div class="skill-progress analytics" style="width: 88%"></div></div>
                                 </div>
                                 <div class="skill-bar-wrapper">
                                     <div class="skill-bar-info">
-                                        <span>React / Next.js</span>
+                                        <span>Python (Pandas, NumPy, Matplotlib)</span>
                                         <span>85%</span>
                                     </div>
-                                    <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                                    <div class="skill-bar"><div class="skill-progress analytics" style="width: 85%"></div></div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Skill Group 2 -->
-                        <div class="skill-group">
-                            <h4 class="skill-group-title">Backend & Databases</h4>
+                        <!-- Electrical Engineering Skills -->
+                        <div class="skill-group skill-track-item" data-track="electrical">
+                            <h4 class="skill-group-title">
+                                <span>Electrical Engineering</span>
+                                <span class="badge badge-electrical">Electrical</span>
+                            </h4>
                             <div class="skill-bars">
                                 <div class="skill-bar-wrapper">
                                     <div class="skill-bar-info">
-                                        <span>Node.js / Express</span>
-                                        <span>80%</span>
+                                        <span>Power Systems & Substation Automation (33/11kV)</span>
+                                        <span>90%</span>
                                     </div>
-                                    <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                                    <div class="skill-bar"><div class="skill-progress electrical" style="width: 90%"></div></div>
                                 </div>
                                 <div class="skill-bar-wrapper">
                                     <div class="skill-bar-info">
-                                        <span>Python (Django/Flask)</span>
-                                        <span>75%</span>
+                                        <span>Electrical Machines & Transformer Diagnostics</span>
+                                        <span>86%</span>
                                     </div>
-                                    <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
+                                    <div class="skill-bar"><div class="skill-progress electrical" style="width: 86%"></div></div>
                                 </div>
                                 <div class="skill-bar-wrapper">
                                     <div class="skill-bar-info">
-                                        <span>SQL & NoSQL (MongoDB, Postgres)</span>
-                                        <span>80%</span>
+                                        <span>MATLAB / Simulink & Control Systems</span>
+                                        <span>82%</span>
                                     </div>
-                                    <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                                    <div class="skill-bar"><div class="skill-progress electrical" style="width: 82%"></div></div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Skills Badges (Other tools) -->
+                    <!-- Technology Badges -->
                     <div class="skills-badges">
-                        <span class="badge">Git</span>
-                        <span class="badge">Docker</span>
-                        <span class="badge">AWS Cloud</span>
-                        <span class="badge">Figma</span>
-                        <span class="badge">RESTful APIs</span>
-                        <span class="badge">CI/CD</span>
+                        <span class="badge">Excel / VLOOKUP</span>
+                        <span class="badge">Tableau</span>
+                        <span class="badge">IEEE 80-2013</span>
+                        <span class="badge">SCADA</span>
+                        <span class="badge">GIS Mapping</span>
+                        <span class="badge">Relay Coordination</span>
+                        <span class="badge">Teamwork</span>
+                        <span class="badge">Technical Writing</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Resume Timeline -->
-            <div class="timeline-container">
-                <h3 class="timeline-heading"><i data-lucide="briefcase"></i> Experience & Education</h3>
-                <div class="timeline">
-                    <!-- Timeline Item 1 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">2024 - Present</div>
-                        <div class="timeline-content card glass-card">
-                            <h4 class="timeline-title">Associate Software Engineer</h4>
-                            <h5 class="timeline-subtitle">TechCraft Solutions, New Delhi</h5>
-                            <p class="timeline-text">
-                                Developing and maintaining modern client-facing applications. Collaborated closely with the UI/UX team to implement pixel-perfect, responsive components. Optimized site load times by 35% through image optimizations and bundle splitting.
-                            </p>
+            <!-- Education & Positions of Responsibility -->
+            <div class="info-row-grid">
+                <div class="card">
+                    <h3 class="card-title"><i data-lucide="graduation-cap"></i> Education</h3>
+                    <div class="edu-item">
+                        <div class="item-header">
+                            <span class="item-title">Bachelor of Technology (B.Tech)</span>
+                            <span class="item-meta">2021 - 2025</span>
                         </div>
+                        <div class="item-sub">Electrical Engineering — SVNIT / NIT Surat</div>
+                        <p class="item-desc">Grade: CGPA 6.0 / 10. Core coursework in Power Systems, Control Systems, Power Electronics, Electrical Machines, and Computational Data Analysis.</p>
                     </div>
+                </div>
 
-                    <!-- Timeline Item 2 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">2023 - 2024</div>
-                        <div class="timeline-content card glass-card">
-                            <h4 class="timeline-title">Software Developer Intern</h4>
-                            <h5 class="timeline-subtitle">DevInnovations Ltd.</h5>
-                            <p class="timeline-text">
-                                Assisted in building robust backend microservices with Node.js. Wrote automated tests increasing test coverage by 20%. Integrated payment processors and webhooks for SaaS products.
-                            </p>
+                <div class="card">
+                    <h3 class="card-title"><i data-lucide="award"></i> Positions of Responsibility</h3>
+                    <div class="por-item">
+                        <div class="item-header">
+                            <span class="item-title">Chief Manager</span>
+                            <span class="item-meta">TPC</span>
                         </div>
+                        <p class="item-desc">Led technical event management, industry liaisoning, and placement coordination initiatives.</p>
                     </div>
-
-                    <!-- Timeline Item 3 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">2020 - 2024</div>
-                        <div class="timeline-content card glass-card">
-                            <h4 class="timeline-title">Bachelor of Technology (Computer Science)</h4>
-                            <h5 class="timeline-subtitle">Guru Gobind Singh Indraprastha University, Delhi</h5>
-                            <p class="timeline-text">
-                                Graduated with Honors. Focused on Data Structures, Algorithms, Web Technologies, and Database Management. Winner of the regional Hackathon 2023 for a smart energy tracking system.
-                            </p>
+                    <div class="por-item">
+                        <div class="item-header">
+                            <span class="item-title">Convener</span>
+                            <span class="item-meta">RIAC</span>
                         </div>
+                        <p class="item-desc">Organized research and innovation workshops fostering student project development.</p>
+                    </div>
+                    <div class="por-item">
+                        <div class="item-header">
+                            <span class="item-title">Senior Executive</span>
+                            <span class="item-meta">NSS</span>
+                        </div>
+                        <p class="item-desc">Directed social outreach, community service camps, and sustainability awareness drives.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Grid Section -->
+        <!-- Experience Timeline Section -->
+        <section class="experience-section" id="experience">
+            <div class="section-header">
+                <span class="section-tagline">Industry Internship History</span>
+                <h2 class="section-title">Work Experience</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="timeline">
+                <!-- Timeline 1: Tata Power Company Ltd. (Electrical) -->
+                <div class="timeline-item" data-track="electrical">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Summer Intern</div>
+                    <div class="timeline-content card">
+                        <div class="timeline-header-row">
+                            <div>
+                                <h4 class="timeline-title">Electrical Engineering Intern</h4>
+                                <div class="timeline-subtitle">Tata Power Company Ltd. — Kalyan, Maharashtra</div>
+                            </div>
+                            <span class="badge badge-electrical">Electrical</span>
+                        </div>
+                        <p class="timeline-text">
+                            Gained extensive operational exposure to 33/11kV substation automation, power transformer maintenance, and SCADA control rooms.
+                        </p>
+                        <ul class="timeline-bullet-list">
+                            <li>Analyzed 33/11kV substation single line diagrams (SLDs), switchgear assemblies, circuit breakers, and protective relay coordination scheme logic.</li>
+                            <li>Assisted engineering teams with transformer health diagnostics including Dissolved Gas Analysis (DGA), insulation resistance, and turns ratio testing.</li>
+                            <li>Studied SCADA telemetry data transmission and Geographic Information System (GIS) asset mapping for distribution networks.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline 2: Fashion 1972NE (Analytics) -->
+                <div class="timeline-item" data-track="analytics">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Data Intern</div>
+                    <div class="timeline-content card">
+                        <div class="timeline-header-row">
+                            <div>
+                                <h4 class="timeline-title">Business Intelligence Analyst Intern</h4>
+                                <div class="timeline-subtitle">Fashion 1972NE</div>
+                            </div>
+                            <span class="badge badge-analytics">Analytics</span>
+                        </div>
+                        <p class="timeline-text">
+                            Built robust business intelligence pipelines and interactive reporting tools to optimize sales & stock logistics.
+                        </p>
+                        <ul class="timeline-bullet-list">
+                            <li>Developed end-to-end Power BI dashboards using complex DAX measures to track weekly product sales velocity and customer purchase retention.</li>
+                            <li>Optimized SQL queries for automated data extraction, reducing report generation turnaround time by 30%.</li>
+                            <li>Identified slow-moving inventory bottlenecks, delivering actionable insights that helped improve stock turnover by 15%.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Timeline 3: Tata Global (Analytics) -->
+                <div class="timeline-item" data-track="analytics">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Analytics Intern</div>
+                    <div class="timeline-content card">
+                        <div class="timeline-header-row">
+                            <div>
+                                <h4 class="timeline-title">Data Analyst Intern</h4>
+                                <div class="timeline-subtitle">Tata Global</div>
+                            </div>
+                            <span class="badge badge-analytics">Analytics</span>
+                        </div>
+                        <p class="timeline-text">
+                            Executed quantitative market analytics and customer segmentation models for enterprise reporting.
+                        </p>
+                        <ul class="timeline-bullet-list">
+                            <li>Performed exploratory data analysis (EDA) using Python (Pandas, NumPy, Seaborn) on multi-region sales datasets comprising over 100k records.</li>
+                            <li>Designed clean KPI dashboards in Power BI highlighting regional revenue variance, profit margins, and churn rates.</li>
+                            <li>Presented executive data summaries to stakeholders to support data-backed quarterly strategy planning.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Showcase Section -->
         <section class="projects-section" id="projects">
             <div class="section-header">
-                <span class="section-tagline">My Creative Works</span>
+                <span class="section-tagline">Featured Projects</span>
                 <h2 class="section-title">Projects Showcase</h2>
                 <div class="section-line"></div>
             </div>
@@ -254,78 +368,177 @@
             <!-- Project Filters -->
             <div class="project-filters">
                 <button class="btn btn-filter active" data-filter="all">All Projects</button>
-                <button class="btn btn-filter" data-filter="web">Web Apps</button>
-                <button class="btn btn-filter" data-filter="backend">Backend APIs</button>
-                <button class="btn btn-filter" data-filter="ml">AI / ML</button>
+                <button class="btn btn-filter" data-filter="analytics">Data Analytics</button>
+                <button class="btn btn-filter" data-filter="electrical">Electrical Engineering</button>
             </div>
 
-            <!-- Dynamic Project Grid -->
+            <!-- Project Grid -->
             <div class="project-grid" id="project-grid-container">
-                <div class="loading-spinner">Loading projects...</div>
+                <!-- Project 1: Sustainability PowerBI -->
+                <div class="card project-card" data-track="analytics" data-category="analytics">
+                    <div class="project-img-box">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?fit=crop&w=800&h=500&q=80" alt="Sustainability PowerBI Dashboard" class="project-img">
+                    </div>
+                    <div class="project-details-box">
+                        <div class="project-title-row">
+                            <h4 class="project-card-title">Sustainability Power BI Dashboard</h4>
+                        </div>
+                        <p class="project-desc">
+                            Interactive corporate ESG and sustainability analytics dashboard evaluating carbon emission trends, energy efficiency metrics, and environmental compliance KPIs.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Power BI</span>
+                            <span class="tag">DAX</span>
+                            <span class="tag">ESG Metrics</span>
+                            <span class="tag">Data Modeling</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/ritiksharma2005/sustainability_powerBI" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                <i data-lucide="github"></i> View GitHub Repo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Supply Chain Dashboard -->
+                <div class="card project-card" data-track="analytics" data-category="analytics">
+                    <div class="project-img-box">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?fit=crop&w=800&h=500&q=80" alt="Supply Chain Operations Dashboard" class="project-img">
+                    </div>
+                    <div class="project-details-box">
+                        <div class="project-title-row">
+                            <h4 class="project-card-title">Supply Chain Operations Dashboard</h4>
+                        </div>
+                        <p class="project-desc">
+                            End-to-end logistics analytics system tracking shipment lead times, inventory turnover rates, order fulfillment accuracy, and supplier performance metrics.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Power BI</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">Supply Chain</span>
+                            <span class="tag">KPI Analytics</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/ritiksharma2005/Supply-Chain-dashboard" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                <i data-lucide="github"></i> View GitHub Repo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Earthing Sizing Calculator (Electrical) -->
+                <div class="card project-card" data-track="electrical" data-category="electrical">
+                    <div class="project-img-box">
+                        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?fit=crop&w=800&h=500&q=80" alt="Substation Earthing Grid Sizing Calculator" class="project-img">
+                    </div>
+                    <div class="project-details-box">
+                        <div class="project-title-row">
+                            <h4 class="project-card-title">Substation Ground Grid Calculator</h4>
+                        </div>
+                        <p class="project-desc">
+                            Engineering calculator tool implementing IEEE 80-2013 formulas for substation grounding grid design, step/touch voltage safety limits, and conductor sizing.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">IEEE 80-2013</span>
+                            <span class="tag">MATLAB</span>
+                            <span class="tag">Power Systems</span>
+                            <span class="tag">Safety Design</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#contact" class="btn btn-secondary btn-sm">
+                                <i data-lucide="info"></i> Project Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Water Level Indicator (Electrical) -->
+                <div class="card project-card" data-track="electrical" data-category="electrical">
+                    <div class="project-img-box">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?fit=crop&w=800&h=500&q=80" alt="Smart Water Level Indicator" class="project-img">
+                    </div>
+                    <div class="project-details-box">
+                        <div class="project-title-row">
+                            <h4 class="project-card-title">Smart Water Level Controller</h4>
+                        </div>
+                        <p class="project-desc">
+                            Hardware electronics project built with BC547 NPN transistors, probe arrays, LED indicators, and automated buzzer alarms for reservoir monitoring.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">BC547 Circuit</span>
+                            <span class="tag">Power Electronics</span>
+                            <span class="tag">Sensors</span>
+                            <span class="tag">Automation</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#contact" class="btn btn-secondary btn-sm">
+                                <i data-lucide="info"></i> Project Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Contact Section -->
         <section class="contact-section" id="contact">
             <div class="section-header">
-                <span class="section-tagline">Let's Connect</span>
-                <h2 class="section-title">Get In Touch</h2>
+                <span class="section-tagline">Get In Touch</span>
+                <h2 class="section-title">Contact Me</h2>
                 <div class="section-line"></div>
             </div>
 
             <div class="contact-grid">
-                <!-- Contact info cards -->
                 <div class="contact-info">
-                    <div class="card glass-card info-card">
+                    <div class="card info-card">
                         <div class="info-icon-box">
                             <i data-lucide="mail"></i>
                         </div>
                         <div class="info-content">
-                            <h4>Email Me</h4>
-                            <p><a href="mailto:ritik.sharma@example.com">ritik.sharma@example.com</a></p>
+                            <h4>Direct Email</h4>
+                            <p><a href="mailto:ritiksharmaddhs2005@gmail.com">ritiksharmaddhs2005@gmail.com</a></p>
                         </div>
                     </div>
 
-                    <div class="card glass-card info-card">
+                    <div class="card info-card">
                         <div class="info-icon-box">
-                            <i data-lucide="map-pin"></i>
+                            <i data-lucide="graduation-cap"></i>
                         </div>
                         <div class="info-content">
-                            <h4>Location</h4>
-                            <p>New Delhi, India</p>
+                            <h4>Academic Institution</h4>
+                            <p>SVNIT / NIT Surat, Gujarat, India</p>
                         </div>
                     </div>
 
-                    <div class="card glass-card info-card">
+                    <div class="card info-card">
                         <div class="info-icon-box">
-                            <i data-lucide="phone"></i>
+                            <i data-lucide="github"></i>
                         </div>
                         <div class="info-content">
-                            <h4>Call Me</h4>
-                            <p>+91 98765 43210</p>
+                            <h4>GitHub Repositories</h4>
+                            <p><a href="https://github.com/ritiksharma2005" target="_blank" rel="noopener noreferrer">github.com/ritiksharma2005</a></p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Contact Form Card -->
-                <div class="card glass-card contact-form-card">
+                <div class="card contact-form-card">
                     <h3 class="card-title">Send a Message</h3>
                     <form id="contact-form" class="contact-form">
                         <div class="form-group">
-                            <input type="text" id="form-name" required placeholder=" ">
-                            <label for="form-name">Full Name</label>
+                            <label for="form-name">Your Name</label>
+                            <input type="text" id="form-name" required placeholder="Enter your full name">
                         </div>
                         <div class="form-group">
-                            <input type="email" id="form-email" required placeholder=" ">
-                            <label for="form-email">Email Address</label>
+                            <label for="form-email">Your Email</label>
+                            <input type="email" id="form-email" required placeholder="Enter your email address">
                         </div>
                         <div class="form-group">
-                            <input type="text" id="form-subject" required placeholder=" ">
                             <label for="form-subject">Subject</label>
+                            <input type="text" id="form-subject" required placeholder="e.g. Hiring Inquiry / Technical Discussion">
                         </div>
                         <div class="form-group">
-                            <textarea id="form-message" required rows="5" placeholder=" "></textarea>
-                            <label for="form-message">Your Message</label>
+                            <label for="form-message">Message</label>
+                            <textarea id="form-message" required rows="4" placeholder="Write your message here..."></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary" id="btn-submit">
                             <span>Send Message</span>
@@ -341,25 +554,12 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2026 Ritik Sharma. All rights reserved.</p>
+            <p>&copy; 2026 Ritik Sharma. Electrical Engineer & Data Analyst (NIT Surat).</p>
             <div class="footer-links">
-                <a href="#home">Back to Top</a>
+                <a href="#home">Back to Top ↑</a>
             </div>
         </div>
     </footer>
-
-    <!-- Project Details Modal -->
-    <div class="modal" id="project-modal" aria-hidden="true" role="dialog">
-        <div class="modal-overlay" id="modal-overlay"></div>
-        <div class="modal-wrapper">
-            <button class="modal-close" id="modal-close" aria-label="Close details popup">
-                <i data-lucide="x"></i>
-            </button>
-            <div class="modal-content glass-card" id="modal-body">
-                <!-- Populated dynamically -->
-            </div>
-        </div>
-    </div>
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
