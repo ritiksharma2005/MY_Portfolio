@@ -1,23 +1,29 @@
 /**
- * RITIK SHARMA PORTFOLIO - DUAL TRACK ENGINE
- * Data Analytics & Electrical Engineering
+ * RITIK SHARMA DUAL-TRACK PORTFOLIO ENGINE
+ * Data Analytics & Electrical Engineering (NIT Surat)
  */
 
 const TRACK_CONFIG = {
     all: {
-        typingTitles: ["Data Analyst & Electrical Engineer", "Power BI & SQL Specialist", "Power Systems & SCADA Engineer"],
-        heroDesc: "Engineering graduate from NIT Surat bridging data-driven analytics with core electrical engineering systems. Specialized in Power BI, SQL, Python, Power Systems & Substation Automation.",
-        bioText: "Graduating in Electrical Engineering from Sardar Vallabhbhai National Institute of Technology (NIT Surat). I hold strong analytical and engineering problem-solving capabilities, applying BI dashboards, SQL querying, and Python to business operations, as well as hands-on substation automation and power equipment diagnostics."
+        title: "Combined Dual Profile (All Domains)",
+        label: "Data Analyst & Electrical Engineer",
+        typingTitles: ["Data Analyst & Electrical Engineer", "Power BI & SQL Specialist", "Power Systems & SCADA Specialist"],
+        bioText: "Graduating in Electrical Engineering from Sardar Vallabhbhai National Institute of Technology (NIT Surat). I hold strong analytical and engineering problem-solving capabilities, applying BI dashboards, SQL querying, and Python to business operations, as well as hands-on substation automation and power equipment diagnostics.",
+        specLabel: "Data Analytics & Power Systems"
     },
     analytics: {
-        typingTitles: ["Data Analyst", "Business Intelligence Engineer", "Power BI & SQL Specialist", "Python Data Analyst"],
-        heroDesc: "Data Analyst specialized in business intelligence, SQL querying, financial/ESG metrics dashboards, and Python exploratory data analysis.",
-        bioText: "Experienced in Data Analytics through internships at Fashion 1972NE and Tata Global. Proficient in transforming raw transactional databases into executive Power BI reports, automating SQL pipelines, and conducting quantitative business analysis."
+        title: "Data Analyst Specialization",
+        label: "Data Analyst / BI Engineer",
+        typingTitles: ["Data Analyst", "Business Intelligence Specialist", "Power BI & DAX Engineer", "Python Data Analyst"],
+        bioText: "Data Analyst specialized in business intelligence, SQL querying, financial/ESG metrics dashboards, and Python exploratory data analysis. Internship experience at Fashion 1972NE and Tata Global building automated DAX metrics and ETL data pipelines.",
+        specLabel: "Power BI, SQL, Python & Business Intelligence"
     },
     electrical: {
-        typingTitles: ["Electrical Engineer", "Power Systems Engineer", "Substation Automation Specialist", "Control Systems Engineer"],
-        heroDesc: "Electrical Engineer with hands-on experience in 33/11kV substation operations, SCADA systems, transformer health testing, and IEEE 80 grounding design.",
-        bioText: "Strong background in core Electrical Engineering from NIT Surat. Hands-on experience from Tata Power Company Ltd. (Kalyan) in substation single-line diagrams, relay coordination, DGA transformer diagnostics, MATLAB/Simulink modeling, and IEEE grounding standards."
+        title: "Electrical Engineering Specialization",
+        label: "Electrical Engineer / Power Systems",
+        typingTitles: ["Electrical Engineer", "Power Systems & Automation Specialist", "Substation SCADA Engineer", "Control Systems Engineer"],
+        bioText: "Electrical Engineering graduate from NIT Surat. Hands-on experience at Tata Power Company Ltd. (Kalyan) in 33/11kV substation automation, transformer DGA diagnostics, SCADA telemetry, protective relay coordination, and IEEE 80 grounding design.",
+        specLabel: "Power Systems, Substation Automation & SCADA"
     }
 };
 
@@ -33,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         window.lucide.createIcons();
     }
 
-    // 2. Theme Toggle Setup
+    // 2. Theme Toggle
     const themeToggleBtn = document.getElementById("theme-toggle");
     const savedTheme = localStorage.getItem("portfolio_theme") || "dark-theme";
     document.body.className = savedTheme;
@@ -52,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 3. Mobile Navigation Menu Toggle
+    // 3. Mobile Navigation Menu
     const menuToggleBtn = document.getElementById("menu-toggle");
     const navMenu = document.getElementById("nav-menu");
     const navLinks = document.querySelectorAll(".nav-link");
@@ -82,12 +88,21 @@ document.addEventListener("DOMContentLoaded", () => {
         highlightActiveNavLink();
     });
 
-    // 5. Track Switcher Logic
-    const trackButtons = document.querySelectorAll(".btn-track");
+    // 5. Track Selectors (Landing Choice Cards & Banner Pills)
+    const choiceCards = document.querySelectorAll(".choice-card");
+    choiceCards.forEach(card => {
+        card.addEventListener("click", (e) => {
+            const track = card.getAttribute("data-track");
+            applyTrackView(track, true);
+        });
+    });
+
+    const trackButtons = document.querySelectorAll(".btn-track-select, .btn-track-pill");
     trackButtons.forEach(btn => {
         btn.addEventListener("click", (e) => {
+            e.stopPropagation();
             const track = btn.getAttribute("data-track");
-            applyTrackView(track);
+            applyTrackView(track, true);
         });
     });
 
@@ -102,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // 7. Contact Form Handler
+    // 7. Contact Form Simulation
     const contactForm = document.getElementById("contact-form");
     const formStatus = document.getElementById("form-status");
     if (contactForm) {
@@ -114,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             setTimeout(() => {
                 formStatus.className = "form-status success";
-                formStatus.innerText = "Thank you! Your message has been sent successfully. Ritik will reach out soon.";
+                formStatus.innerText = "Thank you! Your message has been sent successfully. Ritik will respond shortly.";
                 contactForm.reset();
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = `<span>Send Message</span> <i data-lucide="send"></i>`;
@@ -123,31 +138,46 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Initialize default track view
-    applyTrackView("all");
+    // Initialize Default View
+    applyTrackView("all", false);
 });
 
 /**
- * Applies track filter view ('all', 'analytics', 'electrical')
+ * Applies selected track view ('all', 'analytics', 'electrical')
  */
-function applyTrackView(track) {
+function applyTrackView(track, scrollToSection = false) {
     currentTrack = track || "all";
     const config = TRACK_CONFIG[currentTrack] || TRACK_CONFIG.all;
 
-    // Update Track Buttons State
-    document.querySelectorAll(".btn-track").forEach(btn => {
-        if (btn.getAttribute("data-track") === currentTrack) {
-            btn.classList.add("active");
+    // Update Choice Card Active State
+    document.querySelectorAll(".choice-card").forEach(card => {
+        if (card.getAttribute("data-track") === currentTrack) {
+            card.classList.add("active-choice");
         } else {
-            btn.classList.remove("active");
+            card.classList.remove("active-choice");
         }
     });
 
-    // Update Hero & Bio Descriptions
-    const heroDesc = document.getElementById("hero-desc-text");
+    // Update Banner Pills
+    document.querySelectorAll(".btn-track-pill").forEach(pill => {
+        if (pill.getAttribute("data-track") === currentTrack) {
+            pill.classList.add("active");
+        } else {
+            pill.classList.remove("active");
+        }
+    });
+
+    // Update Status Banner Text
+    const bannerText = document.getElementById("banner-text");
+    if (bannerText) {
+        bannerText.innerHTML = `Active View: <strong>${config.title}</strong>`;
+    }
+
+    // Update Bio Text & Spec Label
     const bioText = document.getElementById("bio-dynamic-text");
-    if (heroDesc) heroDesc.innerText = config.heroDesc;
+    const bioSpecLabel = document.getElementById("bio-spec-label");
     if (bioText) bioText.innerText = config.bioText;
+    if (bioSpecLabel) bioSpecLabel.innerText = config.specLabel;
 
     // Filter Timeline Experience Items
     const timelineItems = document.querySelectorAll(".timeline-item");
@@ -171,7 +201,7 @@ function applyTrackView(track) {
         }
     });
 
-    // Filter Projects
+    // Filter Project Cards
     const projectCards = document.querySelectorAll(".project-card");
     projectCards.forEach(card => {
         const cardTrack = card.getAttribute("data-track");
@@ -184,10 +214,18 @@ function applyTrackView(track) {
 
     // Reset Typing Animation
     resetTypingAnimation(config.typingTitles);
+
+    // Smooth Scroll to Content
+    if (scrollToSection) {
+        const aboutSection = document.getElementById("about");
+        if (aboutSection) {
+            aboutSection.scrollIntoView({ behavior: "smooth" });
+        }
+    }
 }
 
 /**
- * Filters projects based on filter buttons ('all', 'analytics', 'electrical')
+ * Filter projects by category button
  */
 function filterProjects(category) {
     const projectCards = document.querySelectorAll(".project-card");
@@ -207,7 +245,7 @@ function filterProjects(category) {
 }
 
 /**
- * Handles typing animation in hero section
+ * Typing animation for hero tagline
  */
 function resetTypingAnimation(titles) {
     if (typingTimeout) clearTimeout(typingTimeout);
@@ -246,7 +284,7 @@ function typeTitle(titles) {
 }
 
 /**
- * Highlights active navbar link on scroll
+ * Highlight active navigation link on scroll
  */
 function highlightActiveNavLink() {
     const sections = document.querySelectorAll("section[id]");
@@ -254,7 +292,7 @@ function highlightActiveNavLink() {
 
     sections.forEach(current => {
         const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 100;
+        const sectionTop = current.offsetTop - 120;
         const sectionId = current.getAttribute("id");
         const navLink = document.querySelector(`.nav-link[href*="${sectionId}"]`);
 
