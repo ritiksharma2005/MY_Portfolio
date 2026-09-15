@@ -116,24 +116,54 @@ document.addEventListener("DOMContentLoaded", () => {
         highlightActiveNavLink();
     });
 
-    // 7. Contact Form Handler
+    // 7. Contact Form Handler (Web3Forms API Integration)
     const contactForm = document.getElementById("contact-form");
     const formStatus = document.getElementById("form-status");
     if (contactForm) {
-        contactForm.addEventListener("submit", (e) => {
+        contactForm.addEventListener("submit", async (e) => {
             e.preventDefault();
             const submitBtn = document.getElementById("btn-submit");
+            const originalBtnHtml = submitBtn.innerHTML;
+
             submitBtn.disabled = true;
             submitBtn.innerHTML = `<span>Sending...</span>`;
+            if (formStatus) {
+                formStatus.className = "form-status";
+                formStatus.innerText = "";
+            }
 
-            setTimeout(() => {
-                formStatus.className = "form-status success";
-                formStatus.innerText = "Thank you! Your message has been sent successfully. Ritik will reach out soon.";
-                contactForm.reset();
+            const formData = new FormData(contactForm);
+            formData.append("access_key", "de851278-1e55-4f8c-be2b-cb0ef5bcbc7a");
+
+            try {
+                const response = await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    body: formData
+                });
+                const result = await response.json();
+
+                if (result.success) {
+                    if (formStatus) {
+                        formStatus.className = "form-status success";
+                        formStatus.innerText = "Thank you! Your message has been sent directly to Ritik's email.";
+                    }
+                    contactForm.reset();
+                } else {
+                    if (formStatus) {
+                        formStatus.className = "form-status error";
+                        formStatus.innerText = result.message || "Something went wrong. Please try again later.";
+                    }
+                }
+            } catch (error) {
+                if (formStatus) {
+                    formStatus.className = "form-status error";
+                    formStatus.innerText = "Unable to send message right now. Please check your network connection.";
+                }
+            } finally {
                 submitBtn.disabled = false;
-                submitBtn.innerHTML = `<span>Send Message</span> <i data-lucide="send"></i>`;
+                submitBtn.innerHTML = originalBtnHtml;
                 if (window.lucide) window.lucide.createIcons();
-            }, 1200);
+            }
         });
     }
 });

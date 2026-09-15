@@ -1145,6 +1145,7 @@ section {
 .form-group input:focus, .form-group textarea:focus { border-color: var(--primary-color); box-shadow: 0 0 0 3px var(--primary-light); }
 .form-status { margin-top: 0.75rem; font-size: 0.875rem; font-weight: 500; display: none; }
 .form-status.success { display: block; color: #10b981; }
+.form-status.error { display: block; color: #ef4444; }
 
 /* Footer */
 .footer { border-top: 1px solid var(--card-border); padding: 1.75rem 1.5rem; background: var(--bg-secondary); }
