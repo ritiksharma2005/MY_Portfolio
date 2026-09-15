@@ -133,12 +133,20 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             const formData = new FormData(contactForm);
-            formData.append("access_key", "de851278-1e55-4f8c-be2b-cb0ef5bcbc7a");
+            const object = Object.fromEntries(formData);
+            if (!object.access_key) {
+                object.access_key = "de851278-1e55-4f8c-be2b-cb0ef5bcbc7a";
+            }
+            const json = JSON.stringify(object);
 
             try {
                 const response = await fetch("https://api.web3forms.com/submit", {
                     method: "POST",
-                    body: formData
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Accept": "application/json"
+                    },
+                    body: json
                 });
                 const result = await response.json();
 
