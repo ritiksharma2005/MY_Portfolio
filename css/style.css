@@ -762,8 +762,8 @@ button, input, textarea {
 
 .choice-grid-square {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.75rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
 }
 
 .square-card {
@@ -788,6 +788,9 @@ button, input, textarea {
 .square-electrical { border-color: rgba(245, 158, 11, 0.3); }
 .square-electrical:hover { border-color: var(--accent-electrical); box-shadow: 0 12px 28px rgba(245, 158, 11, 0.2); }
 
+.square-dev { border-color: rgba(168, 85, 247, 0.3); }
+.square-dev:hover { border-color: #a855f7; box-shadow: 0 12px 28px rgba(168, 85, 247, 0.2); }
+
 .square-header {
     display: flex;
     justify-content: space-between;
@@ -805,6 +808,7 @@ button, input, textarea {
 
 .analytics-glow-box { background: var(--accent-analytics-light); color: var(--accent-analytics); }
 .electrical-glow-box { background: var(--accent-electrical-light); color: var(--accent-electrical); }
+.dev-glow-box { background: rgba(168, 85, 247, 0.15); color: #a855f7; }
 .square-icon-box svg { width: 26px; height: 26px; }
 
 .animated-icon { animation: pulseIcon 3s infinite ease-in-out; }
@@ -816,11 +820,17 @@ button, input, textarea {
 .square-title { font-size: 1.45rem; font-weight: 700; }
 .square-sub { font-size: 0.875rem; color: var(--text-secondary); font-weight: 500; }
 
+.text-dev { color: #a855f7; }
+.btn-dev { background: #a855f7; border-color: #a855f7; color: #ffffff; }
+.btn-dev:hover { background: #9333ea; border-color: #9333ea; }
+.badge-dev { background: rgba(168, 85, 247, 0.15); color: #a855f7; border: 1px solid rgba(168, 85, 247, 0.3); }
+
 .minimal-check-list { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.25rem; margin-bottom: 0.5rem; }
 .minimal-check-list li { font-size: 0.9rem; font-weight: 600; color: var(--text-primary); display: flex; align-items: center; gap: 0.5rem; }
 
 .check-icon-analytics { color: var(--accent-analytics); width: 18px; height: 18px; }
 .check-icon-electrical { color: var(--accent-electrical); width: 18px; height: 18px; }
+.check-icon-dev { color: #a855f7; width: 18px; height: 18px; }
 
 .square-action { margin-top: auto; }
 .square-action .btn { width: 100%; font-size: 0.9rem; }
