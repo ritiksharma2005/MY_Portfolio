@@ -219,27 +219,49 @@
             </div>
 
             <div class="project-grid">
-                <!-- Project 1: AI Newsroom & Instagram Automation -->
-                <div class="card project-card tilt-3d-card">
+                <!-- Project 1: AI-Powered News Automation -->
+                <div class="card project-card tilt-3d-card" style="grid-column: span 2;">
                     <div class="project-details-box">
-                        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem;">
-                            <h3 class="project-card-title">AI-Powered Automated Newsroom & Instagram Automation</h3>
-                            <span class="badge badge-dev">AI & Automation</span>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; flex-wrap: wrap;">
+                            <h3 class="project-card-title">AI-Powered News Automation</h3>
+                            <span class="badge badge-dev">AI & Workflow Automation</span>
                         </div>
                         <p class="project-desc">
-                            Built an end-to-end AI automation platform that scrapes news from APIs and Instagram sources, analyzes and ranks stories using LLMs (Gemini/Groq), eliminates duplicate feeds, and generates branded Instagram posters, captions, and automated publishing workflows using GitHub Actions and Telegram.
+                            An automated end-to-end news automation platform that collects news from Instagram and external news sources, analyzes and ranks stories using GenAI LLMs, generates viral headlines, summaries, captions, and hashtags, and automatically produces branded Instagram news posters. The system significantly eliminates manual effort in news discovery, content creation, graphics design, and social media publishing.
                         </p>
-                        <div class="project-tags">
+                        
+                        <!-- Technology Tags -->
+                        <div class="project-tags" style="margin-top: 0.5rem;">
                             <span class="tag">Python</span>
-                            <span class="tag">Gemini API</span>
+                            <span class="tag">Google Gemini API</span>
+                            <span class="tag">Groq</span>
                             <span class="tag">Apify</span>
-                            <span class="tag">Playwright</span>
-                            <span class="tag">Pillow</span>
+                            <span class="tag">NewsData.io</span>
+                            <span class="tag">GNews</span>
+                            <span class="tag">Guardian API</span>
+                            <span class="tag">Pillow (PIL)</span>
+                            <span class="tag">Instagram Graph API</span>
+                            <span class="tag">Telegram Bot API</span>
+                            <span class="tag">SQLite</span>
                             <span class="tag">GitHub Actions</span>
+                            <span class="tag">REST APIs</span>
                         </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/ritiksharma2005/news_post" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.4rem 0.8rem;">
-                                <i data-lucide="github"></i> GitHub Repository
+
+                        <!-- Key Features Highlights -->
+                        <div style="margin-top: 0.75rem; border-top: 1px solid var(--card-border); padding-top: 0.75rem;">
+                            <h4 style="font-size: 0.95rem; font-weight: 700; color: #a855f7; margin-bottom: 0.4rem;">✨ Key Features & Technical Architecture:</h4>
+                            <ul class="timeline-bullet-list" style="font-size: 0.85rem; color: var(--text-secondary); padding-left: 1.25rem;">
+                                <li><strong>Multi-Source News Ingestion:</strong> Collects news feeds from Instagram (via Apify) and external APIs including NewsData.io, GNews, Guardian API, and RSS feeds.</li>
+                                <li><strong>GenAI Story Processing:</strong> Integrates <strong>Google Gemini API & Groq LLMs</strong> to analyze, summarize, categorize, and rewrite news, generating catchy headlines, captions, and hashtags.</li>
+                                <li><strong>Dynamic Poster Generation:</strong> Creates publication-ready branded Instagram news posters programmatically using <strong>Python and Pillow (PIL)</strong>.</li>
+                                <li><strong>Human-in-the-Loop Review & Publishing:</strong> Uses <strong>Telegram Bot API</strong> for instant content preview notifications and <strong>Instagram Graph API</strong> for publishing workflows.</li>
+                                <li><strong>Scheduled Automation:</strong> Orchestrates automated cron workflows using <strong>GitHub Actions</strong> and <strong>SQLite</strong> database storage for seamless automated operation.</li>
+                            </ul>
+                        </div>
+
+                        <div class="project-actions" style="margin-top: 1rem; border-top: 1px solid var(--card-border); padding-top: 0.85rem;">
+                            <a href="https://github.com/ritiksharma2005/news_post" target="_blank" rel="noopener noreferrer" class="btn btn-dev" style="font-size: 0.875rem; padding: 0.45rem 1rem; display: inline-flex; align-items: center; gap: 0.45rem;">
+                                <i data-lucide="github"></i> View on GitHub
                             </a>
                         </div>
                     </div>
