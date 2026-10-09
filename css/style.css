@@ -298,11 +298,12 @@ body {
     box-shadow: 0 0 30px rgba(0, 180, 216, 0.5);
 }
 
-/* 3D Tilt Card Support */
+/* 3D Tilt Card Support (Subtle Professional Motion) */
 .tilt-3d-card {
     transform-style: preserve-3d;
-    perspective: 1000px;
+    perspective: 1500px;
     will-change: transform;
+    transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* Animated Ambient Glows */

@@ -260,7 +260,7 @@ function initSplashCanvas() {
 }
 
 /**
- * 3D Tilt Hover Effect for Square Cards
+ * 3D Tilt Hover Effect for Cards (Subtle & Professional Motion)
  */
 function init3DTilt() {
     const tiltCards = document.querySelectorAll(".tilt-3d-card");
@@ -274,14 +274,15 @@ function init3DTilt() {
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
 
-            const rotateX = ((y - centerY) / centerY) * -10;
-            const rotateY = ((x - centerX) / centerX) * 10;
+            // Softened max angle (2.5deg) for ultra-clean readability
+            const rotateX = ((y - centerY) / centerY) * -2.5;
+            const rotateY = ((x - centerX) / centerX) * 2.5;
 
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+            card.style.transform = `perspective(1500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.008, 1.008, 1.008)`;
         });
 
         card.addEventListener("mouseleave", () => {
-            card.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
+            card.style.transform = "perspective(1500px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
         });
     });
 }
