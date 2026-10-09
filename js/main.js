@@ -67,7 +67,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // 3. 3D Tilt Effect on Cards
     init3DTilt();
 
-    // 4. Theme Toggle Handler
+    // 4. Interactive Profile Image Full-Screen Lightbox
+    initProfileImageLightbox();
+
+    // 5. Theme Toggle Handler
     const themeToggleBtn = document.getElementById("theme-toggle");
     const savedTheme = localStorage.getItem("portfolio_theme") || "dark-theme";
     document.body.className = savedTheme;
@@ -301,6 +304,61 @@ function highlightActiveNavLink() {
                 document.querySelectorAll(".nav-link").forEach(link => link.classList.remove("active"));
                 navLink.classList.add("active");
             }
+        }
+    });
+}
+
+/**
+ * Interactive Profile Photo Zoom Lightbox Modal (Circular Full Screen View)
+ */
+function initProfileImageLightbox() {
+    const profileImages = document.querySelectorAll(".profile-img");
+    if (!profileImages.length) return;
+
+    // Dynamically inject modal overlay element if not present
+    let modal = document.getElementById("profile-lightbox-modal");
+    if (!modal) {
+        modal = document.createElement("div");
+        modal.id = "profile-lightbox-modal";
+        modal.className = "profile-lightbox-modal";
+        modal.innerHTML = `
+            <div class="profile-lightbox-content">
+                <button class="profile-lightbox-close" aria-label="Close photo view">&times;</button>
+                <div class="profile-lightbox-circle">
+                    <img id="profile-lightbox-img" src="" alt="Ritik Sharma Profile Photo Enlarged">
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+    }
+
+    const modalImg = modal.querySelector("#profile-lightbox-img");
+    const closeBtn = modal.querySelector(".profile-lightbox-close");
+
+    profileImages.forEach(img => {
+        img.title = "Click to view profile picture full screen";
+        img.addEventListener("click", () => {
+            modalImg.src = img.src;
+            modal.classList.add("active");
+            document.body.style.overflow = "hidden"; // Lock scroll
+        });
+    });
+
+    const closeModal = () => {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+    };
+
+    closeBtn.addEventListener("click", closeModal);
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal.classList.contains("active")) {
+            closeModal();
         }
     });
 }
