@@ -192,18 +192,19 @@ function initSplashCanvas() {
         height = canvas.height = window.innerHeight;
     });
 
-    // Dual particle streams (cyan data & amber electrical)
+    // Triple particle streams (cyan data, amber electrical, purple dev)
     const particles = [];
-    const numParticles = 60;
+    const numParticles = 75;
 
     for (let i = 0; i < numParticles; i++) {
-        const isData = i % 2 === 0;
+        const type = i % 3;
+        const color = type === 0 ? "#00b4d8" : (type === 1 ? "#f59e0b" : "#a855f7");
         particles.push({
             x: Math.random() * width,
             y: Math.random() * height,
             z: Math.random() * 2 + 0.5,
             radius: Math.random() * 2.5 + 1,
-            color: isData ? "#00b4d8" : "#f59e0b",
+            color: color,
             vx: (Math.random() - 0.5) * 1.5,
             vy: (Math.random() - 0.5) * 1.5
         });

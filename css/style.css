@@ -168,6 +168,11 @@ body {
     animation: rotate3dRingB 8s linear infinite reverse;
 }
 
+.ring-dev {
+    border-color: #a855f7;
+    animation: rotate3dRingC 7s linear infinite;
+}
+
 @keyframes rotate3dRingA {
     0% { transform: rotateX(60deg) rotateY(20deg) rotateZ(0deg); }
     100% { transform: rotateX(60deg) rotateY(20deg) rotateZ(360deg); }
@@ -176,6 +181,11 @@ body {
 @keyframes rotate3dRingB {
     0% { transform: rotateX(-45deg) rotateY(45deg) rotateZ(0deg); }
     100% { transform: rotateX(-45deg) rotateY(45deg) rotateZ(360deg); }
+}
+
+@keyframes rotate3dRingC {
+    0% { transform: rotateX(30deg) rotateY(-60deg) rotateZ(0deg); }
+    100% { transform: rotateX(30deg) rotateY(-60deg) rotateZ(360deg); }
 }
 
 .splash-core-icon {
@@ -196,14 +206,14 @@ body {
 
 @keyframes corePulse {
     0%, 100% { transform: scale(1); filter: drop-shadow(0 0 10px var(--primary-color)); }
-    50% { transform: scale(1.2); filter: drop-shadow(0 0 25px var(--accent-analytics)); }
+    50% { transform: scale(1.2); filter: drop-shadow(0 0 25px #a855f7); }
 }
 
 .splash-title {
     font-size: 3rem;
     font-weight: 800;
     letter-spacing: 4px;
-    background: linear-gradient(135deg, var(--accent-analytics), #ffffff, var(--accent-electrical));
+    background: linear-gradient(135deg, var(--accent-analytics), #ffffff, var(--accent-electrical), #a855f7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -221,6 +231,8 @@ body {
     align-items: center;
     gap: 0.75rem;
     margin-top: 0.25rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .splash-tag {
@@ -245,6 +257,12 @@ body {
     border: 1px solid rgba(245, 158, 11, 0.3);
 }
 
+.tag-dev {
+    background: rgba(168, 85, 247, 0.15);
+    color: #a855f7;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
 .splash-spark { color: var(--text-muted); }
 
 .splash-loader-bar {
@@ -259,7 +277,7 @@ body {
 .splash-loader-progress {
     width: 0%;
     height: 100%;
-    background: linear-gradient(90deg, var(--accent-analytics), var(--accent-electrical));
+    background: linear-gradient(90deg, var(--accent-analytics), var(--accent-electrical), #a855f7);
     border-radius: 2px;
     transition: width 2.5s ease-out;
 }
