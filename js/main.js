@@ -258,8 +258,8 @@ function initProfileImageLightbox() {
 
 /**
  * Professional Portfolio Loading Screen Controller
- * Tracks genuine DOM parsing, web font readiness, critical image assets,
- * and window load state with smooth requestAnimationFrame interpolation.
+ * Enforces a deliberate, premium 5.5 to 6-second presentation while
+ * tracking real application and asset readiness.
  */
 function initLoadingScreen() {
     const loadingScreen = document.getElementById("loading-screen");
@@ -270,100 +270,83 @@ function initLoadingScreen() {
     const loadingPercentage = document.getElementById("loading-percentage");
     const loadingStatus = document.getElementById("loading-status");
 
-    let displayedProgress = 0;
-    let targetProgress = 12; // Initial seed for DOM execution
+    const MIN_DURATION = 5500; // 5.5 seconds minimum presentation
+    const startTime = performance.now();
+    let realAssetsReady = false;
     let isCompleted = false;
 
-    // Track weight contributions:
-    // Initial DOM run: 12%
-    // DOMContentLoaded: +20% (-> 32%)
-    // Fonts ready: +24% (-> 56%)
-    // Profile photo ready: +24% (-> 80%)
-    // Hero image ready: +10% (-> 90%)
-    // Window full load: +10% (-> 100%)
-    let accumulatedWeight = 12;
+    // Track real assets readiness in background
+    let assetsLoadedCount = 0;
+    const totalAssetsToCheck = 4;
 
-    function reportProgress(increment) {
-        accumulatedWeight = Math.min(100, accumulatedWeight + increment);
-        targetProgress = accumulatedWeight;
+    function checkAssetProgress() {
+        assetsLoadedCount++;
+        if (assetsLoadedCount >= totalAssetsToCheck) {
+            realAssetsReady = true;
+        }
     }
 
-    // 1. DOM Content Interactive State
+    // 1. DOM Interactive Check
     if (document.readyState === "interactive" || document.readyState === "complete") {
-        reportProgress(20);
+        checkAssetProgress();
     } else {
-        document.addEventListener("DOMContentLoaded", () => reportProgress(20), { once: true });
+        document.addEventListener("DOMContentLoaded", checkAssetProgress, { once: true });
     }
 
-    // 2. Google Web Fonts Resolution
+    // 2. Web Fonts Resolution
     if (document.fonts && document.fonts.ready) {
-        document.fonts.ready.then(() => {
-            reportProgress(24);
-        }).catch(() => {
-            reportProgress(24);
-        });
+        document.fonts.ready.then(checkAssetProgress).catch(checkAssetProgress);
     } else {
-        reportProgress(24);
+        checkAssetProgress();
     }
 
-    // 3. Profile Photograph Asset Preload
+    // 3. Profile Photograph Asset
     const profileImg = new Image();
     profileImg.src = "assets/profile.jpg";
     if (profileImg.complete) {
-        reportProgress(24);
+        checkAssetProgress();
     } else {
-        profileImg.onload = () => reportProgress(24);
-        profileImg.onerror = () => reportProgress(24);
+        profileImg.onload = checkAssetProgress;
+        profileImg.onerror = checkAssetProgress;
     }
 
-    // 4. Secondary Key Visual Asset Preload
-    const heroCover = new Image();
-    heroCover.src = "assets/phonepe_cover.jpg";
-    if (heroCover.complete) {
-        reportProgress(10);
-    } else {
-        heroCover.onload = () => reportProgress(10);
-        heroCover.onerror = () => reportProgress(10);
-    }
-
-    // 5. Full Window Resources Loaded
+    // 4. Window Full Load
     if (document.readyState === "complete") {
-        reportProgress(10);
+        checkAssetProgress();
     } else {
-        window.addEventListener("load", () => reportProgress(10), { once: true });
+        window.addEventListener("load", checkAssetProgress, { once: true });
     }
 
-    // Safety fallback: ensure loading never hangs even on slow networks
-    const safetyTimeout = setTimeout(() => {
-        reportProgress(100);
-    }, 4500);
+    // Fallback safety cap
+    setTimeout(() => {
+        realAssetsReady = true;
+    }, 7000);
 
-    // Smooth physics-based interpolation loop
-    function updateProgressFrame() {
-        if (displayedProgress < targetProgress) {
-            const delta = targetProgress - displayedProgress;
-            displayedProgress += Math.max(0.6, delta * 0.14);
-            if (displayedProgress >= targetProgress) {
-                displayedProgress = targetProgress;
-            }
+    // Smooth continuous animation frame loop calibrated to 5.5 - 6 seconds
+    function updateProgressFrame(now) {
+        const elapsed = now - startTime;
+        const timeFraction = Math.min(1, elapsed / MIN_DURATION);
 
-            const currentInt = Math.min(100, Math.round(displayedProgress));
-            if (loadingFill) loadingFill.style.width = currentInt + "%";
-            if (loadingPercentage) loadingPercentage.textContent = currentInt + "%";
-            if (loadingTrack) loadingTrack.setAttribute("aria-valuenow", currentInt);
-        }
+        // Smooth cubic ease-out progression
+        const easedFraction = 1 - Math.pow(1 - timeFraction, 2.1);
+        const currentInt = Math.min(100, Math.floor(easedFraction * 100));
 
-        if (displayedProgress >= 100 && !isCompleted) {
+        if (loadingFill) loadingFill.style.width = currentInt + "%";
+        if (loadingPercentage) loadingPercentage.textContent = currentInt + "%";
+        if (loadingTrack) loadingTrack.setAttribute("aria-valuenow", currentInt);
+
+        // Transition once both 5.5s has elapsed and real assets are ready
+        if (timeFraction >= 1 && realAssetsReady && !isCompleted) {
             isCompleted = true;
-            clearTimeout(safetyTimeout);
-            if (loadingStatus) {
-                loadingStatus.textContent = "Loading complete";
-            }
+            if (loadingFill) loadingFill.style.width = "100%";
+            if (loadingPercentage) loadingPercentage.textContent = "100%";
+            if (loadingTrack) loadingTrack.setAttribute("aria-valuenow", 100);
+            if (loadingStatus) loadingStatus.textContent = "Loading complete";
 
-            // Elegant pause to appreciate 100% completion before smooth reveal
+            // Brief pause at 100% (to reach ~5.9s / 6.0s total) before smooth reveal
             setTimeout(() => {
                 finishLoading();
-            }, 360);
+            }, 400);
         } else if (!isCompleted) {
             requestAnimationFrame(updateProgressFrame);
         }
