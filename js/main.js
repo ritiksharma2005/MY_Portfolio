@@ -24,6 +24,9 @@ setTimeout(initLucideIcons, 1000);
 document.addEventListener("DOMContentLoaded", () => {
     initLucideIcons();
 
+    // 0. 3D Intro Splash & Domain Jump Screen
+    initSplashScreen();
+
     // 1. Theme Toggle & theme-color sync
     const themeToggleBtn = document.getElementById("theme-toggle");
     const themeColorMeta = document.querySelector('meta[name="theme-color"]');
@@ -251,4 +254,153 @@ function initProfileImageLightbox() {
             closeModal();
         }
     });
+}
+
+/**
+ * 3D Intro Splash Animation & Direct Domain Jump
+ */
+function initSplashScreen() {
+    const splashScreen = document.getElementById("splash-screen");
+    if (!splashScreen) return;
+
+    const progressBar = document.getElementById("splash-progress");
+    const timerSec = document.getElementById("splash-timer-sec");
+    const enterBtn = document.getElementById("splash-enter-btn");
+
+    initSplashCanvas();
+
+    // Start progress bar animation (fills smoothly over 4.5 seconds)
+    if (progressBar) {
+        setTimeout(() => {
+            progressBar.style.width = "100%";
+        }, 80);
+    }
+
+    // Countdown timer (4s -> 0s)
+    let secondsLeft = 4;
+    const countdownInterval = setInterval(() => {
+        secondsLeft--;
+        if (timerSec && secondsLeft >= 0) {
+            timerSec.textContent = secondsLeft;
+        }
+        if (secondsLeft <= 0) {
+            clearInterval(countdownInterval);
+        }
+    }, 1000);
+
+    // Auto dismiss after 4.5s
+    const autoDismissTimer = setTimeout(() => {
+        dismissSplash();
+    }, 4500);
+
+    function dismissSplash() {
+        clearInterval(countdownInterval);
+        clearTimeout(autoDismissTimer);
+        splashScreen.classList.add("hidden");
+    }
+
+    if (enterBtn) {
+        enterBtn.addEventListener("click", () => {
+            dismissSplash();
+        });
+    }
+
+    // Dismiss on Escape or Enter
+    window.addEventListener("keydown", (e) => {
+        if (!splashScreen.classList.contains("hidden") && (e.key === "Escape" || e.key === "Enter")) {
+            dismissSplash();
+        }
+    });
+}
+
+/**
+ * High-Performance Triple Particle Canvas for Splash Screen
+ */
+function initSplashCanvas() {
+    const canvas = document.getElementById("splash-canvas");
+    if (!canvas) return;
+
+    const ctx = canvas.getContext("2d");
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+
+    window.addEventListener("resize", () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+    });
+
+    const particles = [];
+    const numParticles = 75;
+
+    for (let i = 0; i < numParticles; i++) {
+        const type = i % 3;
+        const color = type === 0 ? "#38bdf8" : (type === 1 ? "#3b82f6" : "#60a5fa");
+        particles.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            z: Math.random() * 2 + 0.5,
+            radius: Math.random() * 2.2 + 1,
+            color: color,
+            vx: (Math.random() - 0.5) * 1.4,
+            vy: (Math.random() - 0.5) * 1.4
+        });
+    }
+
+    let mouseX = -1000;
+    let mouseY = -1000;
+    window.addEventListener("mousemove", (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    function animate() {
+        ctx.clearRect(0, 0, width, height);
+
+        for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+
+                if (dist < 130) {
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.strokeStyle = particles[i].color;
+                    ctx.globalAlpha = (1 - dist / 130) * 0.22;
+                    ctx.lineWidth = 1;
+                    ctx.stroke();
+                }
+            }
+        }
+
+        particles.forEach(p => {
+            const dx = mouseX - p.x;
+            const dy = mouseY - p.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 120) {
+                p.x -= (dx / dist) * 1.5;
+                p.y -= (dy / dist) * 1.5;
+            }
+
+            p.x += p.vx;
+            p.y += p.vy;
+
+            if (p.x < 0 || p.x > width) p.vx *= -1;
+            if (p.y < 0 || p.y > height) p.vy *= -1;
+
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.radius * p.z, 0, Math.PI * 2);
+            ctx.fillStyle = p.color;
+            ctx.globalAlpha = 0.85;
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = p.color;
+            ctx.fill();
+            ctx.shadowBlur = 0;
+        });
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
 }
