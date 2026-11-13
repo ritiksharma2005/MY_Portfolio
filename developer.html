@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ritik Sharma | Developer & Software Engineering Portfolio</title>
-    <meta name="description" content="Dedicated Software Developer Portfolio of Ritik Sharma - Python, Full Stack Web Dev, REST APIs, AI Automation, Desktop Tools, B.Tech NIT Surat.">
+    <meta name="description" content="Dedicated Software Developer Portfolio of Ritik Sharma - Python, Full Stack Web Dev, REST APIs, AI Automation, Desktop Tools, B.Tech SVNIT Surat.">
     
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Inter & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
     <!-- Style Sheets -->
     <link rel="stylesheet" href="css/style.css">
@@ -23,13 +23,16 @@
     <header class="navbar" id="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo" id="nav-logo">
-                Ritik <span class="logo-accent" style="color: #a855f7;">Sharma</span> <span class="badge badge-dev">Developer</span>
+                Ritik <span class="logo-accent">Sharma</span> <span class="badge">Developer</span>
             </a>
             
             <nav class="nav-menu" id="nav-menu">
                 <ul>
                     <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="#about" class="nav-link active">About & Academic</a></li>
+                    <li><a href="data-analyst.html" class="nav-link"><i data-lucide="bar-chart-3" class="footer-icon"></i> Data Analyst</a></li>
+                    <li><a href="electrical-engineering.html" class="nav-link"><i data-lucide="zap" class="footer-icon"></i> Electrical Engineer</a></li>
+                    <li><a href="developer.html" class="nav-link active"><i data-lucide="code" class="footer-icon"></i> Developer</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#skills" class="nav-link">Skills</a></li>
                     <li><a href="#projects" class="nav-link">Projects</a></li>
                     <li><a href="#por-section" class="nav-link">Leadership & POR</a></li>
@@ -54,55 +57,55 @@
 
     <!-- Main Content Container -->
     <main>
-        <!-- Dedicated Hero Banner Section -->
+        <!-- Hero Section -->
         <section class="hero-landing-section" id="home">
             <div class="profile-header-card card">
                 <div class="profile-avatar-box">
-                    <img src="assets/profile.jpg" alt="Ritik Sharma Real Photograph" class="profile-img">
+                    <img src="assets/profile.jpg" alt="Ritik Sharma Photograph" class="profile-img">
                 </div>
                 <div class="profile-info-box">
-                    <span class="institution-badge badge-dev">
-                        <i data-lucide="code"></i> Software Developer & Automation Specialist
+                    <span class="institution-badge">
+                        <i data-lucide="code"></i> Software Development & Automation Specialist
                     </span>
                     <h1 class="profile-name">Ritik Sharma</h1>
                     <p class="profile-tagline">
-                        B.Tech Electrical Engineering (NIT Surat) • Python, Web Development, REST APIs & AI Automation
+                        B.Tech Electrical Engineering (SVNIT Surat) • Python, Full-Stack Development, REST APIs & AI Automation
                     </p>
 
                     <!-- Contact Details Pills -->
                     <div class="contact-pills">
-                        <a href="mailto:ritiknit96@gmail.com" class="pill-link pill-email">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pill-icon icon-email"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        <a href="mailto:ritiknit96@gmail.com" class="pill-link">
+                            <i data-lucide="mail" class="pill-icon"></i>
                             ritiknit96@gmail.com
                         </a>
-                        <a href="tel:+919594396048" class="pill-link pill-phone">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pill-icon icon-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <a href="tel:+919594396048" class="pill-link">
+                            <i data-lucide="phone" class="pill-icon"></i>
                             +91 9594396048
                         </a>
-                        <a href="https://github.com/ritiksharma2005" target="_blank" rel="noopener noreferrer" class="pill-link pill-github">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pill-icon icon-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                        <a href="https://github.com/ritiksharma2005" target="_blank" rel="noopener noreferrer" class="pill-link">
+                            <i data-lucide="github" class="pill-icon"></i>
                             GitHub
                         </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="pill-link pill-linkedin">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0077b5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pill-icon icon-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="pill-link">
+                            <i data-lucide="linkedin" class="pill-icon"></i>
                             LinkedIn
                         </a>
-                        <a href="https://www.instagram.com/ritik96.in/?hl=en" target="_blank" rel="noopener noreferrer" class="pill-link pill-instagram">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e1306c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pill-icon icon-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-                            ritik96.in
+                        <a href="https://www.instagram.com/ritik96.in/?hl=en" target="_blank" rel="noopener noreferrer" class="pill-link">
+                            <i data-lucide="instagram" class="pill-icon"></i>
+                            @ritik96.in
                         </a>
-                        <span class="pill-text pill-location">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pill-icon icon-location"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            NIT Surat, India
+                        <span class="pill-text">
+                            <i data-lucide="map-pin" class="pill-icon"></i>
+                            SVNIT Surat, India
                         </span>
                     </div>
 
-                    <!-- Four Core Technical Skill Badges -->
-                    <div class="hero-skill-boxes" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.85rem;">
-                        <span class="badge badge-dev" style="font-size: 0.8rem; padding: 0.35rem 0.75rem;">PYTHON DEVELOPMENT</span>
-                        <span class="badge badge-dev" style="font-size: 0.8rem; padding: 0.35rem 0.75rem;">REST API ARCHITECTURE</span>
-                        <span class="badge badge-dev" style="font-size: 0.8rem; padding: 0.35rem 0.75rem;">AI & AUTOMATION WORKFLOWS</span>
-                        <span class="badge badge-dev" style="font-size: 0.8rem; padding: 0.35rem 0.75rem;">FULL STACK WEB DEVELOPMENT</span>
+                    <!-- Core Focus Badges -->
+                    <div class="domain-stats-row" style="margin-top: 16px;">
+                        <span class="badge">Python Development</span>
+                        <span class="badge">REST API Architecture</span>
+                        <span class="badge">AI & Workflow Automation</span>
+                        <span class="badge">Full-Stack Web Development</span>
                     </div>
                 </div>
             </div>
@@ -111,9 +114,9 @@
         <!-- About & Academic Background Section -->
         <section class="section" id="about">
             <div class="section-header">
-                <span class="section-tagline">Software Engineering & Background</span>
+                <span class="section-tagline">Software Engineering & Academic Foundation</span>
                 <h2 class="section-title">Developer Profile & Academic Background</h2>
-                <div class="section-line" style="background: #a855f7;"></div>
+                <div class="section-line"></div>
             </div>
 
             <div class="about-grid">
@@ -121,28 +124,28 @@
                 <div class="card bio-card">
                     <h3 class="card-title"><i data-lucide="user-check"></i> Developer Overview</h3>
                     <p class="bio-text">
-                        Passionate developer combining engineering principles with software architecture, API design, and automation. Experienced in building automated data processing pipelines, AI content automation workflows, desktop GUI applications, and REST APIs.
+                        Passionate developer combining engineering principles with modern software architecture, API design, and automation. Experienced in building automated data processing pipelines, AI content automation workflows, desktop GUI applications, and REST APIs.
                     </p>
                     <div class="bio-details">
                         <div class="detail-item">
                             <span class="detail-label">Current Degree</span>
-                            <span class="detail-value">B.Tech in Electrical Engineering — NIT Surat (SVNIT)</span>
+                            <span class="detail-value">B.Tech in Electrical Engineering — SVNIT Surat</span>
                         </div>
                         <div class="detail-item">
                             <span class="detail-label">12th (HSC - RKT College)</span>
-                            <span class="detail-value">80.00% • Maharashtra Board (Ulhasnagar)</span>
+                            <span class="detail-value">80.00% • Maharashtra State Board (Ulhasnagar)</span>
                         </div>
                         <div class="detail-item">
                             <span class="detail-label">10th (SSC - Devi Dayal HS)</span>
-                            <span class="detail-value">90.20% • Maharashtra Board (Kalyan, Mumbai)</span>
+                            <span class="detail-value">90.20% • Maharashtra State Board (Kalyan, Mumbai)</span>
                         </div>
                         <div class="detail-item">
                             <span class="detail-label">Entrance Ranks</span>
-                            <span class="detail-value">JEE Mains: 98.3%ile | MHT-CET: 99.0%ile</span>
+                            <span class="detail-value">JEE Mains: 98.30%ile | MHT-CET: 99.00%ile</span>
                         </div>
                         <div class="detail-item">
                             <span class="detail-label">Primary Languages</span>
-                            <span class="detail-value">Python, JavaScript, SQL, HTML5/CSS3</span>
+                            <span class="detail-value">Python, JavaScript (ES6+), SQL, HTML5 / CSS3</span>
                         </div>
                     </div>
                 </div>
@@ -155,7 +158,7 @@
                         <div class="skill-group">
                             <h4 class="skill-group-title">
                                 <span>Core Programming & Web Stack</span>
-                                <span class="badge badge-dev">Development</span>
+                                <span class="badge">Development</span>
                             </h4>
                             <div class="skill-bars">
                                 <div class="skill-bar-wrapper">
@@ -163,28 +166,28 @@
                                         <span>Python (Automation, Data Pipelines, LLM APIs)</span>
                                         <span>92%</span>
                                     </div>
-                                    <div class="skill-bar"><div class="skill-progress" style="width: 92%; background: #a855f7;"></div></div>
+                                    <div class="skill-bar"><div class="skill-progress" style="width: 92%;"></div></div>
                                 </div>
                                 <div class="skill-bar-wrapper">
                                     <div class="skill-bar-info">
                                         <span>Web Frontend (HTML5, CSS3, JavaScript ES6+, Responsive Layouts)</span>
                                         <span>88%</span>
                                     </div>
-                                    <div class="skill-bar"><div class="skill-progress" style="width: 88%; background: #a855f7;"></div></div>
+                                    <div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div>
                                 </div>
                                 <div class="skill-bar-wrapper">
                                     <div class="skill-bar-info">
                                         <span>REST APIs & Backend Integration (FastAPI, Webhooks)</span>
                                         <span>85%</span>
                                     </div>
-                                    <div class="skill-bar"><div class="skill-progress" style="width: 85%; background: #a855f7;"></div></div>
+                                    <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
                                 </div>
                                 <div class="skill-bar-wrapper">
                                     <div class="skill-bar-info">
                                         <span>Web Scraping & Automation (Apify, Playwright, Pillow, GitHub Actions)</span>
                                         <span>90%</span>
                                     </div>
-                                    <div class="skill-bar"><div class="skill-progress" style="width: 90%; background: #a855f7;"></div></div>
+                                    <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
                                 </div>
                             </div>
                         </div>
@@ -201,6 +204,7 @@
                         <span class="badge">Playwright</span>
                         <span class="badge">Apify</span>
                         <span class="badge">Gemini AI API</span>
+                        <span class="badge">Groq</span>
                         <span class="badge">GitHub Actions</span>
                         <span class="badge">CustomTkinter</span>
                         <span class="badge">ReportLab</span>
@@ -213,25 +217,25 @@
         <!-- Projects Section -->
         <section class="section" id="projects">
             <div class="section-header">
-                <span class="section-tagline">Software & Automation Portfolio</span>
+                <span class="section-tagline">Software & Automation Engineering</span>
                 <h2 class="section-title">Developer Projects</h2>
-                <div class="section-line" style="background: #a855f7;"></div>
+                <div class="section-line"></div>
             </div>
 
             <div class="project-grid">
                 <!-- Project 1: AI-Powered News Automation -->
-                <div class="card project-card tilt-3d-card" style="display: flex; flex-direction: column;">
-                    <div class="project-details-box" style="display: flex; flex-direction: column; height: 100%;">
-                        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; flex-wrap: wrap;">
+                <div class="card project-card">
+                    <div class="project-details-box">
+                        <div class="project-title-row">
                             <h3 class="project-card-title">AI-Powered News Automation</h3>
-                            <span class="badge badge-dev">AI & Workflow Automation</span>
+                            <span class="badge">AI & Workflow Automation</span>
                         </div>
                         <p class="project-desc">
                             An automated end-to-end news automation platform that collects news from Instagram and external news sources, analyzes and ranks stories using GenAI LLMs, generates viral headlines, summaries, captions, and hashtags, and automatically produces branded Instagram news posters. The system significantly eliminates manual effort in news discovery, content creation, graphics design, and social media publishing.
                         </p>
                         
                         <!-- Technology Tags -->
-                        <div class="project-tags" style="margin-top: 0.5rem;">
+                        <div class="project-tags">
                             <span class="tag">Python</span>
                             <span class="tag">Google Gemini API</span>
                             <span class="tag">Groq</span>
@@ -248,38 +252,38 @@
                         </div>
 
                         <!-- Key Features Highlights -->
-                        <div style="margin-top: 0.75rem; border-top: 1px solid var(--card-border); padding-top: 0.75rem; flex-grow: 1;">
-                            <h4 style="font-size: 0.95rem; font-weight: 700; color: #a855f7; margin-bottom: 0.4rem;">✨ Key Features & Technical Architecture:</h4>
-                            <ul class="timeline-bullet-list" style="font-size: 0.85rem; color: var(--text-secondary); padding-left: 1.25rem;">
+                        <div style="margin-top: 16px; border-top: 1px solid var(--border-hairline); padding-top: 16px; flex-grow: 1;">
+                            <h4 style="font-size: 0.875rem; font-weight: 600; color: var(--text-primary); margin-bottom: 8px;">Key Features & Technical Architecture</h4>
+                            <ul class="timeline-bullet-list">
                                 <li><strong>Multi-Source News Ingestion:</strong> Ingests news feeds from Instagram (via Apify) and external APIs including NewsData.io, GNews, Guardian API, and RSS feeds.</li>
-                                <li><strong>GenAI Story Processing:</strong> Integrates <strong>Google Gemini API & Groq LLMs</strong> to analyze, summarize, categorize, and rewrite news, generating catchy headlines, captions, and hashtags.</li>
-                                <li><strong>Dynamic Poster Generation:</strong> Creates publication-ready branded Instagram news posters programmatically using <strong>Python and Pillow (PIL)</strong>.</li>
-                                <li><strong>Human-in-the-Loop Review & Publishing:</strong> Uses <strong>Telegram Bot API</strong> for instant content preview notifications and <strong>Instagram Graph API</strong> for publishing workflows.</li>
-                                <li><strong>Scheduled Automation:</strong> Orchestrates automated cron workflows using <strong>GitHub Actions</strong> and <strong>SQLite</strong> database storage for seamless automated operation.</li>
+                                <li><strong>GenAI Story Processing:</strong> Integrates Google Gemini API & Groq LLMs to analyze, summarize, categorize, and rewrite news, generating catchy headlines, captions, and hashtags.</li>
+                                <li><strong>Dynamic Poster Generation:</strong> Creates publication-ready branded Instagram news posters programmatically using Python and Pillow (PIL).</li>
+                                <li><strong>Human-in-the-Loop Review & Publishing:</strong> Uses Telegram Bot API for instant content preview notifications and Instagram Graph API for publishing workflows.</li>
+                                <li><strong>Scheduled Automation:</strong> Orchestrates automated cron workflows using GitHub Actions and SQLite database storage for seamless automated operation.</li>
                             </ul>
                         </div>
 
-                        <div class="project-actions" style="margin-top: auto; border-top: 1px solid var(--card-border); padding-top: 0.85rem;">
-                            <a href="https://github.com/ritiksharma2005/news_post" target="_blank" rel="noopener noreferrer" class="btn btn-dev" style="font-size: 0.85rem; padding: 0.45rem 0.9rem; display: inline-flex; align-items: center; gap: 0.45rem;">
-                                <i data-lucide="github"></i> View GitHub Repository
+                        <div class="project-actions" style="margin-top: 16px; border-top: 1px solid var(--border-hairline); padding-top: 16px;">
+                            <a href="https://github.com/ritiksharma2005/news_post" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                <i data-lucide="github"></i> View on GitHub
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 2: SETU Energy Supply Chain Platform -->
-                <div class="card project-card tilt-3d-card" style="display: flex; flex-direction: column;">
-                    <div class="project-details-box" style="display: flex; flex-direction: column; height: 100%;">
-                        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; flex-wrap: wrap;">
+                <div class="card project-card">
+                    <div class="project-details-box">
+                        <div class="project-title-row">
                             <h3 class="project-card-title">SETU — Energy Supply Chain Analytics & Risk Intelligence Platform</h3>
-                            <span class="badge badge-dev">Full Stack & API</span>
+                            <span class="badge">Full-Stack & API</span>
                         </div>
                         <p class="project-desc">
                             An end-to-end data processing platform monitoring India's crude oil supply-chain risks. Built Python data ingestion pipelines for RSS feeds and official market data, exponential time-decay risk scoring algorithms, FastAPI REST APIs, and an interactive React dashboard with Leaflet world map and Recharts visualizations.
                         </p>
 
                         <!-- Technology Tags -->
-                        <div class="project-tags" style="margin-top: 0.5rem;">
+                        <div class="project-tags">
                             <span class="tag">Python</span>
                             <span class="tag">FastAPI</span>
                             <span class="tag">PostgreSQL</span>
@@ -292,20 +296,20 @@
                         </div>
 
                         <!-- Key Features Highlights -->
-                        <div style="margin-top: 0.75rem; border-top: 1px solid var(--card-border); padding-top: 0.75rem; flex-grow: 1;">
-                            <h4 style="font-size: 0.95rem; font-weight: 700; color: #a855f7; margin-bottom: 0.4rem;">✨ Key Features & Technical Architecture:</h4>
-                            <ul class="timeline-bullet-list" style="font-size: 0.85rem; color: var(--text-secondary); padding-left: 1.25rem;">
+                        <div style="margin-top: 16px; border-top: 1px solid var(--border-hairline); padding-top: 16px; flex-grow: 1;">
+                            <h4 style="font-size: 0.875rem; font-weight: 600; color: var(--text-primary); margin-bottom: 8px;">Key Features & Technical Architecture</h4>
+                            <ul class="timeline-bullet-list">
                                 <li><strong>Real-time News & Market Ingestion:</strong> Ingests crude oil supply-chain news, RSS feeds, and official market data using automated Python scrapers.</li>
                                 <li><strong>Time-Decay Risk Scoring:</strong> Evaluates geopolitical risk scores for energy shipping routes using customized exponential time-decay models.</li>
-                                <li><strong>Full-Stack REST Architecture:</strong> Powered by <strong>FastAPI & PostgreSQL</strong> database with robust endpoints for real-time risk analytics.</li>
-                                <li><strong>Geospatial Map Visualization:</strong> Features an interactive <strong>React + Leaflet</strong> dashboard visualizing global shipping bottlenecks, oil refineries, and risk zones.</li>
-                                <li><strong>Data Insights & Analytics:</strong> Displays interactive financial charts, risk trends, and supply metrics using <strong>Recharts</strong>.</li>
+                                <li><strong>Full-Stack REST Architecture:</strong> Powered by FastAPI & PostgreSQL database with robust endpoints for real-time risk analytics.</li>
+                                <li><strong>Geospatial Map Visualization:</strong> Features an interactive React + Leaflet dashboard visualizing global shipping bottlenecks, oil refineries, and risk zones.</li>
+                                <li><strong>Data Insights & Analytics:</strong> Displays interactive financial charts, risk trends, and supply metrics using Recharts.</li>
                             </ul>
                         </div>
 
-                        <div class="project-actions" style="margin-top: auto; border-top: 1px solid var(--card-border); padding-top: 0.85rem;">
-                            <a href="https://github.com/ritiksharma2005/SETU-Energy-Supply-Chain-Analytics-Platform-" target="_blank" rel="noopener noreferrer" class="btn btn-dev" style="font-size: 0.85rem; padding: 0.45rem 0.9rem; display: inline-flex; align-items: center; gap: 0.45rem;">
-                                <i data-lucide="github"></i> View GitHub Repository
+                        <div class="project-actions" style="margin-top: 16px; border-top: 1px solid var(--border-hairline); padding-top: 16px;">
+                            <a href="https://github.com/ritiksharma2005/SETU-Energy-Supply-Chain-Analytics-Platform-" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                <i data-lucide="github"></i> View on GitHub
                             </a>
                         </div>
                     </div>
@@ -316,15 +320,15 @@
         <!-- Positions of Responsibility (POR) Section -->
         <section class="por-section" id="por-section">
             <div class="section-header">
-                <span class="section-tagline">Leadership & Involvement</span>
+                <span class="section-tagline">Leadership & Institute Service</span>
                 <h2 class="section-title">Positions of Responsibility (POR)</h2>
-                <div class="section-line" style="background: #a855f7;"></div>
-                <p class="section-desc-center">Leadership positions, student placement operations, and council coordination at SVNIT Surat</p>
+                <div class="section-line"></div>
+                <p class="section-desc-center">Leadership roles, council coordination, and student engagement initiatives at SVNIT Surat</p>
             </div>
 
             <div class="por-grid-cards">
                 <!-- POR Card 1: ATPAC -->
-                <div class="card por-card-item tilt-3d-card">
+                <div class="card por-card-item">
                     <div class="por-header-row">
                         <div class="por-icon-box">
                             <i data-lucide="award"></i>
@@ -333,7 +337,7 @@
                     </div>
                     <h3 class="por-card-title">Advisory Committee Member</h3>
                     <h4 class="por-card-org">Alumni Training & Placement Affairs Council (ATPAC)</h4>
-                    <ul class="timeline-bullet-list" style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.6rem 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.35rem;">
+                    <ul class="timeline-bullet-list">
                         <li>Advised student placement coordinators and council teams on campus recruitment drives, interview preparation, and alumni networking.</li>
                         <li>Guided corporate outreach strategy and supported event execution for graduating student placement sessions.</li>
                         <li>Mentored junior team members on professional training programs and industry engagement activities.</li>
@@ -346,7 +350,7 @@
                 </div>
 
                 <!-- POR Card 2: CAC -->
-                <div class="card por-card-item tilt-3d-card">
+                <div class="card por-card-item">
                     <div class="por-header-row">
                         <div class="por-icon-box">
                             <i data-lucide="sparkles"></i>
@@ -355,7 +359,7 @@
                     </div>
                     <h3 class="por-card-title">Advisory Committee Member</h3>
                     <h4 class="por-card-org">Cultural Affairs Council (CAC)</h4>
-                    <ul class="timeline-bullet-list" style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.6rem 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.35rem;">
+                    <ul class="timeline-bullet-list">
                         <li>Guided student teams in planning, logistics, and executing major institute-wide cultural festivals and annual events.</li>
                         <li>Provided strategic direction on event scheduling, venue logistics, budget management, and inter-college cultural competitions.</li>
                         <li>Fostered an inclusive creative environment encouraging widespread student participation across campus cultural clubs.</li>
@@ -368,7 +372,7 @@
                 </div>
 
                 <!-- POR Card 3: RIAC -->
-                <div class="card por-card-item tilt-3d-card">
+                <div class="card por-card-item">
                     <div class="por-header-row">
                         <div class="por-icon-box">
                             <i data-lucide="lightbulb"></i>
@@ -377,7 +381,7 @@
                     </div>
                     <h3 class="por-card-title">Convener</h3>
                     <h4 class="por-card-org">Research & Innovation Affairs Council (RIAC)</h4>
-                    <ul class="timeline-bullet-list" style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.6rem 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.35rem;">
+                    <ul class="timeline-bullet-list">
                         <li>Spearheaded student research initiatives, technical innovation workshops, and project showcases across departments.</li>
                         <li>Coordinated research symposiums and facilitated student-faculty technical project collaborations.</li>
                         <li>Promoted a practical problem-solving culture by organizing technical talks, hackathons, and research forums.</li>
@@ -390,7 +394,7 @@
                 </div>
 
                 <!-- POR Card 4: NSS -->
-                <div class="card por-card-item tilt-3d-card">
+                <div class="card por-card-item">
                     <div class="por-header-row">
                         <div class="por-icon-box">
                             <i data-lucide="heart"></i>
@@ -399,7 +403,7 @@
                     </div>
                     <h3 class="por-card-title">Senior Executive</h3>
                     <h4 class="por-card-org">National Service Scheme (NSS)</h4>
-                    <ul class="timeline-bullet-list" style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.6rem 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.35rem;">
+                    <ul class="timeline-bullet-list">
                         <li>Led community outreach drives, social awareness campaigns, and environmental cleanliness initiatives with student volunteers.</li>
                         <li>Organized health awareness programs, blood donation drives, and educational support activities in local communities.</li>
                         <li>Managed team logistics, volunteer scheduling, and event coordination for social welfare initiatives.</li>
@@ -412,7 +416,7 @@
                 </div>
 
                 <!-- POR Card 5: Kirdar Theater Club -->
-                <div class="card por-card-item tilt-3d-card">
+                <div class="card por-card-item">
                     <div class="por-header-row">
                         <div class="por-icon-box">
                             <i data-lucide="clapperboard"></i>
@@ -421,7 +425,7 @@
                     </div>
                     <h3 class="por-card-title">Active Member</h3>
                     <h4 class="por-card-org">Kirdar — The Dramatics & Theater Club</h4>
-                    <ul class="timeline-bullet-list" style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.6rem 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.35rem;">
+                    <ul class="timeline-bullet-list">
                         <li>Actively performed in stage plays, street plays (Nukkad Natak), and dramatic acts for campus cultural events.</li>
                         <li>Contributed to scriptwriting, character development, voice modulation rehearsals, and creative stage management.</li>
                         <li>Utilized street theater as a powerful medium to convey social messages and engage diverse audiences.</li>
@@ -438,15 +442,15 @@
         <!-- Contact Section -->
         <section class="section" id="contact">
             <div class="section-header">
-                <span class="section-tagline">Get In Touch</span>
+                <span class="section-tagline">Communication</span>
                 <h2 class="section-title">Contact & Inquiries</h2>
-                <div class="section-line" style="background: #a855f7;"></div>
+                <div class="section-line"></div>
             </div>
 
             <div class="contact-grid">
                 <div class="contact-info">
                     <div class="card info-card">
-                        <div class="info-icon-box" style="background: rgba(168, 85, 247, 0.15); color: #a855f7;">
+                        <div class="info-icon-box">
                             <i data-lucide="mail"></i>
                         </div>
                         <div class="info-content">
@@ -455,7 +459,7 @@
                         </div>
                     </div>
                     <div class="card info-card">
-                        <div class="info-icon-box" style="background: rgba(168, 85, 247, 0.15); color: #a855f7;">
+                        <div class="info-icon-box">
                             <i data-lucide="phone"></i>
                         </div>
                         <div class="info-content">
@@ -464,12 +468,12 @@
                         </div>
                     </div>
                     <div class="card info-card">
-                        <div class="info-icon-box" style="background: rgba(168, 85, 247, 0.15); color: #a855f7;">
+                        <div class="info-icon-box">
                             <i data-lucide="map-pin"></i>
                         </div>
                         <div class="info-content">
                             <h4>Location</h4>
-                            <p>NIT Surat (SVNIT), Gujarat, India</p>
+                            <p>SVNIT Surat, Gujarat, India</p>
                         </div>
                     </div>
                 </div>
@@ -494,7 +498,7 @@
                             <label for="form-message">Message</label>
                             <textarea id="form-message" name="message" required rows="4" placeholder="Write your message here..."></textarea>
                         </div>
-                        <button type="submit" class="btn btn-dev" id="btn-submit">
+                        <button type="submit" class="btn btn-primary" id="btn-submit">
                             <span>Send Message</span>
                             <i data-lucide="send"></i>
                         </button>
@@ -508,13 +512,15 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2026 Ritik Sharma. Software Developer Portfolio (NIT Surat).</p>
+            <p>&copy; 2026 Ritik Sharma. B.Tech Electrical Engineering (SVNIT Surat).</p>
             <div class="footer-links">
                 <a href="https://www.instagram.com/ritik96.in/?hl=en" target="_blank" rel="noopener noreferrer"><i data-lucide="instagram" class="footer-icon"></i> @ritik96.in</a>
                 <span>•</span>
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin" class="footer-icon"></i> LinkedIn</a>
                 <span>•</span>
                 <a href="https://github.com/ritiksharma2005" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="footer-icon"></i> GitHub</a>
+                <span>•</span>
+                <a href="index.html"><i data-lucide="home" class="footer-icon"></i> Main Portfolio Home ↑</a>
             </div>
         </div>
     </footer>

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ritik Sharma | Portfolio Landing Page</title>
-    <meta name="description" content="Portfolio Landing Page of Ritik Sharma - B.Tech Electrical Engineering Graduate from NIT Surat (SVNIT). Explore Data Analyst and Electrical Power System Engineering portfolios.">
+    <title>Ritik Sharma | Engineering, Analytics & Software Portfolio</title>
+    <meta name="description" content="Portfolio of Ritik Sharma - B.Tech Electrical Engineering at SVNIT Surat. Data Analytics, Power Systems & Software Development.">
     
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Inter & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
     <!-- Style Sheets -->
     <link rel="stylesheet" href="css/style.css">
@@ -18,44 +18,6 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="dark-theme">
-
-    <!-- 3D INTRO SPLASH ANIMATION SCREEN -->
-    <div id="splash-screen" class="splash-screen">
-        <canvas id="splash-canvas" class="splash-canvas"></canvas>
-        <div class="splash-content">
-            <div class="splash-logo-box">
-                <div class="splash-3d-ring ring-analytics"></div>
-                <div class="splash-3d-ring ring-electrical"></div>
-                <div class="splash-3d-ring ring-dev"></div>
-                <div class="splash-core-icon">
-                    <i data-lucide="cpu" class="splash-icon-pulse"></i>
-                </div>
-            </div>
-
-            <h1 class="splash-title">RITIK SHARMA</h1>
-            <p class="splash-subtitle">B.Tech Electrical Engineering • NIT Surat</p>
-
-            <div class="splash-tags-row">
-                <span class="splash-tag tag-analytics"><i data-lucide="bar-chart-3"></i> Data Analytics</span>
-                <span class="splash-spark">•</span>
-                <span class="splash-tag tag-electrical"><i data-lucide="zap"></i> Electrical Engineer</span>
-                <span class="splash-spark">•</span>
-                <span class="splash-tag tag-dev"><i data-lucide="code"></i> Developer</span>
-            </div>
-
-            <div class="splash-loader-bar">
-                <div class="splash-loader-progress"></div>
-            </div>
-
-            <button id="splash-enter-btn" class="btn btn-splash-enter">
-                <span>Enter Portfolio</span> <i data-lucide="arrow-right"></i>
-            </button>
-        </div>
-    </div>
-
-    <!-- Ambient Visual Glow Elements -->
-    <div class="ambient-glow glow-data"></div>
-    <div class="ambient-glow glow-electrical"></div>
 
     <!-- Navigation Header -->
     <header class="navbar" id="navbar">
@@ -67,10 +29,11 @@
             <nav class="nav-menu" id="nav-menu">
                 <ul>
                     <li><a href="index.html" class="nav-link active">Home</a></li>
-                    <li><a href="data-analyst.html" class="nav-link nav-data-link"><i data-lucide="bar-chart-3"></i> Data Analyst</a></li>
-                    <li><a href="electrical-engineering.html" class="nav-link nav-ee-link"><i data-lucide="zap"></i> Electrical Engineer</a></li>
-                    <li><a href="developer.html" class="nav-link" style="color:#a855f7;"><i data-lucide="code"></i> Developer</a></li>
+                    <li><a href="data-analyst.html" class="nav-link"><i data-lucide="bar-chart-3" class="footer-icon"></i> Data Analyst</a></li>
+                    <li><a href="electrical-engineering.html" class="nav-link"><i data-lucide="zap" class="footer-icon"></i> Electrical Engineer</a></li>
+                    <li><a href="developer.html" class="nav-link"><i data-lucide="code" class="footer-icon"></i> Developer</a></li>
                     <li><a href="#education-section" class="nav-link">Education</a></li>
+                    <li><a href="#achievements-section" class="nav-link">Achievements</a></li>
                     <li><a href="#por-section" class="nav-link">Leadership & POR</a></li>
                 </ul>
             </nav>
@@ -80,10 +43,6 @@
                 <button class="btn-icon" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle Theme">
                     <i data-lucide="sun" class="sun-icon"></i>
                     <i data-lucide="moon" class="moon-icon"></i>
-                </button>
-                <!-- Replay Splash Screen -->
-                <button class="btn-icon" id="replay-splash" aria-label="Replay intro animation" title="Replay 3D Intro">
-                    <i data-lucide="sparkles"></i>
                 </button>
                 <!-- Mobile Menu Button -->
                 <button class="btn-icon mobile-menu-toggle" id="menu-toggle" aria-label="Open mobile menu">
@@ -99,9 +58,9 @@
         <!-- Hero Landing Section -->
         <section class="hero-landing-section" id="home">
             <!-- Header Profile Card -->
-            <div class="profile-header-card card tilt-3d-card">
+            <div class="profile-header-card card">
                 <div class="profile-avatar-box">
-                    <img src="assets/profile.jpg" alt="Ritik Sharma Real Photograph" class="profile-img">
+                    <img src="assets/profile.jpg" alt="Ritik Sharma Profile Photograph" class="profile-img">
                 </div>
                 <div class="profile-info-box">
                     <span class="institution-badge">
@@ -109,117 +68,117 @@
                     </span>
                     <h1 class="profile-name">Ritik Sharma</h1>
                     <p class="profile-tagline">
-                        Triple Expertise: <span class="text-analytics">Data Analytics</span> • <span class="text-electrical">Electrical Engineer</span> • <span class="text-dev">Software Developer</span>
+                        <span>Data Analytics</span> • <span>Electrical Engineering</span> • <span>Software Development</span>
                     </p>
 
                     <!-- Contact Details Bar -->
                     <div class="contact-pills">
-                        <a href="mailto:ritiknit96@gmail.com" class="pill-link pill-email">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pill-icon icon-email"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                            ritiknit96@gmail.com
+                        <a href="mailto:ritiknit96@gmail.com" class="pill-link">
+                            <i data-lucide="mail"></i>
+                            <span>ritiknit96@gmail.com</span>
                         </a>
-                        <a href="tel:+919594396048" class="pill-link pill-phone">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pill-icon icon-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                            +91 9594396048
+                        <a href="tel:+919594396048" class="pill-link">
+                            <i data-lucide="phone"></i>
+                            <span>+91 9594396048</span>
                         </a>
-                        <a href="https://github.com/ritiksharma2005" target="_blank" rel="noopener noreferrer" class="pill-link pill-github">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pill-icon icon-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-                            GitHub
+                        <a href="https://github.com/ritiksharma2005" target="_blank" rel="noopener noreferrer" class="pill-link">
+                            <i data-lucide="github"></i>
+                            <span>GitHub</span>
                         </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="pill-link pill-linkedin">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0077b5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pill-icon icon-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-                            LinkedIn
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="pill-link">
+                            <i data-lucide="linkedin"></i>
+                            <span>LinkedIn</span>
                         </a>
-                        <a href="https://www.instagram.com/ritik96.in/?hl=en" target="_blank" rel="noopener noreferrer" class="pill-link pill-instagram">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e1306c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pill-icon icon-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-                            ritik96.in
+                        <a href="https://www.instagram.com/ritik96.in/?hl=en" target="_blank" rel="noopener noreferrer" class="pill-link">
+                            <i data-lucide="instagram"></i>
+                            <span>@ritik96.in</span>
                         </a>
-                        <span class="pill-text pill-location">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pill-icon icon-location"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            NIT Surat, India
+                        <span class="pill-text">
+                            <i data-lucide="map-pin"></i>
+                            <span>NIT Surat, India</span>
                         </span>
                     </div>
                 </div>
             </div>
 
-            <!-- Compact Square Domain Choice Cards (Side-by-Side Parallel Row with 3D Tilt) -->
+            <!-- Compact Domain Modules -->
             <div class="track-choice-container">
                 <div class="choice-header">
                     <h2 class="choice-title">Select a Portfolio Domain</h2>
-                    <p class="choice-subtitle">Click a box to open the dedicated portfolio domain</p>
+                    <p class="choice-subtitle">Explore dedicated projects, internships, and technical competencies</p>
                 </div>
 
                 <div class="choice-grid-square">
                     <!-- SQUARE BOX 1: DATA ANALYST -->
-                    <a href="data-analyst.html" class="square-card square-analytics tilt-3d-card">
+                    <a href="data-analyst.html" class="square-card">
                         <div class="square-header">
-                            <div class="square-icon-box analytics-glow-box">
-                                <i data-lucide="bar-chart-3" class="animated-icon"></i>
+                            <div class="square-icon-box">
+                                <i data-lucide="bar-chart-3"></i>
                             </div>
+                            <span class="badge">Analytics</span>
                         </div>
 
-                        <h3 class="square-title text-analytics">Data Analyst</h3>
-                        <p class="square-sub">Power BI • SQL • Python</p>
+                        <h3 class="square-title">Data Analyst</h3>
+                        <p class="square-sub">Power BI • SQL • Python • EDA</p>
 
-                        <!-- Minimal Checkmark List -->
                         <ul class="minimal-check-list">
-                            <li><i data-lucide="check-circle-2" class="check-icon-analytics"></i> Internships</li>
-                            <li><i data-lucide="check-circle-2" class="check-icon-analytics"></i> Projects</li>
-                            <li><i data-lucide="check-circle-2" class="check-icon-analytics"></i> Skills</li>
+                            <li><i data-lucide="check"></i> Fashion 1972NE & Tata Internships</li>
+                            <li><i data-lucide="check"></i> GHG Emissions & Supply Chain Dashboards</li>
+                            <li><i data-lucide="check"></i> DAX Modeling, Power Query & SQL</li>
                         </ul>
 
                         <div class="square-action">
-                            <span class="btn btn-primary btn-analytics">
+                            <span class="btn btn-secondary">
                                 Open Data Analyst <i data-lucide="arrow-right"></i>
                             </span>
                         </div>
                     </a>
 
                     <!-- SQUARE BOX 2: ELECTRICAL ENGINEER -->
-                    <a href="electrical-engineering.html" class="square-card square-electrical tilt-3d-card">
+                    <a href="electrical-engineering.html" class="square-card">
                         <div class="square-header">
-                            <div class="square-icon-box electrical-glow-box">
-                                <i data-lucide="zap" class="animated-icon-spark"></i>
+                            <div class="square-icon-box">
+                                <i data-lucide="zap"></i>
                             </div>
+                            <span class="badge">Electrical</span>
                         </div>
 
-                        <h3 class="square-title text-electrical">Electrical Engineer</h3>
-                        <p class="square-sub">Power Systems • Machines • Transformers • Switchgear</p>
+                        <h3 class="square-title">Electrical Engineer</h3>
+                        <p class="square-sub">Power Systems • Machines • Switchgear</p>
 
-                        <!-- Minimal Checkmark List -->
                         <ul class="minimal-check-list">
-                            <li><i data-lucide="check-circle-2" class="check-icon-electrical"></i> Internships</li>
-                            <li><i data-lucide="check-circle-2" class="check-icon-electrical"></i> Projects</li>
-                            <li><i data-lucide="check-circle-2" class="check-icon-electrical"></i> Skills</li>
+                            <li><i data-lucide="check"></i> Substation & Power Distribution Analysis</li>
+                            <li><i data-lucide="check"></i> Transformer Sizing & Protection Schemes</li>
+                            <li><i data-lucide="check"></i> MATLAB / Simulink Simulation Models</li>
                         </ul>
 
                         <div class="square-action">
-                            <span class="btn btn-primary btn-electrical">
+                            <span class="btn btn-secondary">
                                 Open Electrical Eng. <i data-lucide="arrow-right"></i>
                             </span>
                         </div>
                     </a>
 
                     <!-- SQUARE BOX 3: DEVELOPER -->
-                    <a href="developer.html" class="square-card square-dev tilt-3d-card">
+                    <a href="developer.html" class="square-card">
                         <div class="square-header">
-                            <div class="square-icon-box dev-glow-box">
-                                <i data-lucide="code" class="animated-icon"></i>
+                            <div class="square-icon-box">
+                                <i data-lucide="code"></i>
                             </div>
+                            <span class="badge">Software</span>
                         </div>
 
-                        <h3 class="square-title text-dev">Developer</h3>
-                        <p class="square-sub">Python • Web Apps • AI Automation • REST APIs</p>
+                        <h3 class="square-title">Developer</h3>
+                        <p class="square-sub">Python • REST APIs • AI Workflows</p>
 
-                        <!-- Minimal Checkmark List -->
                         <ul class="minimal-check-list">
-                            <li><i data-lucide="check-circle-2" class="check-icon-dev"></i> Software Projects</li>
-                            <li><i data-lucide="check-circle-2" class="check-icon-dev"></i> AI & Web Automation</li>
-                            <li><i data-lucide="check-circle-2" class="check-icon-dev"></i> Academic Background</li>
+                            <li><i data-lucide="check"></i> AI-Powered News Automation Engine</li>
+                            <li><i data-lucide="check"></i> SETU Energy Risk Intelligence Platform</li>
+                            <li><i data-lucide="check"></i> FastAPI, SQLite & GitHub Actions CI/CD</li>
                         </ul>
 
                         <div class="square-action">
-                            <span class="btn btn-primary btn-dev">
+                            <span class="btn btn-secondary">
                                 Open Developer Portfolio <i data-lucide="arrow-right"></i>
                             </span>
                         </div>
@@ -231,15 +190,14 @@
         <!-- ACADEMIC BACKGROUND & EDUCATION SECTION -->
         <section class="education-section" id="education-section">
             <div class="section-header">
-                <span class="section-tagline">Academic Excellence & Qualifications</span>
+                <span class="section-tagline">Academic Qualifications</span>
                 <h2 class="section-title">Academic Background</h2>
-                <div class="section-line"></div>
-                <p class="section-desc-center">Education history, Maharashtra State Board academic performance, and competitive entrance examination ranks</p>
+                <p class="section-desc">Education history, state board examination performance, and competitive entrance examination ranks</p>
             </div>
 
             <div class="edu-grid-cards">
                 <!-- Education 1: B.Tech at SVNIT Surat -->
-                <div class="card edu-card-item tilt-3d-card">
+                <div class="card edu-card-item">
                     <div class="por-header-row">
                         <div class="por-icon-box">
                             <i data-lucide="graduation-cap"></i>
@@ -257,7 +215,7 @@
                 </div>
 
                 <!-- Education 2: 12th Senior Secondary at RKT College -->
-                <div class="card edu-card-item tilt-3d-card">
+                <div class="card edu-card-item">
                     <div class="por-header-row">
                         <div class="por-icon-box">
                             <i data-lucide="book-open"></i>
@@ -266,7 +224,7 @@
                     </div>
                     <h3 class="edu-card-title">Senior Secondary (12th Class - HSC)</h3>
                     <h4 class="edu-card-inst">Ramchand Kimatram Talreja College of Arts, Science & Commerce (RKT College)</h4>
-                    <p class="edu-card-meta">Ulhasnagar, Maharashtra 421002 • Maharashtra State Board</p>
+                    <p class="edu-card-inst" style="color: var(--text-muted);">Ulhasnagar, Maharashtra 421002 • Maharashtra State Board</p>
                     <p class="item-desc">
                         Completed Higher Secondary Certificate (HSC) in Science stream with strong fundamentals in Mathematics and Physics.
                     </p>
@@ -276,7 +234,7 @@
                 </div>
 
                 <!-- Education 3: 10th Secondary at Devi Dayal High School -->
-                <div class="card edu-card-item tilt-3d-card">
+                <div class="card edu-card-item">
                     <div class="por-header-row">
                         <div class="por-icon-box">
                             <i data-lucide="school"></i>
@@ -285,7 +243,7 @@
                     </div>
                     <h3 class="edu-card-title">Secondary School Certificate (10th Class - SSC)</h3>
                     <h4 class="edu-card-inst">Devi Dayal High School</h4>
-                    <p class="edu-card-meta">Kalyan, Mumbai • Maharashtra State Board</p>
+                    <p class="edu-card-inst" style="color: var(--text-muted);">Kalyan, Mumbai • Maharashtra State Board</p>
                     <p class="item-desc">
                         Completed Secondary School Certificate (SSC) with top academic performance across all subjects.
                     </p>
@@ -295,50 +253,49 @@
                 </div>
 
                 <!-- Education 4: National & State Competitive Entrance Exams -->
-                <div class="card edu-card-item tilt-3d-card" style="grid-column: span 3;">
+                <div class="card edu-card-item" style="grid-column: span 3;">
                     <div class="por-header-row">
-                        <div class="por-icon-box" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b;">
+                        <div class="por-icon-box">
                             <i data-lucide="award"></i>
                         </div>
-                        <span class="edu-card-badge" style="background: rgba(245, 158, 11, 0.12); color: #f59e0b;">Competitive Ranks (2023)</span>
+                        <span class="edu-card-badge">Competitive Ranks (2023)</span>
                     </div>
                     <h3 class="edu-card-title">National & State Engineering Entrance Examinations</h3>
                     <p class="item-desc">
                         Demonstrated problem-solving capabilities in national and state-level engineering entrance exams:
                     </p>
-                    <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.5rem;">
-                        <div class="edu-score-highlight" style="background: rgba(59, 130, 246, 0.12); color: #3b82f6; border-color: rgba(59, 130, 246, 0.3);">
-                            <strong>JEE Mains 2023:</strong> 98.3 Percentile (National Level)
+                    <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px;">
+                        <div class="edu-score-highlight">
+                            <strong>JEE Mains 2023:</strong> 98.30 Percentile (National Level)
                         </div>
-                        <div class="edu-score-highlight" style="background: rgba(168, 85, 247, 0.12); color: #a855f7; border-color: rgba(168, 85, 247, 0.3);">
-                            <strong>MHT-CET 2023:</strong> 99.0 Percentile (State Level)
+                        <div class="edu-score-highlight">
+                            <strong>MHT-CET 2023:</strong> 99.00 Percentile (State Level)
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- POSITIONS OF RESPONSIBILITY (POR) SECTION BELOW SQUARE CARDS -->
+        <!-- POSITIONS OF RESPONSIBILITY (POR) SECTION -->
         <section class="por-section" id="por-section">
             <div class="section-header">
-                <span class="section-tagline">Leadership & Campus Involvement</span>
+                <span class="section-tagline">Leadership & Coordination</span>
                 <h2 class="section-title">Positions of Responsibility (POR)</h2>
-                <div class="section-line"></div>
-                <p class="section-desc-center">Key leadership roles, council convener positions, and event management experience at SVNIT Surat</p>
+                <p class="section-desc">Council convener roles, placement operations, and community initiative leadership at SVNIT Surat</p>
             </div>
 
             <div class="por-grid-cards">
                 <!-- POR Card 1: ATPAC -->
-                <div class="card por-card-item tilt-3d-card">
+                <div class="card por-card-item">
                     <div class="por-header-row">
                         <div class="por-icon-box">
                             <i data-lucide="award"></i>
                         </div>
-                        <span class="por-inst">SVNIT, Surat</span>
+                        <span class="por-inst">SVNIT Surat</span>
                     </div>
                     <h3 class="por-card-title">Advisory Committee Member</h3>
                     <h4 class="por-card-org">Alumni Training & Placement Affairs Council (ATPAC)</h4>
-                    <ul class="timeline-bullet-list" style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.6rem 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.35rem;">
+                    <ul class="timeline-bullet-list">
                         <li>Advised student placement coordinators and council teams on campus recruitment drives, interview preparation, and alumni networking.</li>
                         <li>Guided corporate outreach strategy and supported event execution for graduating student placement sessions.</li>
                         <li>Mentored junior team members on professional training programs and industry engagement activities.</li>
@@ -351,16 +308,16 @@
                 </div>
 
                 <!-- POR Card 2: CAC -->
-                <div class="card por-card-item tilt-3d-card">
+                <div class="card por-card-item">
                     <div class="por-header-row">
                         <div class="por-icon-box">
                             <i data-lucide="sparkles"></i>
                         </div>
-                        <span class="por-inst">SVNIT, Surat</span>
+                        <span class="por-inst">SVNIT Surat</span>
                     </div>
                     <h3 class="por-card-title">Advisory Committee Member</h3>
                     <h4 class="por-card-org">Cultural Affairs Council (CAC)</h4>
-                    <ul class="timeline-bullet-list" style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.6rem 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.35rem;">
+                    <ul class="timeline-bullet-list">
                         <li>Guided student teams in planning, logistics, and executing major institute-wide cultural festivals and annual events.</li>
                         <li>Provided strategic direction on event scheduling, venue logistics, budget management, and inter-college cultural competitions.</li>
                         <li>Fostered an inclusive creative environment encouraging widespread student participation across campus cultural clubs.</li>
@@ -373,16 +330,16 @@
                 </div>
 
                 <!-- POR Card 3: RIAC -->
-                <div class="card por-card-item tilt-3d-card">
+                <div class="card por-card-item">
                     <div class="por-header-row">
                         <div class="por-icon-box">
                             <i data-lucide="lightbulb"></i>
                         </div>
-                        <span class="por-inst">SVNIT, Surat</span>
+                        <span class="por-inst">SVNIT Surat</span>
                     </div>
                     <h3 class="por-card-title">Convener</h3>
                     <h4 class="por-card-org">Research & Innovation Affairs Council (RIAC)</h4>
-                    <ul class="timeline-bullet-list" style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.6rem 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.35rem;">
+                    <ul class="timeline-bullet-list">
                         <li>Spearheaded student research initiatives, technical innovation workshops, and project showcases across departments.</li>
                         <li>Coordinated research symposiums and facilitated student-faculty technical project collaborations.</li>
                         <li>Promoted a practical problem-solving culture by organizing technical talks, hackathons, and research forums.</li>
@@ -395,16 +352,16 @@
                 </div>
 
                 <!-- POR Card 4: NSS -->
-                <div class="card por-card-item tilt-3d-card">
+                <div class="card por-card-item">
                     <div class="por-header-row">
                         <div class="por-icon-box">
                             <i data-lucide="heart"></i>
                         </div>
-                        <span class="por-inst">SVNIT, Surat</span>
+                        <span class="por-inst">SVNIT Surat</span>
                     </div>
                     <h3 class="por-card-title">Senior Executive</h3>
                     <h4 class="por-card-org">National Service Scheme (NSS)</h4>
-                    <ul class="timeline-bullet-list" style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.6rem 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.35rem;">
+                    <ul class="timeline-bullet-list">
                         <li>Led community outreach drives, social awareness campaigns, and environmental cleanliness initiatives with student volunteers.</li>
                         <li>Organized health awareness programs, blood donation drives, and educational support activities in local communities.</li>
                         <li>Managed team logistics, volunteer scheduling, and event coordination for social welfare initiatives.</li>
@@ -417,16 +374,16 @@
                 </div>
 
                 <!-- POR Card 5: Kirdar Theater Club -->
-                <div class="card por-card-item tilt-3d-card">
+                <div class="card por-card-item">
                     <div class="por-header-row">
                         <div class="por-icon-box">
                             <i data-lucide="clapperboard"></i>
                         </div>
-                        <span class="por-inst">SVNIT, Surat</span>
+                        <span class="por-inst">SVNIT Surat</span>
                     </div>
                     <h3 class="por-card-title">Active Member</h3>
                     <h4 class="por-card-org">Kirdar — The Dramatics & Theater Club</h4>
-                    <ul class="timeline-bullet-list" style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.6rem 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.35rem;">
+                    <ul class="timeline-bullet-list">
                         <li>Actively performed in stage plays, street plays (Nukkad Natak), and dramatic acts for campus cultural events.</li>
                         <li>Contributed to scriptwriting, character development, voice modulation rehearsals, and creative stage management.</li>
                         <li>Utilized street theater as a powerful medium to convey social messages and engage diverse audiences.</li>
@@ -440,19 +397,18 @@
             </div>
         </section>
 
-        <!-- ACHIEVEMENTS & HONORS SECTION (DISTINCT HIGH-CONTRAST SECTION) -->
+        <!-- ACHIEVEMENTS & HONORS SECTION -->
         <section class="achievements-section" id="achievements-section">
             <div class="achievements-wrapper">
                 <div class="section-header">
-                    <span class="section-tagline achievements-tagline">🏆 Recognition & Honors</span>
+                    <span class="achievements-tagline">Recognition & Honors</span>
                     <h2 class="section-title">Key Achievements</h2>
-                    <div class="section-line achievements-line"></div>
-                    <p class="section-desc-center">Competitive national honors, commercial revenue milestones, user growth, and top entrance ranks</p>
+                    <p class="section-desc">Competitive national honors, commercial revenue milestones, user growth, and top entrance ranks</p>
                 </div>
 
                 <div class="achievements-grid">
                     <!-- Achievement 1: MANTHAN 2025 -->
-                    <div class="achievement-card tilt-3d-card">
+                    <div class="achievement-card">
                         <div class="achievement-header-row">
                             <div class="achievement-icon-box">
                                 <i data-lucide="trophy"></i>
@@ -472,7 +428,7 @@
                     </div>
 
                     <!-- Achievement 2: Flyng Corporation -->
-                    <div class="achievement-card tilt-3d-card">
+                    <div class="achievement-card">
                         <div class="achievement-header-row">
                             <div class="achievement-icon-box">
                                 <i data-lucide="trending-up"></i>
@@ -492,7 +448,7 @@
                     </div>
 
                     <!-- Achievement 3: Prep Mentor -->
-                    <div class="achievement-card tilt-3d-card">
+                    <div class="achievement-card">
                         <div class="achievement-header-row">
                             <div class="achievement-icon-box">
                                 <i data-lucide="users"></i>
@@ -512,32 +468,32 @@
                     </div>
 
                     <!-- Achievement 4: JEE 2023 -->
-                    <div class="achievement-card tilt-3d-card">
+                    <div class="achievement-card">
                         <div class="achievement-header-row">
                             <div class="achievement-icon-box">
                                 <i data-lucide="award"></i>
                             </div>
-                            <span class="achievement-badge">98.3 Percentile</span>
+                            <span class="achievement-badge">98.30 Percentile</span>
                         </div>
                         <h3 class="achievement-card-title">JEE Mains 2023</h3>
-                        <h4 class="achievement-card-event">National Engineering Entrance Exam</h4>
+                        <h4 class="achievement-card-event">National Engineering Entrance Examination</h4>
                         <p class="achievement-card-text">
                             Achieved 98.3 percentile in JEE 2023. Demonstrated strong performance and problem-solving caliber in a highly competitive national-level engineering entrance examination.
                         </p>
                         <div class="achievement-tags">
                             <span class="achievement-tag">JEE 2023</span>
-                            <span class="achievement-tag">98.3 Percentile</span>
+                            <span class="achievement-tag">98.30 %ile</span>
                             <span class="achievement-tag">National Rank</span>
                         </div>
                     </div>
 
                     <!-- Achievement 5: MHT-CET 2023 -->
-                    <div class="achievement-card tilt-3d-card">
+                    <div class="achievement-card">
                         <div class="achievement-header-row">
                             <div class="achievement-icon-box">
                                 <i data-lucide="star"></i>
                             </div>
-                            <span class="achievement-badge">99 Percentile</span>
+                            <span class="achievement-badge">99.00 Percentile</span>
                         </div>
                         <h3 class="achievement-card-title">MHT-CET 2023</h3>
                         <h4 class="achievement-card-event">State Level Engineering Entrance</h4>
@@ -546,27 +502,27 @@
                         </p>
                         <div class="achievement-tags">
                             <span class="achievement-tag">MHT-CET 2023</span>
-                            <span class="achievement-tag">99 Percentile</span>
+                            <span class="achievement-tag">99.00 %ile</span>
                             <span class="achievement-tag">Top Rank</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Certifications & Courses Sub-Section -->
-                <div class="certifications-block" style="margin-top: 2.5rem; border-top: 1px dashed rgba(245, 158, 11, 0.3); padding-top: 2rem;">
-                    <div class="cert-header" style="margin-bottom: 1.25rem;">
-                        <span class="achievement-badge" style="background: rgba(6, 182, 212, 0.12); color: #06b6d4; border-color: rgba(6, 182, 212, 0.3);">📜 Academic Certification</span>
-                        <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-top: 0.5rem;">Certifications & Courses</h3>
+                <div class="certifications-block">
+                    <div class="cert-header">
+                        <span class="badge">Academic Certification</span>
+                        <h3>Certifications & Courses</h3>
                     </div>
-                    <div class="achievement-card cert-card tilt-3d-card" style="border-top-color: #06b6d4; max-width: 600px;">
+                    <div class="achievement-card cert-card">
                         <div class="achievement-header-row">
-                            <div class="achievement-icon-box" style="background: rgba(6, 182, 212, 0.15); color: #06b6d4; border-color: rgba(6, 182, 212, 0.3);">
-                                <i data-lucide="scroll"></i>
+                            <div class="achievement-icon-box">
+                                <i data-lucide="file-check"></i>
                             </div>
-                            <span class="achievement-badge" style="background: rgba(6, 182, 212, 0.12); color: #06b6d4; border-color: rgba(6, 182, 212, 0.3);">NPTEL Certified</span>
+                            <span class="achievement-badge">NPTEL Certified</span>
                         </div>
                         <h3 class="achievement-card-title">Data Analytics Course</h3>
-                        <h4 class="achievement-card-event" style="color: #a855f7;">NPTEL (Official Learning Platform)</h4>
+                        <h4 class="achievement-card-event">NPTEL (Official Learning Platform)</h4>
                         <p class="achievement-card-text">
                             Successfully completed an NPTEL Data Analytics course through the official NPTEL learning platform. Gained structured knowledge of data analytics concepts through a nationally recognized academic platform.
                         </p>
@@ -575,8 +531,8 @@
                             <span class="achievement-tag">Data Analytics</span>
                             <span class="achievement-tag">Academic Certification</span>
                         </div>
-                        <div style="margin-top: 0.75rem; border-top: 1px solid var(--card-border); padding-top: 0.75rem;">
-                            <a href="https://drive.google.com/file/d/1WcKcySJjRskFgzxfBzun6OHB9D8XvNWC/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="font-size: 0.825rem; padding: 0.4rem 0.85rem; width: fit-content; display: inline-flex; align-items: center; gap: 0.4rem;">
+                        <div style="margin-top: 8px; border-top: 1px solid var(--border-hairline); padding-top: 12px;">
+                            <a href="https://drive.google.com/file/d/1WcKcySJjRskFgzxfBzun6OHB9D8XvNWC/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
                                 <i data-lucide="external-link"></i> View Certificate
                             </a>
                         </div>
@@ -589,7 +545,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2026 Ritik Sharma. B.Tech Electrical Engineering (NIT Surat).</p>
+            <p>&copy; 2026 Ritik Sharma. B.Tech Electrical Engineering (SVNIT Surat).</p>
             <div class="footer-links">
                 <a href="https://www.instagram.com/ritik96.in/?hl=en" target="_blank" rel="noopener noreferrer"><i data-lucide="instagram" class="footer-icon"></i> @ritik96.in</a>
                 <span>•</span>

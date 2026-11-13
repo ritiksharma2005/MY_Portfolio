@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ritik Sharma | Data Analyst Portfolio</title>
-    <meta name="description" content="Dedicated Data Analyst Portfolio of Ritik Sharma - Power BI, SQL, Python, Excel, Data Modeling, Fashion 1972NE & Tata Global internships.">
+    <meta name="description" content="Dedicated Data Analyst Portfolio of Ritik Sharma - Power BI, SQL, Python, Excel, Data Modeling, Fashion 1972NE & Tata Global internships. B.Tech SVNIT Surat.">
     
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Inter & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
     <!-- Style Sheets -->
     <link rel="stylesheet" href="css/style.css">
@@ -23,13 +23,16 @@
     <header class="navbar" id="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo" id="nav-logo">
-                Ritik <span class="logo-accent">Sharma</span> <span class="badge badge-analytics">Data Analyst</span>
+                Ritik <span class="logo-accent">Sharma</span> <span class="badge">Data Analyst</span>
             </a>
             
             <nav class="nav-menu" id="nav-menu">
                 <ul>
                     <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="#about" class="nav-link active">About & Skills</a></li>
+                    <li><a href="data-analyst.html" class="nav-link active"><i data-lucide="bar-chart-3" class="footer-icon"></i> Data Analyst</a></li>
+                    <li><a href="electrical-engineering.html" class="nav-link"><i data-lucide="zap" class="footer-icon"></i> Electrical Engineer</a></li>
+                    <li><a href="developer.html" class="nav-link"><i data-lucide="code" class="footer-icon"></i> Developer</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#experience" class="nav-link">Experience</a></li>
                     <li><a href="#projects" class="nav-link">Projects</a></li>
                     <li><a href="#por-section" class="nav-link">Leadership & POR</a></li>
@@ -54,55 +57,63 @@
 
     <!-- Main Content Container -->
     <main>
-        <!-- Dedicated Hero Banner Section -->
+        <!-- Hero Section -->
         <section class="hero-landing-section" id="home">
             <div class="profile-header-card card">
                 <div class="profile-avatar-box">
-                    <img src="assets/profile.jpg" alt="Ritik Sharma Real Photograph" class="profile-img">
+                    <img src="assets/profile.jpg" alt="Ritik Sharma Photograph" class="profile-img">
                 </div>
                 <div class="profile-info-box">
-                    <span class="institution-badge badge-analytics">
-                        <i data-lucide="bar-chart-3"></i> Data Analytics & BI Specialist
+                    <span class="institution-badge">
+                        <i data-lucide="bar-chart-3"></i> Data Analytics & Business Intelligence
                     </span>
                     <h1 class="profile-name">Ritik Sharma</h1>
                     <p class="profile-tagline">
-                        B.Tech Electrical Engineering (NIT Surat) • Power BI, SQL, Python & Excel
+                        B.Tech Electrical Engineering (SVNIT Surat) • Power BI, SQL, Python & Advanced Excel
                     </p>
 
                     <!-- Contact Details Pills -->
                     <div class="contact-pills">
-                        <a href="mailto:ritiknit96@gmail.com" class="pill-link pill-email">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pill-icon icon-email"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        <a href="mailto:ritiknit96@gmail.com" class="pill-link">
+                            <i data-lucide="mail" class="pill-icon"></i>
                             ritiknit96@gmail.com
                         </a>
-                        <a href="tel:+919594396048" class="pill-link pill-phone">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pill-icon icon-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <a href="tel:+919594396048" class="pill-link">
+                            <i data-lucide="phone" class="pill-icon"></i>
                             +91 9594396048
                         </a>
-                        <a href="https://github.com/ritiksharma2005" target="_blank" rel="noopener noreferrer" class="pill-link pill-github">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pill-icon icon-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                        <a href="https://github.com/ritiksharma2005" target="_blank" rel="noopener noreferrer" class="pill-link">
+                            <i data-lucide="github" class="pill-icon"></i>
                             GitHub
                         </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="pill-link pill-linkedin">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0077b5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pill-icon icon-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="pill-link">
+                            <i data-lucide="linkedin" class="pill-icon"></i>
                             LinkedIn
                         </a>
-                        <a href="https://www.instagram.com/ritik96.in/?hl=en" target="_blank" rel="noopener noreferrer" class="pill-link pill-instagram">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e1306c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pill-icon icon-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-                            ritik96.in
+                        <a href="https://www.instagram.com/ritik96.in/?hl=en" target="_blank" rel="noopener noreferrer" class="pill-link">
+                            <i data-lucide="instagram" class="pill-icon"></i>
+                            @ritik96.in
                         </a>
-                        <span class="pill-text pill-location">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pill-icon icon-location"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            NIT Surat, India
+                        <span class="pill-text">
+                            <i data-lucide="map-pin" class="pill-icon"></i>
+                            SVNIT Surat, India
                         </span>
                     </div>
 
-                    <div class="hero-actions" style="margin-top: 0.85rem;">
-                        <a href="https://drive.google.com/file/d/1p1MXulINzy2JIHfly_M4T5H72uDyWYpr/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-analytics">
+                    <!-- Core Badges & Resume CTA -->
+                    <div class="domain-stats-row" style="margin-top: 16px;">
+                        <span class="badge">Power BI & DAX</span>
+                        <span class="badge">SQL Query Optimization</span>
+                        <span class="badge">Exploratory Data Analysis</span>
+                        <span class="badge">Business Intelligence</span>
+                    </div>
+
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px;">
+                        <a href="https://drive.google.com/file/d/1p1MXulINzy2JIHfly_M4T5H72uDyWYpr/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
                             <i data-lucide="file-text"></i> Download Data Analyst Resume (PDF)
                         </a>
-                        <a href="#projects" class="btn btn-secondary">
-                            <i data-lucide="folder-git-2"></i> View Power BI Projects
+                        <a href="#projects" class="btn btn-secondary btn-sm">
+                            <i data-lucide="folder-git-2"></i> View Analytics Projects
                         </a>
                     </div>
                 </div>
@@ -110,9 +121,9 @@
         </section>
 
         <!-- About & Skills Section -->
-        <section class="about-section" id="about">
+        <section class="section" id="about">
             <div class="section-header">
-                <span class="section-tagline">Analytics Expertise</span>
+                <span class="section-tagline">Analytics Foundation & Technical Competencies</span>
                 <h2 class="section-title">Technical Skills & Profile</h2>
                 <div class="section-line"></div>
             </div>
@@ -120,26 +131,26 @@
             <div class="about-grid">
                 <!-- Bio Card -->
                 <div class="card bio-card">
-                    <h3 class="card-title"><i data-lucide="user-check"></i> Analytical Summary</h3>
+                    <h3 class="card-title"><i data-lucide="user-check"></i> Analytical Profile</h3>
                     <p class="bio-text">
-                        Graduating in Electrical Engineering from NIT Surat with strong expertise in Data Analytics. Experienced in building automated data extraction pipelines, formulating complex DAX queries in Power BI, executing Exploratory Data Analysis (EDA) in Python, and transforming operational data into executive dashboards.
+                        Graduating in Electrical Engineering from SVNIT Surat with specialized analytical expertise. Experienced in building automated data extraction pipelines, formulating complex DAX measures in Power BI, executing exploratory data analysis (EDA) in Python, and transforming operational records into executive-level dashboards.
                     </p>
                     <div class="bio-details">
                         <div class="detail-item">
                             <span class="detail-label">Current Degree</span>
-                            <span class="detail-value">B.Tech in Electrical Engineering — NIT Surat (SVNIT)</span>
+                            <span class="detail-value">B.Tech in Electrical Engineering — SVNIT Surat</span>
                         </div>
                         <div class="detail-item">
                             <span class="detail-label">12th (HSC - RKT College)</span>
-                            <span class="detail-value">80.00% • Maharashtra Board (Ulhasnagar)</span>
+                            <span class="detail-value">80.00% • Maharashtra State Board (Ulhasnagar)</span>
                         </div>
                         <div class="detail-item">
                             <span class="detail-label">10th (SSC - Devi Dayal HS)</span>
-                            <span class="detail-value">90.20% • Maharashtra Board (Kalyan, Mumbai)</span>
+                            <span class="detail-value">90.20% • Maharashtra State Board (Kalyan, Mumbai)</span>
                         </div>
                         <div class="detail-item">
                             <span class="detail-label">Entrance Ranks</span>
-                            <span class="detail-value">JEE Mains: 98.3%ile | MHT-CET: 99.0%ile</span>
+                            <span class="detail-value">JEE Mains: 98.30%ile | MHT-CET: 99.00%ile</span>
                         </div>
                         <div class="detail-item">
                             <span class="detail-label">Primary Stack</span>
@@ -150,13 +161,13 @@
 
                 <!-- Technical & Soft Skills Card -->
                 <div class="card skills-card">
-                    <h3 class="card-title"><i data-lucide="sliders"></i> Technical & Soft Skills</h3>
+                    <h3 class="card-title"><i data-lucide="sliders"></i> Technical Stack & Tools</h3>
                     
                     <div class="skills-container">
                         <div class="skill-group">
                             <h4 class="skill-group-title">
                                 <span>Core Data Analytics Skills</span>
-                                <span class="badge badge-analytics">Analytics</span>
+                                <span class="badge">Analytics</span>
                             </h4>
                             <div class="skill-bars">
                                 <div class="skill-bar-wrapper">
@@ -164,28 +175,28 @@
                                         <span>Power BI & DAX (Data Modeling & Reports)</span>
                                         <span>92%</span>
                                     </div>
-                                    <div class="skill-bar"><div class="skill-progress analytics" style="width: 92%"></div></div>
+                                    <div class="skill-bar"><div class="skill-progress" style="width: 92%"></div></div>
                                 </div>
                                 <div class="skill-bar-wrapper">
                                     <div class="skill-bar-info">
                                         <span>SQL (MySQL, Joins, Aggregations, Optimization)</span>
                                         <span>88%</span>
                                     </div>
-                                    <div class="skill-bar"><div class="skill-progress analytics" style="width: 88%"></div></div>
+                                    <div class="skill-bar"><div class="skill-progress" style="width: 88%"></div></div>
                                 </div>
                                 <div class="skill-bar-wrapper">
                                     <div class="skill-bar-info">
                                         <span>Python (Pandas, NumPy, Matplotlib, Seaborn)</span>
                                         <span>85%</span>
                                     </div>
-                                    <div class="skill-bar"><div class="skill-progress analytics" style="width: 85%"></div></div>
+                                    <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
                                 </div>
                                 <div class="skill-bar-wrapper">
                                     <div class="skill-bar-info">
                                         <span>MS Excel (Pivot Tables, VLOOKUP, Advanced Formulas)</span>
                                         <span>82%</span>
                                     </div>
-                                    <div class="skill-bar"><div class="skill-progress analytics" style="width: 82%"></div></div>
+                                    <div class="skill-bar"><div class="skill-progress" style="width: 82%"></div></div>
                                 </div>
                             </div>
                         </div>
@@ -210,9 +221,9 @@
         </section>
 
         <!-- Experience Timeline Section -->
-        <section class="experience-section" id="experience">
+        <section class="section" id="experience">
             <div class="section-header">
-                <span class="section-tagline">Industry Experience</span>
+                <span class="section-tagline">Industry & Applied Experience</span>
                 <h2 class="section-title">Data Analyst Internships</h2>
                 <div class="section-line"></div>
             </div>
@@ -220,7 +231,7 @@
             <div class="timeline">
                 <!-- Internship 1: Fashion 1972NE -->
                 <div class="timeline-item">
-                    <div class="timeline-dot" style="background: var(--accent-analytics);"></div>
+                    <div class="timeline-dot"></div>
                     <div class="timeline-date">May 2026 – July 2026</div>
                     <div class="timeline-content card">
                         <div class="timeline-header-row">
@@ -228,7 +239,7 @@
                                 <h4 class="timeline-title">Data Analyst Intern</h4>
                                 <div class="timeline-subtitle">Fashion 1972NE • Surat</div>
                             </div>
-                            <span class="badge badge-analytics">Data Analytics</span>
+                            <span class="badge">Data Analytics</span>
                         </div>
                         <p class="timeline-text">
                             <strong>Summary:</strong> Worked with OMS and ERP data to understand production, inventory, and operational performance. Used data analysis and dashboards to support better monitoring, planning, and decision-making.
@@ -243,7 +254,7 @@
 
                 <!-- Internship 2: Tata Global Internship -->
                 <div class="timeline-item">
-                    <div class="timeline-dot" style="background: var(--accent-analytics);"></div>
+                    <div class="timeline-dot"></div>
                     <div class="timeline-date">October 2025</div>
                     <div class="timeline-content card">
                         <div class="timeline-header-row">
@@ -251,7 +262,7 @@
                                 <h4 class="timeline-title">Data Analyst Intern</h4>
                                 <div class="timeline-subtitle">Tata Global Internship • Remote</div>
                             </div>
-                            <span class="badge badge-analytics">Data Analytics</span>
+                            <span class="badge">Data Analytics</span>
                         </div>
                         <p class="timeline-text">
                             <strong>Summary:</strong> Focused on data cleaning, analysis, and visualization using Excel and SQL to evaluate business datasets and identify sales trends and key performance indicators.
@@ -266,7 +277,7 @@
 
                 <!-- Internship 3: SVNIT Alumni Association -->
                 <div class="timeline-item">
-                    <div class="timeline-dot" style="background: var(--accent-analytics);"></div>
+                    <div class="timeline-dot"></div>
                     <div class="timeline-date">May 2025 – Dec 2025</div>
                     <div class="timeline-content card">
                         <div class="timeline-header-row">
@@ -274,7 +285,7 @@
                                 <h4 class="timeline-title">Branding & Marketing Intern</h4>
                                 <div class="timeline-subtitle">SVNIT Alumni Association • SVNIT, Surat</div>
                             </div>
-                            <span class="badge badge-analytics">Branding & Outreach</span>
+                            <span class="badge">Outreach & Operations</span>
                         </div>
                         <p class="timeline-text">
                             <strong>Summary:</strong> Managed brand identity, digital outreach, and promotional initiatives for alumni events and merchandise planning.
@@ -290,22 +301,23 @@
         </section>
 
         <!-- Projects Showcase Section -->
-        <section class="projects-section" id="projects">
+        <section class="section" id="projects">
             <div class="section-header">
-                <span class="section-tagline">Data Engineering, AI Automation & Analytics</span>
+                <span class="section-tagline">Data Modeling, Analytics & BI Dashboards</span>
                 <h2 class="section-title">Data Analytics & Automation Projects</h2>
                 <div class="section-line"></div>
             </div>
 
             <div class="project-grid">
-                <!-- Project 1: PhonePe Annual Report Analysis (FinTech & Digital Payments) -->
+                <!-- Project 1: PhonePe Annual Report Analysis -->
                 <div class="card project-card">
                     <div class="project-img-box">
                         <img src="assets/phonepe_cover.jpg" alt="PhonePe Annual Report Analysis Dashboard" class="project-img">
                     </div>
                     <div class="project-details-box">
                         <div class="project-title-row">
-                            <h4 class="project-card-title">📱 PhonePe Annual Report Analysis</h4>
+                            <h3 class="project-card-title">PhonePe Annual Report Analysis</h3>
+                            <span class="badge">FinTech & BI</span>
                         </div>
                         <p class="project-desc">
                             Analyzed <strong>PhonePe Pulse data</strong> to understand digital payment trends, transaction performance, user activity, and the growth of financial services across India. Built an interactive <strong>Power BI dashboard</strong> to convert raw fintech data into executive insights and support data-driven decision-making.
@@ -318,15 +330,15 @@
                             <span class="tag">DAX</span>
                         </div>
 
-                        <!-- Key Metrics Highlights -->
-                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.4rem;">
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">📱 FinTech Payment Trends</span>
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">💰 Volume vs Value Analytics</span>
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">🏦 Loan Disbursement Insights</span>
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">🗺️ Geographical Performance</span>
+                        <!-- Key Highlights -->
+                        <div class="domain-stats-row" style="margin-top: 12px;">
+                            <span class="badge">Payment Trends</span>
+                            <span class="badge">Volume vs Value</span>
+                            <span class="badge">Loan Disbursement</span>
+                            <span class="badge">Geographical Patterns</span>
                         </div>
 
-                        <ul class="timeline-bullet-list" style="margin-top: 0.6rem; font-size: 0.85rem; color: var(--text-secondary);">
+                        <ul class="timeline-bullet-list" style="margin-top: 12px;">
                             <li>Analyzed transaction and user data across regions, distinguishing between <strong>Transaction Count</strong> (volume) and <strong>Transaction Amount</strong> (monetary value).</li>
                             <li>Cleaned and prepared PhonePe Pulse dataset for Power BI modeling, establishing KPIs, trend charts, and state/region interactive filters.</li>
                             <li>Analyzed financial service categories including <strong>loan disbursements</strong> (distinguishing disbursed loan count & total value from repayment/defaults).</li>
@@ -334,22 +346,23 @@
                             <li>Formulated executive insights into service performance, user activity growth, and digital payment adoption trends.</li>
                         </ul>
 
-                        <div class="project-actions" style="margin-top: 0.85rem;">
-                            <a href="https://github.com/ritiksharma2005/PhonePe-Annual-Repoart-Analysis" target="_blank" rel="noopener noreferrer" class="btn btn-analytics btn-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pill-icon icon-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> View GitHub Repository
+                        <div class="project-actions" style="margin-top: 16px; border-top: 1px solid var(--border-hairline); padding-top: 16px;">
+                            <a href="https://github.com/ritiksharma2005/PhonePe-Annual-Repoart-Analysis" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                <i data-lucide="github"></i> View on GitHub
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 2: GHG Emission Analytics Dashboard (Sustainability Power BI) -->
+                <!-- Project 2: GHG Emission Analytics Dashboard -->
                 <div class="card project-card">
                     <div class="project-img-box">
                         <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?fit=crop&w=800&h=500&q=80" alt="GHG Emission Analytics Dashboard" class="project-img">
                     </div>
                     <div class="project-details-box">
                         <div class="project-title-row">
-                            <h4 class="project-card-title">🌍 GHG Emission Analytics Dashboard</h4>
+                            <h3 class="project-card-title">GHG Emission Analytics Dashboard</h3>
+                            <span class="badge">ESG & Sustainability</span>
                         </div>
                         <p class="project-desc">
                             Developed an interactive Power BI dashboard to analyze <strong>Greenhouse Gas (GHG) emissions</strong> for a rubber manufacturing industry across <strong>Scope 1, Scope 2, and Scope 3</strong>. The dashboard helps identify major emission sources, analyze department-wise and monthly trends, and support <strong>ESG reporting and data-driven sustainability decisions</strong>.
@@ -363,15 +376,15 @@
                             <span class="tag">Sustainability</span>
                         </div>
 
-                        <!-- Key Metrics Highlights -->
-                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.4rem;">
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">🌿 Scope 1–3 Emission Analysis</span>
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">📊 ESG Analytics</span>
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">📉 Carbon Footprint Tracking</span>
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">💡 Sustainability Insights</span>
+                        <!-- Key Highlights -->
+                        <div class="domain-stats-row" style="margin-top: 12px;">
+                            <span class="badge">Scope 1–3 Emissions</span>
+                            <span class="badge">ESG Analytics</span>
+                            <span class="badge">Carbon Footprint</span>
+                            <span class="badge">Sustainability Insights</span>
                         </div>
 
-                        <ul class="timeline-bullet-list" style="margin-top: 0.6rem; font-size: 0.85rem; color: var(--text-secondary);">
+                        <ul class="timeline-bullet-list" style="margin-top: 12px;">
                             <li>Built an interactive Power BI dashboard to monitor and compare <strong>Scope 1, Scope 2, and Scope 3 emissions</strong> across operational activities.</li>
                             <li>Analyzed <strong>department-wise, category-wise, fuel-wise, and monthly emission trends</strong> to identify major contributors to the carbon footprint.</li>
                             <li>Identified <strong>logistics and diesel-operated vehicles</strong> as primary Scope 1 contributors, and <strong>upstream transportation</strong> as key Scope 3 driver.</li>
@@ -379,9 +392,9 @@
                             <li>Utilized <strong>Power Query and DAX</strong> for data transformation, calculated measures, KPI development, and interactive dashboard analysis.</li>
                         </ul>
 
-                        <div class="project-actions" style="margin-top: 0.85rem;">
-                            <a href="https://github.com/ritiksharma2005/sustainability_powerBI" target="_blank" rel="noopener noreferrer" class="btn btn-analytics btn-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pill-icon icon-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> View GitHub Repository
+                        <div class="project-actions" style="margin-top: 16px; border-top: 1px solid var(--border-hairline); padding-top: 16px;">
+                            <a href="https://github.com/ritiksharma2005/sustainability_powerBI" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                <i data-lucide="github"></i> View on GitHub
                             </a>
                         </div>
                     </div>
@@ -394,7 +407,8 @@
                     </div>
                     <div class="project-details-box">
                         <div class="project-title-row">
-                            <h4 class="project-card-title">📦 Supply Chain Analytics Dashboard</h4>
+                            <h3 class="project-card-title">Supply Chain Analytics Dashboard</h3>
+                            <span class="badge">Supply Chain & Operations</span>
                         </div>
                         <p class="project-desc">
                             Developed an interactive Power BI dashboard to analyze <strong>sales, profit, customer behavior, product performance, and pricing strategies</strong> using supply chain data from 2015–2017. Investigated the decline in sales and quantity sold in 2017 while profit remained relatively stable, identifying the role of <strong>product mix, pricing, and customer retention</strong>.
@@ -408,15 +422,15 @@
                             <span class="tag">Supply Chain Analytics</span>
                         </div>
 
-                        <!-- Key Metrics Highlights -->
-                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.4rem;">
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">📊 178K+ Records Analyzed</span>
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">📈 Sales & Profit Investigation</span>
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">👥 Customer Retention Analytics</span>
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">📦 Supply Chain Insights</span>
+                        <!-- Key Highlights -->
+                        <div class="domain-stats-row" style="margin-top: 12px;">
+                            <span class="badge">178K+ Records</span>
+                            <span class="badge">Sales & Margin Diagnostics</span>
+                            <span class="badge">Retention Analytics</span>
+                            <span class="badge">Inventory Optimization</span>
                         </div>
 
-                        <ul class="timeline-bullet-list" style="margin-top: 0.6rem; font-size: 0.85rem; color: var(--text-secondary);">
+                        <ul class="timeline-bullet-list" style="margin-top: 12px;">
                             <li>Analyzed <strong>178,396 records and 22 features</strong>, using SQL to filter incomplete 2018 data and Power Query for data cleaning and transformation.</li>
                             <li>Built an interactive Power BI dashboard with <strong>DAX-based KPIs</strong> covering sales, profit, orders, quantity, repeat purchases, discounts, customers, and products.</li>
                             <li>Investigated the key business problem of <strong>declining sales and quantity with stable profit</strong>, identifying the shift toward higher-priced products as a major contributing factor.</li>
@@ -424,9 +438,9 @@
                             <li>Analyzed product, customer, pricing, and discount performance to propose strategies for improving <strong>retention, product mix, demand planning, and sales growth</strong>.</li>
                         </ul>
 
-                        <div class="project-actions" style="margin-top: 0.85rem;">
-                            <a href="https://github.com/ritiksharma2005/Supply-Chain-dashboard" target="_blank" rel="noopener noreferrer" class="btn btn-analytics btn-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pill-icon icon-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> View GitHub Repository
+                        <div class="project-actions" style="margin-top: 16px; border-top: 1px solid var(--border-hairline); padding-top: 16px;">
+                            <a href="https://github.com/ritiksharma2005/Supply-Chain-dashboard" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                <i data-lucide="github"></i> View on GitHub
                             </a>
                         </div>
                     </div>
@@ -439,7 +453,8 @@
                     </div>
                     <div class="project-details-box">
                         <div class="project-title-row">
-                            <h4 class="project-card-title">🛢️ SETU — India Energy Supply Chain Resilience Platform</h4>
+                            <h3 class="project-card-title">SETU — India Energy Supply Chain Resilience Platform</h3>
+                            <span class="badge">Data Engineering & Risk</span>
                         </div>
                         <p class="project-desc">
                             Developed an end-to-end analytics platform to monitor <strong>India's crude oil supply-chain risks</strong>, combining geopolitical news, shipping corridors, commodity prices, sanctions, and petroleum buffer data into a unified dashboard for risk monitoring and decision support.
@@ -455,24 +470,24 @@
                             <span class="tag">Data Engineering</span>
                         </div>
 
-                        <!-- Key Metrics Highlights -->
-                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.4rem;">
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">🛡️ Risk Intelligence</span>
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">⚙️ Automated Data Pipeline</span>
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">📦 Supply Chain Analytics</span>
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">🌐 Full-Stack Decision Support</span>
+                        <!-- Key Highlights -->
+                        <div class="domain-stats-row" style="margin-top: 12px;">
+                            <span class="badge">Risk Intelligence</span>
+                            <span class="badge">Automated Pipelines</span>
+                            <span class="badge">Corridor Analytics</span>
+                            <span class="badge">Decision Support</span>
                         </div>
 
-                        <ul class="timeline-bullet-list" style="margin-top: 0.6rem; font-size: 0.85rem; color: var(--text-secondary);">
+                        <ul class="timeline-bullet-list" style="margin-top: 12px;">
                             <li>Built a <strong>data pipeline</strong> collecting and processing geopolitical news from Google News RSS and government feeds, with duplicate detection, relevance filtering, and risk classification across <strong>7 major maritime corridors</strong>.</li>
                             <li>Developed a <strong>risk-scoring algorithm</strong> using event severity and exponential time decay to generate corridor risk scores from <strong>0–100</strong> for real-time threat detection.</li>
                             <li>Integrated <strong>Brent, WTI, USD/INR exchange rates, OFAC sanctions, Strategic Petroleum Reserves (SPR), refinery stocks, and geopolitical events</strong>, served via FastAPI REST APIs.</li>
                             <li>Created an interactive <strong>React dashboard</strong> featuring an interactive world map (Leaflet), riskometers, corridor risk breakdown bars, commodity price charts, buffer-stock tracking, and live news feeds.</li>
                         </ul>
 
-                        <div class="project-actions" style="margin-top: 0.85rem;">
-                            <a href="https://github.com/ritiksharma2005/SETU-Energy-Supply-Chain-Analytics-Platform-" target="_blank" rel="noopener noreferrer" class="btn btn-analytics btn-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pill-icon icon-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> View GitHub Repository
+                        <div class="project-actions" style="margin-top: 16px; border-top: 1px solid var(--border-hairline); padding-top: 16px;">
+                            <a href="https://github.com/ritiksharma2005/SETU-Energy-Supply-Chain-Analytics-Platform-" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                <i data-lucide="github"></i> View on GitHub
                             </a>
                         </div>
                     </div>
@@ -485,7 +500,8 @@
                     </div>
                     <div class="project-details-box">
                         <div class="project-title-row">
-                            <h4 class="project-card-title">📊 Customer & Sales Analysis</h4>
+                            <h3 class="project-card-title">Customer & Sales Analysis</h3>
+                            <span class="badge">SQL & Python</span>
                         </div>
                         <p class="project-desc">
                             Analyzed <strong>10,000+ transactional records across 7 relational tables</strong> to understand customer behavior, sales performance, product categories, and seller contribution. Used SQL for business analysis and Python for data cleaning, preprocessing, and visualization to generate actionable insights.
@@ -499,15 +515,15 @@
                             <span class="tag">Relational DB</span>
                         </div>
 
-                        <!-- Key Metrics Highlights -->
-                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.4rem;">
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">🗃️ 10K+ Records</span>
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">🔗 7 Relational Tables</span>
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">⚡ SQL Queries</span>
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">📈 Python Visualizations</span>
+                        <!-- Key Highlights -->
+                        <div class="domain-stats-row" style="margin-top: 12px;">
+                            <span class="badge">10K+ Records</span>
+                            <span class="badge">7 Relational Tables</span>
+                            <span class="badge">SQL Aggregations</span>
+                            <span class="badge">Python Visualizations</span>
                         </div>
 
-                        <ul class="timeline-bullet-list" style="margin-top: 0.6rem; font-size: 0.85rem; color: var(--text-secondary);">
+                        <ul class="timeline-bullet-list" style="margin-top: 12px;">
                             <li>Worked with <strong>7 relational tables</strong> covering customers, orders, order items, payments, products, sellers, and geolocation, analyzing entity relationships using SQL.</li>
                             <li>Performed <strong>data cleaning and preprocessing using Python and Pandas</strong>, integrating SQL query results into Jupyter Notebook for exploratory analysis.</li>
                             <li>Executed complex SQL queries to analyze <strong>customer distribution, sales trends, product categories, seller performance, retention, and YoY growth</strong>.</li>
@@ -515,9 +531,9 @@
                             <li>Generated data-backed business insights to optimize <strong>marketing target zones, inventory planning, and seller management</strong>.</li>
                         </ul>
 
-                        <div class="project-actions" style="margin-top: 0.85rem;">
-                            <a href="https://github.com/ritiksharma2005/Customer-Sales-Analysis-using-SQL-and-Python#-customer--sales-analysis-using-sql-and-python" target="_blank" rel="noopener noreferrer" class="btn btn-analytics btn-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pill-icon icon-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> View GitHub Repository
+                        <div class="project-actions" style="margin-top: 16px; border-top: 1px solid var(--border-hairline); padding-top: 16px;">
+                            <a href="https://github.com/ritiksharma2005/Customer-Sales-Analysis-using-SQL-and-Python#-customer--sales-analysis-using-sql-and-python" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                <i data-lucide="github"></i> View on GitHub
                             </a>
                         </div>
                     </div>
@@ -530,7 +546,8 @@
                     </div>
                     <div class="project-details-box">
                         <div class="project-title-row">
-                            <h4 class="project-card-title">🍕 Pizza Sales Analysis</h4>
+                            <h3 class="project-card-title">Pizza Sales Analysis</h3>
+                            <span class="badge">SQL & MySQL</span>
                         </div>
                         <p class="project-desc">
                             Developed a SQL-based sales analysis project for a pizza store using transactional sales data. Imported and transformed CSV data into SQL, applied queries and database operations to filter and analyze sales information, and generated insights into pizza sales and business performance.
@@ -542,24 +559,24 @@
                             <span class="tag">Data Analysis</span>
                         </div>
 
-                        <!-- Key Metrics Highlights -->
-                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.4rem;">
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">⚡ SQL Queries</span>
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">🍕 Sales Analysis</span>
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">🔍 Data Filtering</span>
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">🗄️ Database Operations</span>
+                        <!-- Key Highlights -->
+                        <div class="domain-stats-row" style="margin-top: 12px;">
+                            <span class="badge">SQL Queries</span>
+                            <span class="badge">Sales Analytics</span>
+                            <span class="badge">Data Transformation</span>
+                            <span class="badge">Aggregations</span>
                         </div>
 
-                        <ul class="timeline-bullet-list" style="margin-top: 0.6rem; font-size: 0.85rem; color: var(--text-secondary);">
+                        <ul class="timeline-bullet-list" style="margin-top: 12px;">
                             <li>Converted <strong>CSV sales data into SQL tables</strong> and structured the dataset for analytical querying.</li>
                             <li>Used SQL operations such as <strong>CREATE, ALTER, JOIN, filtering, aggregation, and group functions</strong> to manipulate and analyze data.</li>
                             <li>Wrote optimized SQL queries to extract <strong>filtered sales metrics and analyze pizza sales performance</strong> across categories.</li>
                             <li>Analyzed transactional information to identify <strong>order patterns, product performance trends, and total store revenue</strong>.</li>
                         </ul>
 
-                        <div class="project-actions" style="margin-top: 0.85rem;">
-                            <a href="https://github.com/ritiksharma2005/PIZZA-SALES-ANALYSIS---SQL" target="_blank" rel="noopener noreferrer" class="btn btn-analytics btn-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pill-icon icon-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> View GitHub Repository
+                        <div class="project-actions" style="margin-top: 16px; border-top: 1px solid var(--border-hairline); padding-top: 16px;">
+                            <a href="https://github.com/ritiksharma2005/PIZZA-SALES-ANALYSIS---SQL" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                <i data-lucide="github"></i> View on GitHub
                             </a>
                         </div>
                     </div>
@@ -572,7 +589,8 @@
                     </div>
                     <div class="project-details-box">
                         <div class="project-title-row">
-                            <h4 class="project-card-title">🎵 Music Store Sales Analysis</h4>
+                            <h3 class="project-card-title">Music Store Sales Analysis</h3>
+                            <span class="badge">SQL & MySQL</span>
                         </div>
                         <p class="project-desc">
                             Developed a SQL-based sales analysis project for a music store using <strong>MySQL</strong>. Used SQL queries to explore sales data, analyze customer and business performance, and extract meaningful insights from the database.
@@ -584,24 +602,24 @@
                             <span class="tag">Business Insights</span>
                         </div>
 
-                        <!-- Key Metrics Highlights -->
-                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.4rem;">
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">🐬 MySQL Database</span>
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">⚡ SQL Queries</span>
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">📈 Sales Analysis</span>
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">💡 Business Insights</span>
+                        <!-- Key Highlights -->
+                        <div class="domain-stats-row" style="margin-top: 12px;">
+                            <span class="badge">MySQL Database</span>
+                            <span class="badge">Relational Queries</span>
+                            <span class="badge">Customer Trends</span>
+                            <span class="badge">Revenue Diagnostics</span>
                         </div>
 
-                        <ul class="timeline-bullet-list" style="margin-top: 0.6rem; font-size: 0.85rem; color: var(--text-secondary);">
+                        <ul class="timeline-bullet-list" style="margin-top: 12px;">
                             <li>Analyzed music store sales data using <strong>MySQL and complex SQL queries</strong>.</li>
                             <li>Used SQL operations such as <strong>JOINs, filtering, aggregation, and sorting</strong> to extract relevant business metrics.</li>
                             <li>Analyzed <strong>customer, sales, and product-related data</strong> to identify purchasing patterns and answer key business questions.</li>
                             <li>Converted raw database information into <strong>structured insights to support sales and revenue growth strategies</strong>.</li>
                         </ul>
 
-                        <div class="project-actions" style="margin-top: 0.85rem;">
-                            <a href="https://github.com/ritiksharma2005/Music-store---SQL" target="_blank" rel="noopener noreferrer" class="btn btn-analytics btn-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pill-icon icon-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> View GitHub Repository
+                        <div class="project-actions" style="margin-top: 16px; border-top: 1px solid var(--border-hairline); padding-top: 16px;">
+                            <a href="https://github.com/ritiksharma2005/Music-store---SQL" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                <i data-lucide="github"></i> View on GitHub
                             </a>
                         </div>
                     </div>
@@ -614,7 +632,8 @@
                     </div>
                     <div class="project-details-box">
                         <div class="project-title-row">
-                            <h4 class="project-card-title">📊 Performance Analysis Dashboard</h4>
+                            <h3 class="project-card-title">Performance Analysis Dashboard</h3>
+                            <span class="badge">Business Intelligence</span>
                         </div>
                         <p class="project-desc">
                             Developed an interactive Power BI dashboard using real-world business data from <strong>CCS National Institute of Agricultural Marketing (NIAM), Jaipur</strong>, for AgroGrow Fertilizers Pvt. Ltd. Analyzed regional sales, dealer performance, product revenue, margins, and pricing to identify performance gaps and generate data-driven business recommendations.
@@ -627,15 +646,15 @@
                             <span class="tag">Business Analytics</span>
                         </div>
 
-                        <!-- Key Metrics Highlights -->
-                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.4rem;">
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">🏷️ 21 Products Analyzed</span>
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">🗺️ Regional Sales Analysis</span>
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">🤝 Dealer Analytics</span>
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">💡 Business Recommendations</span>
+                        <!-- Key Highlights -->
+                        <div class="domain-stats-row" style="margin-top: 12px;">
+                            <span class="badge">21 Products</span>
+                            <span class="badge">Regional Sales</span>
+                            <span class="badge">Dealer Network</span>
+                            <span class="badge">Margin Analysis</span>
                         </div>
 
-                        <ul class="timeline-bullet-list" style="margin-top: 0.6rem; font-size: 0.85rem; color: var(--text-secondary);">
+                        <ul class="timeline-bullet-list" style="margin-top: 12px;">
                             <li><strong>Cleaned and transformed unstructured business data</strong> using Excel and Power Query, handling duplicates, missing values, and formatting inconsistencies before analysis.</li>
                             <li>Built an interactive <strong>Power BI dashboard with DAX-based KPIs</strong> to analyze sales performance across <strong>zones, territories, dealers, and products</strong>.</li>
                             <li>Identified key business issues including <strong>uneven regional performance, dealer dependency, margin imbalance, and underperforming products</strong>, and proposed data-backed strategies for improving sales and dealer performance.</li>
@@ -643,30 +662,23 @@
                             <li>Compared <strong>dealer margins and MRP</strong> to identify margin inconsistencies and potential pricing-related business risks.</li>
                         </ul>
 
-                        <div class="project-actions" style="margin-top: 0.85rem;">
-                            <a href="https://github.com/ritiksharma2005/Performance-Analysis-Dashboard-Power-BI-" target="_blank" rel="noopener noreferrer" class="btn btn-analytics btn-sm">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pill-icon icon-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> View GitHub Repository
+                        <div class="project-actions" style="margin-top: 16px; border-top: 1px solid var(--border-hairline); padding-top: 16px;">
+                            <a href="https://github.com/ritiksharma2005/Performance-Analysis-Dashboard-Power-BI-" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                <i data-lucide="github"></i> View on GitHub
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 9: AI-Powered Automated Newsroom (SPECIAL AUTOMATION & GENAI HIGHLIGHT) -->
-                <div class="card project-card" style="border: 2px solid rgba(168, 85, 247, 0.45); background: linear-gradient(145deg, rgba(168, 85, 247, 0.04), rgba(236, 72, 153, 0.04)); box-shadow: 0 8px 24px rgba(168, 85, 247, 0.12);">
-                    <div class="project-img-box" style="position: relative;">
+                <!-- Project 9: AI-Powered Automated Newsroom -->
+                <div class="card project-card">
+                    <div class="project-img-box">
                         <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?fit=crop&w=800&h=500&q=80" alt="AI-Powered Automated Newsroom & Instagram Automation" class="project-img">
-                        <div style="position: absolute; top: 12px; right: 12px; background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%); color: #fff; padding: 0.3rem 0.75rem; border-radius: 20px; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
-                            🤖 SPECIAL AUTOMATION ✨
-                        </div>
                     </div>
                     <div class="project-details-box">
-                        <div style="margin-bottom: 0.4rem;">
-                            <span class="badge" style="background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.2)); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.4); font-weight: 700; font-size: 0.75rem; padding: 0.25rem 0.65rem; border-radius: 9999px;">
-                                🌟 SPECIAL FEATURED PROJECT
-                            </span>
-                        </div>
                         <div class="project-title-row">
-                            <h4 class="project-card-title">📰 AI-Powered Automated Newsroom & Instagram Automation</h4>
+                            <h3 class="project-card-title">AI-Powered Automated Newsroom</h3>
+                            <span class="badge">AI Automation</span>
                         </div>
                         <p class="project-desc">
                             Built an end-to-end AI-powered news automation platform that collects news from APIs and Instagram sources, analyzes and ranks stories using GenAI, removes duplicates, and generates original news content. Automatically produces branded Instagram posters, captions, and delivers content through scheduled workflows.
@@ -683,15 +695,15 @@
                             <span class="tag">Telegram Bot API</span>
                         </div>
 
-                        <!-- Key Metrics & Automation Highlights -->
-                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.4rem;">
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem; background: rgba(168, 85, 247, 0.15); color: #c084fc; border-color: rgba(168, 85, 247, 0.3);">⚡ 100% Automated Pipeline</span>
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem; background: rgba(236, 72, 153, 0.15); color: #f472b6; border-color: rgba(236, 72, 153, 0.3);">🤖 GenAI News Ranking & Captions</span>
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">🎨 Dynamic Poster Generation</span>
-                            <span class="badge badge-analytics" style="font-size: 0.78rem; padding: 0.25rem 0.6rem;">📱 Auto Instagram & Telegram Workflow</span>
+                        <!-- Key Highlights -->
+                        <div class="domain-stats-row" style="margin-top: 12px;">
+                            <span class="badge">Automated Pipeline</span>
+                            <span class="badge">GenAI Ranking</span>
+                            <span class="badge">Poster Generation</span>
+                            <span class="badge">Publishing Workflows</span>
                         </div>
 
-                        <ul class="timeline-bullet-list" style="margin-top: 0.6rem; font-size: 0.85rem; color: var(--text-secondary);">
+                        <ul class="timeline-bullet-list" style="margin-top: 12px;">
                             <li>Automated <strong>news collection, deduplication, relevance filtering, and ranking</strong> across NewsData.io, GNews, Guardian API, and RSS feeds.</li>
                             <li>Utilized <strong>Gemini & Groq Multimodal AI</strong> for automated story classification, summarization, viral headline generation, and caption synthesis.</li>
                             <li>Integrated <strong>Instagram monitoring & web scraping</strong> using Apify and Playwright to track trending social stories.</li>
@@ -699,9 +711,9 @@
                             <li>Orchestrated <strong>GitHub Actions cron workflows</strong> with a human-in-the-loop Telegram Bot review interface before live social media publishing.</li>
                         </ul>
 
-                        <div class="project-actions" style="margin-top: 0.85rem;">
-                            <a href="https://github.com/ritiksharma2005/news_post" target="_blank" rel="noopener noreferrer" class="btn btn-analytics btn-sm" style="background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%); border: none; color: #fff;">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pill-icon icon-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> View GitHub Repository
+                        <div class="project-actions" style="margin-top: 16px; border-top: 1px solid var(--border-hairline); padding-top: 16px;">
+                            <a href="https://github.com/ritiksharma2005/news_post" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                <i data-lucide="github"></i> View on GitHub
                             </a>
                         </div>
                     </div>
@@ -712,9 +724,10 @@
         <!-- Positions of Responsibility Section -->
         <section class="por-section" id="por-section">
             <div class="section-header">
-                <span class="section-tagline">Campus Leadership</span>
+                <span class="section-tagline">Leadership & Institute Service</span>
                 <h2 class="section-title">Positions of Responsibility (POR)</h2>
                 <div class="section-line"></div>
+                <p class="section-desc-center">Leadership roles, council coordination, and student engagement initiatives at SVNIT Surat</p>
             </div>
 
             <div class="por-grid-cards">
@@ -728,7 +741,7 @@
                     </div>
                     <h3 class="por-card-title">Advisory Committee Member</h3>
                     <h4 class="por-card-org">Alumni Training & Placement Affairs Council (ATPAC)</h4>
-                    <ul class="timeline-bullet-list" style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.6rem 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.35rem;">
+                    <ul class="timeline-bullet-list">
                         <li>Advised student placement coordinators and council teams on campus recruitment drives, interview preparation, and alumni networking.</li>
                         <li>Guided corporate outreach strategy and supported event execution for graduating student placement sessions.</li>
                         <li>Mentored junior team members on professional training programs and industry engagement activities.</li>
@@ -750,7 +763,7 @@
                     </div>
                     <h3 class="por-card-title">Advisory Committee Member</h3>
                     <h4 class="por-card-org">Cultural Affairs Council (CAC)</h4>
-                    <ul class="timeline-bullet-list" style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.6rem 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.35rem;">
+                    <ul class="timeline-bullet-list">
                         <li>Guided student teams in planning, logistics, and executing major institute-wide cultural festivals and annual events.</li>
                         <li>Provided strategic direction on event scheduling, venue logistics, budget management, and inter-college cultural competitions.</li>
                         <li>Fostered an inclusive creative environment encouraging widespread student participation across campus cultural clubs.</li>
@@ -772,7 +785,7 @@
                     </div>
                     <h3 class="por-card-title">Convener</h3>
                     <h4 class="por-card-org">Research & Innovation Affairs Council (RIAC)</h4>
-                    <ul class="timeline-bullet-list" style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.6rem 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.35rem;">
+                    <ul class="timeline-bullet-list">
                         <li>Spearheaded student research initiatives, technical innovation workshops, and project showcases across departments.</li>
                         <li>Coordinated research symposiums and facilitated student-faculty technical project collaborations.</li>
                         <li>Promoted a practical problem-solving culture by organizing technical talks, hackathons, and research forums.</li>
@@ -794,7 +807,7 @@
                     </div>
                     <h3 class="por-card-title">Senior Executive</h3>
                     <h4 class="por-card-org">National Service Scheme (NSS)</h4>
-                    <ul class="timeline-bullet-list" style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.6rem 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.35rem;">
+                    <ul class="timeline-bullet-list">
                         <li>Led community outreach drives, social awareness campaigns, and environmental cleanliness initiatives with student volunteers.</li>
                         <li>Organized health awareness programs, blood donation drives, and educational support activities in local communities.</li>
                         <li>Managed team logistics, volunteer scheduling, and event coordination for social welfare initiatives.</li>
@@ -816,7 +829,7 @@
                     </div>
                     <h3 class="por-card-title">Active Member</h3>
                     <h4 class="por-card-org">Kirdar — The Dramatics & Theater Club</h4>
-                    <ul class="timeline-bullet-list" style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.6rem 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 0.35rem;">
+                    <ul class="timeline-bullet-list">
                         <li>Actively performed in stage plays, street plays (Nukkad Natak), and dramatic acts for campus cultural events.</li>
                         <li>Contributed to scriptwriting, character development, voice modulation rehearsals, and creative stage management.</li>
                         <li>Utilized street theater as a powerful medium to convey social messages and engage diverse audiences.</li>
@@ -831,72 +844,52 @@
         </section>
 
         <!-- Contact Section -->
-        <section class="contact-section" id="contact">
+        <section class="section" id="contact">
             <div class="section-header">
-                <span class="section-tagline">Get In Touch</span>
-                <h2 class="section-title">Contact Ritik</h2>
+                <span class="section-tagline">Communication</span>
+                <h2 class="section-title">Contact & Inquiries</h2>
                 <div class="section-line"></div>
             </div>
 
             <div class="contact-grid">
                 <div class="contact-info">
                     <div class="card info-card">
-                        <div class="info-icon-box" style="background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.3);">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        <div class="info-icon-box">
+                            <i data-lucide="mail"></i>
                         </div>
                         <div class="info-content">
-                            <h4>Direct Email</h4>
-                            <p><a href="mailto:ritiknit96@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px;"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> ritiknit96@gmail.com</a></p>
+                            <h4>Email Address</h4>
+                            <p><a href="mailto:ritiknit96@gmail.com">ritiknit96@gmail.com</a></p>
                         </div>
                     </div>
 
                     <div class="card info-card">
-                        <div class="info-icon-box" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3);">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <div class="info-icon-box">
+                            <i data-lucide="phone"></i>
                         </div>
                         <div class="info-content">
                             <h4>Phone / Contact</h4>
-                            <p><a href="tel:+919594396048"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +91 9594396048</a></p>
+                            <p><a href="tel:+919594396048">+91 9594396048</a></p>
                         </div>
                     </div>
 
                     <div class="card info-card">
-                        <div class="info-icon-box" style="background: rgba(168, 85, 247, 0.2); border: 1px solid rgba(168, 85, 247, 0.45);">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                        <div class="info-icon-box">
+                            <i data-lucide="map-pin"></i>
                         </div>
                         <div class="info-content">
-                            <h4>GitHub</h4>
-                            <p><a href="https://github.com/ritiksharma2005" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px;"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> GitHub Profile</a></p>
+                            <h4>Location</h4>
+                            <p>SVNIT Surat, Gujarat, India</p>
                         </div>
                     </div>
 
                     <div class="card info-card">
-                        <div class="info-icon-box" style="background: rgba(14, 165, 233, 0.2); border: 1px solid rgba(14, 165, 233, 0.45);">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-                        </div>
-                        <div class="info-content">
-                            <h4>LinkedIn</h4>
-                            <p><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px;"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg> LinkedIn Profile</a></p>
-                        </div>
-                    </div>
-
-                    <div class="card info-card">
-                        <div class="info-icon-box" style="background: rgba(244, 63, 94, 0.2); border: 1px solid rgba(244, 63, 94, 0.45);">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f43f5e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-                        </div>
-                        <div class="info-content">
-                            <h4>Instagram</h4>
-                            <p><a href="https://www.instagram.com/ritik96.in/?hl=en" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f43f5e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px;"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg> @ritik96.in</a></p>
-                        </div>
-                    </div>
-
-                    <div class="card info-card">
-                        <div class="info-icon-box" style="background: rgba(245, 158, 11, 0.2); border: 1px solid rgba(245, 158, 11, 0.45);">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+                        <div class="info-icon-box">
+                            <i data-lucide="file-text"></i>
                         </div>
                         <div class="info-content">
                             <h4>Data Analyst Resume</h4>
-                            <p><a href="https://drive.google.com/file/d/1p1MXulINzy2JIHfly_M4T5H72uDyWYpr/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px;"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg> View PDF Resume</a></p>
+                            <p><a href="https://drive.google.com/file/d/1p1MXulINzy2JIHfly_M4T5H72uDyWYpr/view?usp=drive_link" target="_blank" rel="noopener noreferrer">View PDF Resume</a></p>
                         </div>
                     </div>
                 </div>
@@ -915,13 +908,13 @@
                         </div>
                         <div class="form-group">
                             <label for="form-subject">Subject</label>
-                            <input type="text" id="form-subject" name="subject" required placeholder="Data Analyst Role / Project Inquiry">
+                            <input type="text" id="form-subject" name="subject" required placeholder="Data Analyst Role / Analytics Inquiry">
                         </div>
                         <div class="form-group">
                             <label for="form-message">Message</label>
                             <textarea id="form-message" name="message" required rows="4" placeholder="Write your message here..."></textarea>
                         </div>
-                        <button type="submit" class="btn btn-analytics" id="btn-submit">
+                        <button type="submit" class="btn btn-primary" id="btn-submit">
                             <span>Send Message</span>
                             <i data-lucide="send"></i>
                         </button>
@@ -935,15 +928,13 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2026 Ritik Sharma. Data Analyst Portfolio (NIT Surat).</p>
+            <p>&copy; 2026 Ritik Sharma. B.Tech Electrical Engineering (SVNIT Surat).</p>
             <div class="footer-links">
                 <a href="https://www.instagram.com/ritik96.in/?hl=en" target="_blank" rel="noopener noreferrer"><i data-lucide="instagram" class="footer-icon"></i> @ritik96.in</a>
                 <span>•</span>
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin" class="footer-icon"></i> LinkedIn</a>
                 <span>•</span>
                 <a href="https://github.com/ritiksharma2005" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="footer-icon"></i> GitHub</a>
-                <span>•</span>
-                <a href="mailto:ritiknit96@gmail.com"><i data-lucide="mail" class="footer-icon"></i> ritiknit96@gmail.com</a>
                 <span>•</span>
                 <a href="index.html"><i data-lucide="home" class="footer-icon"></i> Main Portfolio Home ↑</a>
             </div>
