@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111111">
     <title>Ritik Sharma | Engineering, Analytics & Software Portfolio</title>
     <meta name="description" content="Portfolio of Ritik Sharma - B.Tech Electrical Engineering at SVNIT Surat. Data Analytics, Power Systems & Software Development.">
     
-    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <!-- Preconnect & Fonts: Inter & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
     <!-- Style Sheets -->
@@ -19,6 +21,9 @@
 </head>
 <body class="dark-theme">
 
+    <!-- Keyboard Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Navigation Header -->
     <header class="navbar" id="navbar">
         <div class="nav-container">
@@ -26,12 +31,12 @@
                 Ritik <span class="logo-accent">Sharma</span>
             </a>
             
-            <nav class="nav-menu" id="nav-menu">
+            <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
                 <ul>
                     <li><a href="index.html" class="nav-link active">Home</a></li>
-                    <li><a href="data-analyst.html" class="nav-link"><i data-lucide="bar-chart-3" class="footer-icon"></i> Data Analyst</a></li>
-                    <li><a href="electrical-engineering.html" class="nav-link"><i data-lucide="zap" class="footer-icon"></i> Electrical Engineer</a></li>
-                    <li><a href="developer.html" class="nav-link"><i data-lucide="code" class="footer-icon"></i> Developer</a></li>
+                    <li><a href="data-analyst.html" class="nav-link"><i data-lucide="bar-chart-3" class="footer-icon" aria-hidden="true"></i> Data Analyst</a></li>
+                    <li><a href="electrical-engineering.html" class="nav-link"><i data-lucide="zap" class="footer-icon" aria-hidden="true"></i> Electrical Engineer</a></li>
+                    <li><a href="developer.html" class="nav-link"><i data-lucide="code" class="footer-icon" aria-hidden="true"></i> Developer</a></li>
                     <li><a href="#education-section" class="nav-link">Education</a></li>
                     <li><a href="#achievements-section" class="nav-link">Achievements</a></li>
                     <li><a href="#por-section" class="nav-link">Leadership & POR</a></li>
@@ -41,31 +46,37 @@
             <div class="nav-actions">
                 <!-- Theme Toggle Button -->
                 <button class="btn-icon" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle Theme">
-                    <i data-lucide="sun" class="sun-icon"></i>
-                    <i data-lucide="moon" class="moon-icon"></i>
+                    <i data-lucide="sun" class="sun-icon" aria-hidden="true"></i>
+                    <i data-lucide="moon" class="moon-icon" aria-hidden="true"></i>
                 </button>
                 <!-- Mobile Menu Button -->
                 <button class="btn-icon mobile-menu-toggle" id="menu-toggle" aria-label="Open mobile menu">
-                    <i data-lucide="menu" class="open-icon"></i>
-                    <i data-lucide="x" class="close-icon"></i>
+                    <i data-lucide="menu" class="open-icon" aria-hidden="true"></i>
+                    <i data-lucide="x" class="close-icon" aria-hidden="true"></i>
                 </button>
             </div>
         </div>
     </header>
 
     <!-- Main Content Container -->
-    <main>
+    <main id="main-content">
         <!-- Hero Landing Section -->
         <section class="hero-landing-section" id="home">
             <!-- Header Profile Card -->
             <div class="profile-header-card card">
                 <div class="profile-avatar-box">
-                    <img src="assets/profile.jpg" alt="Ritik Sharma Profile Photograph" class="profile-img">
+                    <img src="assets/profile.jpg" alt="Ritik Sharma Profile Photograph" class="profile-img" width="96" height="96" fetchpriority="high">
                 </div>
                 <div class="profile-info-box">
-                    <span class="institution-badge">
-                        <i data-lucide="graduation-cap"></i> B.Tech Electrical Engineering • NIT Surat (SVNIT)
-                    </span>
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+                        <span class="institution-badge">
+                            <i data-lucide="graduation-cap" aria-hidden="true"></i> B.Tech Electrical Engineering • NIT Surat (SVNIT)
+                        </span>
+                        <div class="status-badge" aria-label="Status: Available for Roles & Opportunities">
+                            <span class="status-dot" aria-hidden="true"></span>
+                            <span>Available for Opportunities</span>
+                        </div>
+                    </div>
                     <h1 class="profile-name">Ritik Sharma</h1>
                     <p class="profile-tagline">
                         <span>Data Analytics</span> • <span>Electrical Engineering</span> • <span>Software Development</span>
@@ -74,27 +85,27 @@
                     <!-- Contact Details Bar -->
                     <div class="contact-pills">
                         <a href="mailto:ritiknit96@gmail.com" class="pill-link">
-                            <i data-lucide="mail"></i>
+                            <i data-lucide="mail" aria-hidden="true"></i>
                             <span>ritiknit96@gmail.com</span>
                         </a>
                         <a href="tel:+919594396048" class="pill-link">
-                            <i data-lucide="phone"></i>
+                            <i data-lucide="phone" aria-hidden="true"></i>
                             <span>+91 9594396048</span>
                         </a>
                         <a href="https://github.com/ritiksharma2005" target="_blank" rel="noopener noreferrer" class="pill-link">
-                            <i data-lucide="github"></i>
+                            <i data-lucide="github" aria-hidden="true"></i>
                             <span>GitHub</span>
                         </a>
                         <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="pill-link">
-                            <i data-lucide="linkedin"></i>
+                            <i data-lucide="linkedin" aria-hidden="true"></i>
                             <span>LinkedIn</span>
                         </a>
                         <a href="https://www.instagram.com/ritik96.in/?hl=en" target="_blank" rel="noopener noreferrer" class="pill-link">
-                            <i data-lucide="instagram"></i>
+                            <i data-lucide="instagram" aria-hidden="true"></i>
                             <span>@ritik96.in</span>
                         </a>
                         <span class="pill-text">
-                            <i data-lucide="map-pin"></i>
+                            <i data-lucide="map-pin" aria-hidden="true"></i>
                             <span>NIT Surat, India</span>
                         </span>
                     </div>
@@ -113,7 +124,7 @@
                     <a href="data-analyst.html" class="square-card">
                         <div class="square-header">
                             <div class="square-icon-box">
-                                <i data-lucide="bar-chart-3"></i>
+                                <i data-lucide="bar-chart-3" aria-hidden="true"></i>
                             </div>
                             <span class="badge">Analytics</span>
                         </div>
@@ -122,14 +133,14 @@
                         <p class="square-sub">Power BI • SQL • Python • EDA</p>
 
                         <ul class="minimal-check-list">
-                            <li><i data-lucide="check"></i> Fashion 1972NE & Tata Internships</li>
-                            <li><i data-lucide="check"></i> GHG Emissions & Supply Chain Dashboards</li>
-                            <li><i data-lucide="check"></i> DAX Modeling, Power Query & SQL</li>
+                            <li><i data-lucide="check" aria-hidden="true"></i> Fashion 1972NE &amp; Tata Internships</li>
+                            <li><i data-lucide="check" aria-hidden="true"></i> GHG Emissions &amp; Supply Chain Dashboards</li>
+                            <li><i data-lucide="check" aria-hidden="true"></i> DAX Modeling, Power Query &amp; SQL</li>
                         </ul>
 
                         <div class="square-action">
                             <span class="btn btn-secondary">
-                                Open Data Analyst <i data-lucide="arrow-right"></i>
+                                Open Data Analyst <i data-lucide="arrow-right" aria-hidden="true"></i>
                             </span>
                         </div>
                     </a>
@@ -138,7 +149,7 @@
                     <a href="electrical-engineering.html" class="square-card">
                         <div class="square-header">
                             <div class="square-icon-box">
-                                <i data-lucide="zap"></i>
+                                <i data-lucide="zap" aria-hidden="true"></i>
                             </div>
                             <span class="badge">Electrical</span>
                         </div>
@@ -147,14 +158,14 @@
                         <p class="square-sub">Power Systems • Machines • Switchgear</p>
 
                         <ul class="minimal-check-list">
-                            <li><i data-lucide="check"></i> Substation & Power Distribution Analysis</li>
-                            <li><i data-lucide="check"></i> Transformer Sizing & Protection Schemes</li>
-                            <li><i data-lucide="check"></i> MATLAB / Simulink Simulation Models</li>
+                            <li><i data-lucide="check" aria-hidden="true"></i> Substation &amp; Power Distribution Analysis</li>
+                            <li><i data-lucide="check" aria-hidden="true"></i> Transformer Sizing &amp; Protection Schemes</li>
+                            <li><i data-lucide="check" aria-hidden="true"></i> MATLAB / Simulink Simulation Models</li>
                         </ul>
 
                         <div class="square-action">
                             <span class="btn btn-secondary">
-                                Open Electrical Eng. <i data-lucide="arrow-right"></i>
+                                Open Electrical Eng. <i data-lucide="arrow-right" aria-hidden="true"></i>
                             </span>
                         </div>
                     </a>
@@ -163,7 +174,7 @@
                     <a href="developer.html" class="square-card">
                         <div class="square-header">
                             <div class="square-icon-box">
-                                <i data-lucide="code"></i>
+                                <i data-lucide="code" aria-hidden="true"></i>
                             </div>
                             <span class="badge">Software</span>
                         </div>
@@ -172,14 +183,14 @@
                         <p class="square-sub">Python • REST APIs • AI Workflows</p>
 
                         <ul class="minimal-check-list">
-                            <li><i data-lucide="check"></i> AI-Powered News Automation Engine</li>
-                            <li><i data-lucide="check"></i> SETU Energy Risk Intelligence Platform</li>
-                            <li><i data-lucide="check"></i> FastAPI, SQLite & GitHub Actions CI/CD</li>
+                            <li><i data-lucide="check" aria-hidden="true"></i> AI-Powered News Automation Engine</li>
+                            <li><i data-lucide="check" aria-hidden="true"></i> SETU Energy Risk Intelligence Platform</li>
+                            <li><i data-lucide="check" aria-hidden="true"></i> FastAPI, SQLite &amp; GitHub Actions CI/CD</li>
                         </ul>
 
                         <div class="square-action">
                             <span class="btn btn-secondary">
-                                Open Developer Portfolio <i data-lucide="arrow-right"></i>
+                                Open Developer Portfolio <i data-lucide="arrow-right" aria-hidden="true"></i>
                             </span>
                         </div>
                     </a>
@@ -200,7 +211,7 @@
                 <div class="card edu-card-item">
                     <div class="por-header-row">
                         <div class="por-icon-box">
-                            <i data-lucide="graduation-cap"></i>
+                            <i data-lucide="graduation-cap" aria-hidden="true"></i>
                         </div>
                         <span class="edu-card-badge">2023 – Present</span>
                     </div>
@@ -218,12 +229,12 @@
                 <div class="card edu-card-item">
                     <div class="por-header-row">
                         <div class="por-icon-box">
-                            <i data-lucide="book-open"></i>
+                            <i data-lucide="book-open" aria-hidden="true"></i>
                         </div>
                         <span class="edu-card-badge">Completed 2023</span>
                     </div>
                     <h3 class="edu-card-title">Senior Secondary (12th Class - HSC)</h3>
-                    <h4 class="edu-card-inst">Ramchand Kimatram Talreja College of Arts, Science & Commerce (RKT College)</h4>
+                    <h4 class="edu-card-inst">Ramchand Kimatram Talreja College of Arts, Science &amp; Commerce (RKT College)</h4>
                     <p class="edu-card-inst" style="color: var(--text-muted);">Ulhasnagar, Maharashtra 421002 • Maharashtra State Board</p>
                     <p class="item-desc">
                         Completed Higher Secondary Certificate (HSC) in Science stream with strong fundamentals in Mathematics and Physics.
@@ -237,7 +248,7 @@
                 <div class="card edu-card-item">
                     <div class="por-header-row">
                         <div class="por-icon-box">
-                            <i data-lucide="school"></i>
+                            <i data-lucide="school" aria-hidden="true"></i>
                         </div>
                         <span class="edu-card-badge">Completed 2021</span>
                     </div>
@@ -256,11 +267,11 @@
                 <div class="card edu-card-item" style="grid-column: span 3;">
                     <div class="por-header-row">
                         <div class="por-icon-box">
-                            <i data-lucide="award"></i>
+                            <i data-lucide="award" aria-hidden="true"></i>
                         </div>
                         <span class="edu-card-badge">Competitive Ranks (2023)</span>
                     </div>
-                    <h3 class="edu-card-title">National & State Engineering Entrance Examinations</h3>
+                    <h3 class="edu-card-title">National &amp; State Engineering Entrance Examinations</h3>
                     <p class="item-desc">
                         Demonstrated problem-solving capabilities in national and state-level engineering entrance exams:
                     </p>
@@ -279,7 +290,7 @@
         <!-- POSITIONS OF RESPONSIBILITY (POR) SECTION -->
         <section class="por-section" id="por-section">
             <div class="section-header">
-                <span class="section-tagline">Leadership & Coordination</span>
+                <span class="section-tagline">Leadership &amp; Coordination</span>
                 <h2 class="section-title">Positions of Responsibility (POR)</h2>
                 <p class="section-desc">Council convener roles, placement operations, and community initiative leadership at SVNIT Surat</p>
             </div>
@@ -289,12 +300,12 @@
                 <div class="card por-card-item">
                     <div class="por-header-row">
                         <div class="por-icon-box">
-                            <i data-lucide="award"></i>
+                            <i data-lucide="award" aria-hidden="true"></i>
                         </div>
                         <span class="por-inst">SVNIT Surat</span>
                     </div>
                     <h3 class="por-card-title">Advisory Committee Member</h3>
-                    <h4 class="por-card-org">Alumni Training & Placement Affairs Council (ATPAC)</h4>
+                    <h4 class="por-card-org">Alumni Training &amp; Placement Affairs Council (ATPAC)</h4>
                     <ul class="timeline-bullet-list">
                         <li>Advised student placement coordinators and council teams on campus recruitment drives, interview preparation, and alumni networking.</li>
                         <li>Guided corporate outreach strategy and supported event execution for graduating student placement sessions.</li>
@@ -311,7 +322,7 @@
                 <div class="card por-card-item">
                     <div class="por-header-row">
                         <div class="por-icon-box">
-                            <i data-lucide="sparkles"></i>
+                            <i data-lucide="sparkles" aria-hidden="true"></i>
                         </div>
                         <span class="por-inst">SVNIT Surat</span>
                     </div>
@@ -333,12 +344,12 @@
                 <div class="card por-card-item">
                     <div class="por-header-row">
                         <div class="por-icon-box">
-                            <i data-lucide="lightbulb"></i>
+                            <i data-lucide="lightbulb" aria-hidden="true"></i>
                         </div>
                         <span class="por-inst">SVNIT Surat</span>
                     </div>
                     <h3 class="por-card-title">Convener</h3>
-                    <h4 class="por-card-org">Research & Innovation Affairs Council (RIAC)</h4>
+                    <h4 class="por-card-org">Research &amp; Innovation Affairs Council (RIAC)</h4>
                     <ul class="timeline-bullet-list">
                         <li>Spearheaded student research initiatives, technical innovation workshops, and project showcases across departments.</li>
                         <li>Coordinated research symposiums and facilitated student-faculty technical project collaborations.</li>
@@ -355,7 +366,7 @@
                 <div class="card por-card-item">
                     <div class="por-header-row">
                         <div class="por-icon-box">
-                            <i data-lucide="heart"></i>
+                            <i data-lucide="heart" aria-hidden="true"></i>
                         </div>
                         <span class="por-inst">SVNIT Surat</span>
                     </div>
@@ -377,19 +388,19 @@
                 <div class="card por-card-item">
                     <div class="por-header-row">
                         <div class="por-icon-box">
-                            <i data-lucide="clapperboard"></i>
+                            <i data-lucide="clapperboard" aria-hidden="true"></i>
                         </div>
                         <span class="por-inst">SVNIT Surat</span>
                     </div>
                     <h3 class="por-card-title">Active Member</h3>
-                    <h4 class="por-card-org">Kirdar — The Dramatics & Theater Club</h4>
+                    <h4 class="por-card-org">Kirdar — The Dramatics &amp; Theater Club</h4>
                     <ul class="timeline-bullet-list">
                         <li>Actively performed in stage plays, street plays (Nukkad Natak), and dramatic acts for campus cultural events.</li>
                         <li>Contributed to scriptwriting, character development, voice modulation rehearsals, and creative stage management.</li>
                         <li>Utilized street theater as a powerful medium to convey social messages and engage diverse audiences.</li>
                     </ul>
                     <div class="por-skills-tags">
-                        <span class="tag">Theater & Dramatics</span>
+                        <span class="tag">Theater &amp; Dramatics</span>
                         <span class="tag">Street Drama</span>
                         <span class="tag">Public Performance</span>
                     </div>
@@ -401,9 +412,9 @@
         <section class="achievements-section" id="achievements-section">
             <div class="achievements-wrapper">
                 <div class="section-header">
-                    <span class="achievements-tagline">Recognition & Honors</span>
-                    <h2 class="section-title">Key Achievements</h2>
-                    <p class="section-desc">Competitive national honors, commercial revenue milestones, user growth, and top entrance ranks</p>
+                    <span class="achievements-tagline">Track Record of Excellence</span>
+                    <h2 class="section-title">Key Achievements &amp; Recognition</h2>
+                    <p class="section-desc">Notable analytical hackathons, platform scale milestones, and national competitive exam ranks</p>
                 </div>
 
                 <div class="achievements-grid">
@@ -411,7 +422,7 @@
                     <div class="achievement-card">
                         <div class="achievement-header-row">
                             <div class="achievement-icon-box">
-                                <i data-lucide="trophy"></i>
+                                <i data-lucide="trophy" aria-hidden="true"></i>
                             </div>
                             <span class="achievement-badge">Finalist</span>
                         </div>
@@ -431,7 +442,7 @@
                     <div class="achievement-card">
                         <div class="achievement-header-row">
                             <div class="achievement-icon-box">
-                                <i data-lucide="trending-up"></i>
+                                <i data-lucide="trending-up" aria-hidden="true"></i>
                             </div>
                             <span class="achievement-badge">₹3 Lakh Sales</span>
                         </div>
@@ -451,7 +462,7 @@
                     <div class="achievement-card">
                         <div class="achievement-header-row">
                             <div class="achievement-icon-box">
-                                <i data-lucide="users"></i>
+                                <i data-lucide="users" aria-hidden="true"></i>
                             </div>
                             <span class="achievement-badge">200+ Users</span>
                         </div>
@@ -471,7 +482,7 @@
                     <div class="achievement-card">
                         <div class="achievement-header-row">
                             <div class="achievement-icon-box">
-                                <i data-lucide="award"></i>
+                                <i data-lucide="award" aria-hidden="true"></i>
                             </div>
                             <span class="achievement-badge">98.30 Percentile</span>
                         </div>
@@ -491,7 +502,7 @@
                     <div class="achievement-card">
                         <div class="achievement-header-row">
                             <div class="achievement-icon-box">
-                                <i data-lucide="star"></i>
+                                <i data-lucide="star" aria-hidden="true"></i>
                             </div>
                             <span class="achievement-badge">99.00 Percentile</span>
                         </div>
@@ -512,12 +523,12 @@
                 <div class="certifications-block">
                     <div class="cert-header">
                         <span class="badge">Academic Certification</span>
-                        <h3>Certifications & Courses</h3>
+                        <h3>Certifications &amp; Courses</h3>
                     </div>
                     <div class="achievement-card cert-card">
                         <div class="achievement-header-row">
                             <div class="achievement-icon-box">
-                                <i data-lucide="file-check"></i>
+                                <i data-lucide="file-check" aria-hidden="true"></i>
                             </div>
                             <span class="achievement-badge">NPTEL Certified</span>
                         </div>
@@ -533,7 +544,7 @@
                         </div>
                         <div style="margin-top: 8px; border-top: 1px solid var(--border-hairline); padding-top: 12px;">
                             <a href="https://drive.google.com/file/d/1WcKcySJjRskFgzxfBzun6OHB9D8XvNWC/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
-                                <i data-lucide="external-link"></i> View Certificate
+                                <i data-lucide="external-link" aria-hidden="true"></i> View Certificate
                             </a>
                         </div>
                     </div>
@@ -547,15 +558,15 @@
         <div class="footer-content">
             <p>&copy; 2026 Ritik Sharma. B.Tech Electrical Engineering (SVNIT Surat).</p>
             <div class="footer-links">
-                <a href="https://www.instagram.com/ritik96.in/?hl=en" target="_blank" rel="noopener noreferrer"><i data-lucide="instagram" class="footer-icon"></i> @ritik96.in</a>
+                <a href="https://www.instagram.com/ritik96.in/?hl=en" target="_blank" rel="noopener noreferrer"><i data-lucide="instagram" class="footer-icon" aria-hidden="true"></i> @ritik96.in</a>
                 <span>•</span>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin" class="footer-icon"></i> LinkedIn</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin" class="footer-icon" aria-hidden="true"></i> LinkedIn</a>
                 <span>•</span>
-                <a href="https://github.com/ritiksharma2005" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="footer-icon"></i> GitHub</a>
+                <a href="https://github.com/ritiksharma2005" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="footer-icon" aria-hidden="true"></i> GitHub</a>
                 <span>•</span>
-                <a href="mailto:ritiknit96@gmail.com"><i data-lucide="mail" class="footer-icon"></i> ritiknit96@gmail.com</a>
+                <a href="mailto:ritiknit96@gmail.com"><i data-lucide="mail" class="footer-icon" aria-hidden="true"></i> ritiknit96@gmail.com</a>
                 <span>•</span>
-                <a href="tel:+919594396048"><i data-lucide="phone" class="footer-icon"></i> +91 9594396048</a>
+                <a href="tel:+919594396048"><i data-lucide="phone" class="footer-icon" aria-hidden="true"></i> +91 9594396048</a>
             </div>
         </div>
     </footer>

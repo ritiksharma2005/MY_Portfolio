@@ -1,7 +1,12 @@
 /**
  * RITIK SHARMA PORTFOLIO ENGINE
- * Design: Unslop Design System (Inter + JetBrains Mono, Graphite ramp, Hairline borders)
- * Features: Lucide Icons, Theme Toggle, Smooth Scroll, Profile Lightbox Modal, Web3Forms Contact
+ * Built in accordance with Vercel Web Interface Guidelines & Agent Skills
+ * Features:
+ * - Dynamic theme-color sync with color-scheme & localStorage
+ * - WCAG 2.2 accessible focus management & aria-expanded state handling
+ * - Modal keyboard trapping & focus restoration for image lightbox
+ * - Web3Forms integration with aria-live status messaging & polite updates
+ * - Performant, debounced scroll handling & Lucide icon hydration
  */
 
 function initLucideIcons() {
@@ -10,69 +15,81 @@ function initLucideIcons() {
     }
 }
 
-// Initialize immediately and on window load
+// Initial execution
 initLucideIcons();
 window.addEventListener("load", initLucideIcons);
 setTimeout(initLucideIcons, 300);
 setTimeout(initLucideIcons, 1000);
 
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Initialize Icons
     initLucideIcons();
 
-    // 2. Interactive Profile Image Full-Screen Lightbox
-    initProfileImageLightbox();
-
-    // 3. Theme Toggle Handler
+    // 1. Theme Toggle & theme-color sync
     const themeToggleBtn = document.getElementById("theme-toggle");
+    const themeColorMeta = document.querySelector('meta[name="theme-color"]');
     const savedTheme = localStorage.getItem("portfolio_theme") || "dark-theme";
     document.body.className = savedTheme;
+    updateThemeColorMeta(savedTheme);
 
     if (themeToggleBtn) {
         themeToggleBtn.addEventListener("click", () => {
-            if (document.body.classList.contains("light-theme")) {
-                document.body.classList.remove("light-theme");
-                document.body.classList.add("dark-theme");
-                localStorage.setItem("portfolio_theme", "dark-theme");
-            } else {
-                document.body.classList.remove("dark-theme");
-                document.body.classList.add("light-theme");
-                localStorage.setItem("portfolio_theme", "light-theme");
-            }
+            const isLight = document.body.classList.contains("light-theme");
+            const newTheme = isLight ? "dark-theme" : "light-theme";
+            document.body.className = newTheme;
+            localStorage.setItem("portfolio_theme", newTheme);
+            updateThemeColorMeta(newTheme);
         });
     }
 
-    // 4. Mobile Navigation Menu Toggle
+    function updateThemeColorMeta(theme) {
+        if (themeColorMeta) {
+            themeColorMeta.setAttribute("content", theme === "light-theme" ? "#fafafa" : "#111111");
+        }
+    }
+
+    // 2. Mobile Navigation Toggle with aria-expanded
     const menuToggleBtn = document.getElementById("menu-toggle");
     const navMenu = document.getElementById("nav-menu");
     const navLinks = document.querySelectorAll(".nav-link");
 
     if (menuToggleBtn && navMenu) {
+        menuToggleBtn.setAttribute("aria-expanded", "false");
+
         menuToggleBtn.addEventListener("click", () => {
-            navMenu.classList.toggle("open");
-            menuToggleBtn.classList.toggle("active");
+            const isOpen = navMenu.classList.toggle("open");
+            menuToggleBtn.classList.toggle("active", isOpen);
+            menuToggleBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
         });
 
         navLinks.forEach(link => {
             link.addEventListener("click", () => {
                 navMenu.classList.remove("open");
                 menuToggleBtn.classList.remove("active");
+                menuToggleBtn.setAttribute("aria-expanded", "false");
             });
         });
     }
 
-    // 5. Navbar Scroll Effect & Active Section Highlighting
+    // 3. Navbar Scroll Handler & Active Section Highlighting
     const navbar = document.getElementById("navbar");
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 30) {
-            navbar.classList.add("scrolled");
-        } else {
-            navbar.classList.remove("scrolled");
-        }
-        highlightActiveNavLink();
-    });
+    let isTicking = false;
 
-    // 6. Contact Form Handler (Web3Forms API Integration)
+    window.addEventListener("scroll", () => {
+        if (!isTicking) {
+            window.requestAnimationFrame(() => {
+                if (window.scrollY > 30) {
+                    navbar.classList.add("scrolled");
+                } else {
+                    navbar.classList.remove("scrolled");
+                }
+                highlightActiveNavLink();
+                isTicking = false;
+            });
+            isTicking = true;
+        }
+    }, { passive: true });
+
+    // 4. Contact Form Handler (Web3Forms API Integration)
     const contactForm = document.getElementById("contact-form");
     const formStatus = document.getElementById("form-status");
     if (contactForm) {
@@ -82,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const originalBtnHtml = submitBtn.innerHTML;
 
             submitBtn.disabled = true;
-            submitBtn.innerHTML = `<span>Sending...</span>`;
+            submitBtn.innerHTML = `<span>Sending…</span>`;
             if (formStatus) {
                 formStatus.className = "form-status";
                 formStatus.innerText = "";
@@ -130,6 +147,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+
+    // 5. Interactive Profile Image Full-Screen Lightbox
+    initProfileImageLightbox();
 });
 
 /**
@@ -148,7 +168,6 @@ function highlightActiveNavLink() {
         if (navLink) {
             if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
                 document.querySelectorAll(".nav-link").forEach(link => {
-                    // Only modify local section links, not inter-page nav
                     if (link.getAttribute("href").startsWith("#")) {
                         link.classList.remove("active");
                     }
@@ -160,23 +179,25 @@ function highlightActiveNavLink() {
 }
 
 /**
- * Interactive Profile Photo Zoom Lightbox Modal (Circular Full Screen View)
+ * Profile Image Modal Lightbox with Focus Restoration & Keyboard Support
  */
 function initProfileImageLightbox() {
     const profileImages = document.querySelectorAll(".profile-img");
     if (!profileImages.length) return;
 
-    // Inject modal overlay element if not present
     let modal = document.getElementById("profile-lightbox-modal");
     if (!modal) {
         modal = document.createElement("div");
         modal.id = "profile-lightbox-modal";
         modal.className = "profile-lightbox-modal";
+        modal.setAttribute("role", "dialog");
+        modal.setAttribute("aria-modal", "true");
+        modal.setAttribute("aria-label", "Enlarged profile photo view");
         modal.innerHTML = `
             <div class="profile-lightbox-content">
                 <button class="profile-lightbox-close" aria-label="Close photo view">&times;</button>
                 <div class="profile-lightbox-circle">
-                    <img id="profile-lightbox-img" src="" alt="Ritik Sharma Profile Photo Enlarged">
+                    <img id="profile-lightbox-img" src="" alt="Ritik Sharma Profile Photo Enlarged" width="360" height="360">
                 </div>
             </div>
         `;
@@ -185,19 +206,37 @@ function initProfileImageLightbox() {
 
     const modalImg = modal.querySelector("#profile-lightbox-img");
     const closeBtn = modal.querySelector(".profile-lightbox-close");
+    let lastActiveElement = null;
 
     profileImages.forEach(img => {
         img.title = "Click to view profile picture full screen";
-        img.addEventListener("click", () => {
+        img.setAttribute("role", "button");
+        img.setAttribute("tabindex", "0");
+        img.setAttribute("aria-label", "View profile photo enlarged");
+
+        const openModal = () => {
+            lastActiveElement = document.activeElement;
             modalImg.src = img.src;
             modal.classList.add("active");
-            document.body.style.overflow = "hidden"; // Lock scroll
+            document.body.style.overflow = "hidden";
+            closeBtn.focus();
+        };
+
+        img.addEventListener("click", openModal);
+        img.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                openModal();
+            }
         });
     });
 
     const closeModal = () => {
         modal.classList.remove("active");
         document.body.style.overflow = "";
+        if (lastActiveElement && typeof lastActiveElement.focus === "function") {
+            lastActiveElement.focus();
+        }
     };
 
     closeBtn.addEventListener("click", closeModal);

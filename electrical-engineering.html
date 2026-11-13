@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111111">
     <title>Ritik Sharma | Electrical Power System Engineering Portfolio</title>
-    <meta name="description" content="Dedicated Electrical Engineering Portfolio of Ritik Sharma - SVNIT Surat B.Tech EE, Power Systems, Electrical Machines, Transformers & Switchgear, Tata Power Kalyan internship.">
+    <meta name="description" content="Dedicated Electrical Engineering Portfolio of Ritik Sharma - SVNIT Surat B.Tech EE, Power Systems, Electrical Machines, Transformers &amp; Switchgear, Tata Power Kalyan internship.">
     
-    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <!-- Preconnect & Fonts: Inter & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
     <!-- Style Sheets -->
@@ -19,6 +21,9 @@
 </head>
 <body class="dark-theme">
 
+    <!-- Keyboard Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Navigation Header -->
     <header class="navbar" id="navbar">
         <div class="nav-container">
@@ -26,16 +31,16 @@
                 Ritik <span class="logo-accent">Sharma</span> <span class="badge">Electrical Engineer</span>
             </a>
             
-            <nav class="nav-menu" id="nav-menu">
+            <nav class="nav-menu" id="nav-menu" aria-label="Electrical Engineering Page Navigation">
                 <ul>
                     <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="data-analyst.html" class="nav-link"><i data-lucide="bar-chart-3" class="footer-icon"></i> Data Analyst</a></li>
-                    <li><a href="electrical-engineering.html" class="nav-link active"><i data-lucide="zap" class="footer-icon"></i> Electrical Engineer</a></li>
-                    <li><a href="developer.html" class="nav-link"><i data-lucide="code" class="footer-icon"></i> Developer</a></li>
+                    <li><a href="data-analyst.html" class="nav-link"><i data-lucide="bar-chart-3" class="footer-icon" aria-hidden="true"></i> Data Analyst</a></li>
+                    <li><a href="electrical-engineering.html" class="nav-link active"><i data-lucide="zap" class="footer-icon" aria-hidden="true"></i> Electrical Engineer</a></li>
+                    <li><a href="developer.html" class="nav-link"><i data-lucide="code" class="footer-icon" aria-hidden="true"></i> Developer</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#experience" class="nav-link">Experience</a></li>
                     <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#por-section" class="nav-link">Leadership & POR</a></li>
+                    <li><a href="#por-section" class="nav-link">Leadership &amp; POR</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
@@ -43,30 +48,36 @@
             <div class="nav-actions">
                 <!-- Theme Toggle Button -->
                 <button class="btn-icon" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle Theme">
-                    <i data-lucide="sun" class="sun-icon"></i>
-                    <i data-lucide="moon" class="moon-icon"></i>
+                    <i data-lucide="sun" class="sun-icon" aria-hidden="true"></i>
+                    <i data-lucide="moon" class="moon-icon" aria-hidden="true"></i>
                 </button>
                 <!-- Mobile Menu Button -->
                 <button class="btn-icon mobile-menu-toggle" id="menu-toggle" aria-label="Open mobile menu">
-                    <i data-lucide="menu" class="open-icon"></i>
-                    <i data-lucide="x" class="close-icon"></i>
+                    <i data-lucide="menu" class="open-icon" aria-hidden="true"></i>
+                    <i data-lucide="x" class="close-icon" aria-hidden="true"></i>
                 </button>
             </div>
         </div>
     </header>
 
     <!-- Main Content Container -->
-    <main>
+    <main id="main-content">
         <!-- Hero Section -->
         <section class="hero-landing-section" id="home">
             <div class="profile-header-card card">
                 <div class="profile-avatar-box">
-                    <img src="assets/profile.jpg" alt="Ritik Sharma Photograph" class="profile-img">
+                    <img src="assets/profile.jpg" alt="Ritik Sharma Photograph" class="profile-img" width="96" height="96" fetchpriority="high">
                 </div>
                 <div class="profile-info-box">
-                    <span class="institution-badge">
-                        <i data-lucide="zap"></i> Electrical Engineering • SVNIT Surat
-                    </span>
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+                        <span class="institution-badge">
+                            <i data-lucide="zap" aria-hidden="true"></i> Electrical Engineering • SVNIT Surat
+                        </span>
+                        <div class="status-badge" aria-label="Status: Open for Electrical Engineering Roles">
+                            <span class="status-dot" aria-hidden="true"></span>
+                            <span>Open for Engineering Roles</span>
+                        </div>
+                    </div>
                     <h1 class="profile-name">Ritik Sharma</h1>
                     <p class="profile-tagline">
                         Electrical Engineering | Power Systems | Electrical Equipment | Project Execution
@@ -75,27 +86,27 @@
                     <!-- Contact Details Pills -->
                     <div class="contact-pills">
                         <a href="mailto:ritiknit96@gmail.com" class="pill-link">
-                            <i data-lucide="mail" class="pill-icon"></i>
+                            <i data-lucide="mail" class="pill-icon" aria-hidden="true"></i>
                             ritiknit96@gmail.com
                         </a>
                         <a href="tel:+919594396048" class="pill-link">
-                            <i data-lucide="phone" class="pill-icon"></i>
+                            <i data-lucide="phone" class="pill-icon" aria-hidden="true"></i>
                             +91 9594396048
                         </a>
                         <a href="https://github.com/ritiksharma2005" target="_blank" rel="noopener noreferrer" class="pill-link">
-                            <i data-lucide="github" class="pill-icon"></i>
+                            <i data-lucide="github" class="pill-icon" aria-hidden="true"></i>
                             GitHub
                         </a>
                         <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="pill-link">
-                            <i data-lucide="linkedin" class="pill-icon"></i>
+                            <i data-lucide="linkedin" class="pill-icon" aria-hidden="true"></i>
                             LinkedIn
                         </a>
                         <a href="https://www.instagram.com/ritik96.in/?hl=en" target="_blank" rel="noopener noreferrer" class="pill-link">
-                            <i data-lucide="instagram" class="pill-icon"></i>
+                            <i data-lucide="instagram" class="pill-icon" aria-hidden="true"></i>
                             @ritik96.in
                         </a>
                         <span class="pill-text">
-                            <i data-lucide="map-pin" class="pill-icon"></i>
+                            <i data-lucide="map-pin" class="pill-icon" aria-hidden="true"></i>
                             SVNIT Surat, India
                         </span>
                     </div>
@@ -104,16 +115,16 @@
                     <div class="domain-stats-row" style="margin-top: 16px;">
                         <span class="badge">Power Systems</span>
                         <span class="badge">Electrical Machines</span>
-                        <span class="badge">Transformers & Switchgear</span>
+                        <span class="badge">Transformers &amp; Switchgear</span>
                         <span class="badge">Project Execution</span>
                     </div>
 
                     <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px;">
                         <a href="https://drive.google.com/file/d/1YC9DSloOvHTaTgJz4LeROu1q4s64NZUX/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-                            <i data-lucide="file-text"></i> Download Electrical Resume (PDF)
+                            <i data-lucide="file-text" aria-hidden="true"></i> Download Electrical Resume (PDF)
                         </a>
                         <a href="#projects" class="btn btn-secondary btn-sm">
-                            <i data-lucide="folder-git-2"></i> View Electrical Projects
+                            <i data-lucide="folder-git-2" aria-hidden="true"></i> View Electrical Projects
                         </a>
                     </div>
                 </div>
@@ -123,15 +134,15 @@
         <!-- About & Skills Section -->
         <section class="section" id="about">
             <div class="section-header">
-                <span class="section-tagline">Engineering Foundation & Technical Capabilities</span>
-                <h2 class="section-title">Technical Skills & Profile</h2>
-                <div class="section-line"></div>
+                <span class="section-tagline">Engineering Foundation &amp; Technical Capabilities</span>
+                <h2 class="section-title">Technical Skills &amp; Profile</h2>
+                <p class="section-desc">Power systems engineering, substation operations, and analytical modeling fundamentals</p>
             </div>
 
             <div class="about-grid">
                 <!-- Bio Card -->
                 <div class="card bio-card">
-                    <h3 class="card-title"><i data-lucide="user-check"></i> Engineering Profile</h3>
+                    <h3 class="card-title"><i data-lucide="user-check" aria-hidden="true"></i> Engineering Profile</h3>
                     <p class="bio-text">
                         Final-year Electrical Engineering student at SVNIT Surat with strong interests in power systems, electrical equipment, and project execution. During my internship at Tata Power, I gained practical exposure to power transmission, distribution, electrical equipment, maintenance practices, testing, and electrical safety.
                     </p>
@@ -157,14 +168,14 @@
                         </div>
                         <div class="detail-item">
                             <span class="detail-label">Primary Domain</span>
-                            <span class="detail-value">Power Systems, Machines, Transformers & Switchgear</span>
+                            <span class="detail-value">Power Systems, Machines, Transformers &amp; Switchgear</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Technical & Categorized Skills Card -->
                 <div class="card skills-card">
-                    <h3 class="card-title"><i data-lucide="sliders"></i> Technical & Domain Skills</h3>
+                    <h3 class="card-title"><i data-lucide="sliders" aria-hidden="true"></i> Technical &amp; Domain Skills</h3>
                     
                     <div class="skills-container">
                         <!-- Category 1: Core Electrical -->
@@ -177,17 +188,17 @@
                                 <span class="badge">Power Systems</span>
                                 <span class="badge">Electrical Machines</span>
                                 <span class="badge">Transformers</span>
-                                <span class="badge">Switchgear & Protection</span>
+                                <span class="badge">Switchgear &amp; Protection</span>
                                 <span class="badge">Electrical Measurements</span>
                                 <span class="badge">Control Systems</span>
-                                <span class="badge">Earthing & Grounding</span>
+                                <span class="badge">Earthing &amp; Grounding</span>
                             </div>
                         </div>
 
                         <!-- Category 2: Engineering Tools -->
                         <div class="skill-group" style="margin-top: 16px;">
                             <h4 class="skill-group-title">
-                                <span>Engineering Tools & Software</span>
+                                <span>Engineering Tools &amp; Software</span>
                                 <span class="badge">Tools</span>
                             </h4>
                             <div class="skills-badges">
@@ -202,7 +213,7 @@
                         <!-- Category 3: Professional Skills -->
                         <div class="skill-group" style="margin-top: 16px;">
                             <h4 class="skill-group-title">
-                                <span>Professional & Operational Skills</span>
+                                <span>Professional &amp; Operational Skills</span>
                                 <span class="badge">Execution</span>
                             </h4>
                             <div class="skills-badges">
@@ -221,9 +232,9 @@
         <!-- Industrial Experience Section -->
         <section class="section" id="experience">
             <div class="section-header">
-                <span class="section-tagline">Field & Industrial Exposure</span>
+                <span class="section-tagline">Field &amp; Industrial Exposure</span>
                 <h2 class="section-title">Industrial Experience</h2>
-                <div class="section-line"></div>
+                <p class="section-desc">Practical industrial training in power transmission, switchyard operations, and safety standards</p>
             </div>
 
             <div class="timeline">
@@ -243,9 +254,9 @@
                             <strong>Summary:</strong> Gained practical exposure to <strong>power transmission, distribution, electrical equipment, maintenance, testing, and electrical safety</strong> in an industrial environment.
                         </p>
                         <ul class="timeline-bullet-list">
-                            <li><strong>Power Transmission & Distribution:</strong> Exposure to day-to-day operations of transmission and distribution systems.</li>
-                            <li><strong>Equipment & Maintenance:</strong> Learned about electrical equipment, maintenance procedures, and basic testing practices.</li>
-                            <li><strong>Safety & Project Execution:</strong> Observed electrical safety practices and gained an understanding of technical documentation and project execution.</li>
+                            <li><strong>Power Transmission &amp; Distribution:</strong> Exposure to day-to-day operations of transmission and distribution systems.</li>
+                            <li><strong>Equipment &amp; Maintenance:</strong> Learned about electrical equipment, maintenance procedures, and basic testing practices.</li>
+                            <li><strong>Safety &amp; Project Execution:</strong> Observed electrical safety practices and gained an understanding of technical documentation and project execution.</li>
                         </ul>
                     </div>
                 </div>
@@ -255,16 +266,16 @@
         <!-- Projects Showcase Section -->
         <section class="section" id="projects">
             <div class="section-header">
-                <span class="section-tagline">Engineering Hardware, Software & Automation</span>
-                <h2 class="section-title">Engineering & Automation Projects</h2>
-                <div class="section-line"></div>
+                <span class="section-tagline">Engineering Hardware, Software &amp; Automation</span>
+                <h2 class="section-title">Engineering &amp; Automation Projects</h2>
+                <p class="section-desc">Ground-grid software calculation tools, circuit prototypes, and workflow automation systems</p>
             </div>
 
             <div class="project-grid">
                 <!-- Project 1: Earthing Sizing Calculator -->
                 <div class="card project-card">
                     <div class="project-img-box">
-                        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?fit=crop&w=800&h=500&q=80" alt="Earthing Sizing Calculator" class="project-img">
+                        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?fit=crop&amp;w=800&amp;h=500&amp;q=80" alt="Earthing Sizing Calculator" class="project-img" width="800" height="500" loading="lazy">
                     </div>
                     <div class="project-details-box">
                         <div class="project-title-row">
@@ -291,7 +302,7 @@
                 <!-- Project 2: Water Level Indicator -->
                 <div class="card project-card">
                     <div class="project-img-box">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?fit=crop&w=800&h=500&q=80" alt="Water Level Indicator" class="project-img">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?fit=crop&amp;w=800&amp;h=500&amp;q=80" alt="Water Level Indicator" class="project-img" width="800" height="500" loading="lazy">
                     </div>
                     <div class="project-details-box">
                         <div class="project-title-row">
@@ -318,7 +329,7 @@
                 <!-- Project 3: AI-Powered Automated Newsroom -->
                 <div class="card project-card">
                     <div class="project-img-box">
-                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?fit=crop&w=800&h=500&q=80" alt="AI-Powered Automated Newsroom & Instagram Automation" class="project-img">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?fit=crop&amp;w=800&amp;h=500&amp;q=80" alt="AI-Powered Automated Newsroom &amp; Instagram Automation" class="project-img" width="800" height="500" loading="lazy">
                     </div>
                     <div class="project-details-box">
                         <div class="project-title-row">
@@ -341,15 +352,15 @@
 
                         <ul class="timeline-bullet-list" style="margin-top: 12px;">
                             <li>Automated <strong>news collection, deduplication, relevance filtering, and ranking</strong> across NewsData.io, GNews, Guardian API, and RSS feeds.</li>
-                            <li>Utilized <strong>Gemini & Groq Multimodal AI</strong> for automated story classification, summarization, viral headline generation, and caption synthesis.</li>
-                            <li>Integrated <strong>Instagram monitoring & web scraping</strong> using Apify and Playwright to track trending social stories.</li>
+                            <li>Utilized <strong>Gemini &amp; Groq Multimodal AI</strong> for automated story classification, summarization, viral headline generation, and caption synthesis.</li>
+                            <li>Integrated <strong>Instagram monitoring &amp; web scraping</strong> using Apify and Playwright to track trending social stories.</li>
                             <li>Engineered an automated <strong>Poster Generation Engine</strong> using Python/Pillow to overlay headlines, brand logos, and AI visuals into publish-ready social assets.</li>
                             <li>Orchestrated <strong>GitHub Actions cron workflows</strong> with a human-in-the-loop Telegram Bot review interface before live social media publishing.</li>
                         </ul>
 
                         <div class="project-actions" style="margin-top: 16px; border-top: 1px solid var(--border-hairline); padding-top: 16px;">
                             <a href="https://github.com/ritiksharma2005/news_post" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-                                <i data-lucide="github"></i> View on GitHub
+                                <i data-lucide="github" aria-hidden="true"></i> View on GitHub
                             </a>
                         </div>
                     </div>
@@ -360,10 +371,9 @@
         <!-- Positions of Responsibility Section -->
         <section class="por-section" id="por-section">
             <div class="section-header">
-                <span class="section-tagline">Leadership & Institute Service</span>
+                <span class="section-tagline">Leadership &amp; Institute Service</span>
                 <h2 class="section-title">Positions of Responsibility (POR)</h2>
-                <div class="section-line"></div>
-                <p class="section-desc-center">Leadership roles, council coordination, and student engagement initiatives at SVNIT Surat</p>
+                <p class="section-desc">Leadership roles, council coordination, and student engagement initiatives at SVNIT Surat</p>
             </div>
 
             <div class="por-grid-cards">
@@ -371,12 +381,12 @@
                 <div class="card por-card-item">
                     <div class="por-header-row">
                         <div class="por-icon-box">
-                            <i data-lucide="award"></i>
+                            <i data-lucide="award" aria-hidden="true"></i>
                         </div>
-                        <span class="por-inst">SVNIT, Surat</span>
+                        <span class="por-inst">SVNIT Surat</span>
                     </div>
                     <h3 class="por-card-title">Advisory Committee Member</h3>
-                    <h4 class="por-card-org">Alumni Training & Placement Affairs Council (ATPAC)</h4>
+                    <h4 class="por-card-org">Alumni Training &amp; Placement Affairs Council (ATPAC)</h4>
                     <ul class="timeline-bullet-list">
                         <li>Advised student placement coordinators and council teams on campus recruitment drives, interview preparation, and alumni networking.</li>
                         <li>Guided corporate outreach strategy and supported event execution for graduating student placement sessions.</li>
@@ -393,9 +403,9 @@
                 <div class="card por-card-item">
                     <div class="por-header-row">
                         <div class="por-icon-box">
-                            <i data-lucide="sparkles"></i>
+                            <i data-lucide="sparkles" aria-hidden="true"></i>
                         </div>
-                        <span class="por-inst">SVNIT, Surat</span>
+                        <span class="por-inst">SVNIT Surat</span>
                     </div>
                     <h3 class="por-card-title">Advisory Committee Member</h3>
                     <h4 class="por-card-org">Cultural Affairs Council (CAC)</h4>
@@ -415,12 +425,12 @@
                 <div class="card por-card-item">
                     <div class="por-header-row">
                         <div class="por-icon-box">
-                            <i data-lucide="lightbulb"></i>
+                            <i data-lucide="lightbulb" aria-hidden="true"></i>
                         </div>
-                        <span class="por-inst">SVNIT, Surat</span>
+                        <span class="por-inst">SVNIT Surat</span>
                     </div>
                     <h3 class="por-card-title">Convener</h3>
-                    <h4 class="por-card-org">Research & Innovation Affairs Council (RIAC)</h4>
+                    <h4 class="por-card-org">Research &amp; Innovation Affairs Council (RIAC)</h4>
                     <ul class="timeline-bullet-list">
                         <li>Spearheaded student research initiatives, technical innovation workshops, and project showcases across departments.</li>
                         <li>Coordinated research symposiums and facilitated student-faculty technical project collaborations.</li>
@@ -437,9 +447,9 @@
                 <div class="card por-card-item">
                     <div class="por-header-row">
                         <div class="por-icon-box">
-                            <i data-lucide="heart"></i>
+                            <i data-lucide="heart" aria-hidden="true"></i>
                         </div>
-                        <span class="por-inst">SVNIT, Surat</span>
+                        <span class="por-inst">SVNIT Surat</span>
                     </div>
                     <h3 class="por-card-title">Senior Executive</h3>
                     <h4 class="por-card-org">National Service Scheme (NSS)</h4>
@@ -459,19 +469,19 @@
                 <div class="card por-card-item">
                     <div class="por-header-row">
                         <div class="por-icon-box">
-                            <i data-lucide="clapperboard"></i>
+                            <i data-lucide="clapperboard" aria-hidden="true"></i>
                         </div>
-                        <span class="por-inst">SVNIT, Surat</span>
+                        <span class="por-inst">SVNIT Surat</span>
                     </div>
                     <h3 class="por-card-title">Active Member</h3>
-                    <h4 class="por-card-org">Kirdar — The Dramatics & Theater Club</h4>
+                    <h4 class="por-card-org">Kirdar — The Dramatics &amp; Theater Club</h4>
                     <ul class="timeline-bullet-list">
                         <li>Actively performed in stage plays, street plays (Nukkad Natak), and dramatic acts for campus cultural events.</li>
                         <li>Contributed to scriptwriting, character development, voice modulation rehearsals, and creative stage management.</li>
                         <li>Utilized street theater as a powerful medium to convey social messages and engage diverse audiences.</li>
                     </ul>
                     <div class="por-skills-tags">
-                        <span class="tag">Theater & Dramatics</span>
+                        <span class="tag">Theater &amp; Dramatics</span>
                         <span class="tag">Street Drama</span>
                         <span class="tag">Public Performance</span>
                     </div>
@@ -483,15 +493,15 @@
         <section class="section" id="contact">
             <div class="section-header">
                 <span class="section-tagline">Communication</span>
-                <h2 class="section-title">Contact & Inquiries</h2>
-                <div class="section-line"></div>
+                <h2 class="section-title">Contact &amp; Inquiries</h2>
+                <p class="section-desc">Reach out for power systems engineering opportunities, industrial consulting, or technical discussions</p>
             </div>
 
             <div class="contact-grid">
                 <div class="contact-info">
                     <div class="card info-card">
                         <div class="info-icon-box">
-                            <i data-lucide="mail"></i>
+                            <i data-lucide="mail" aria-hidden="true"></i>
                         </div>
                         <div class="info-content">
                             <h4>Email Address</h4>
@@ -501,7 +511,7 @@
 
                     <div class="card info-card">
                         <div class="info-icon-box">
-                            <i data-lucide="phone"></i>
+                            <i data-lucide="phone" aria-hidden="true"></i>
                         </div>
                         <div class="info-content">
                             <h4>Phone / Contact</h4>
@@ -511,7 +521,7 @@
 
                     <div class="card info-card">
                         <div class="info-icon-box">
-                            <i data-lucide="map-pin"></i>
+                            <i data-lucide="map-pin" aria-hidden="true"></i>
                         </div>
                         <div class="info-content">
                             <h4>Location</h4>
@@ -521,7 +531,7 @@
 
                     <div class="card info-card">
                         <div class="info-icon-box">
-                            <i data-lucide="file-text"></i>
+                            <i data-lucide="file-text" aria-hidden="true"></i>
                         </div>
                         <div class="info-content">
                             <h4>Electrical Resume</h4>
@@ -536,26 +546,26 @@
                         <input type="hidden" name="access_key" value="de851278-1e55-4f8c-be2b-cb0ef5bcbc7a">
                         <div class="form-group">
                             <label for="form-name">Your Name</label>
-                            <input type="text" id="form-name" name="name" required placeholder="Enter your full name">
+                            <input type="text" id="form-name" name="name" required autocomplete="name" placeholder="e.g., Alex Johnson…">
                         </div>
                         <div class="form-group">
                             <label for="form-email">Your Email</label>
-                            <input type="email" id="form-email" name="email" required placeholder="Enter your email address">
+                            <input type="email" id="form-email" name="email" required autocomplete="email" spellcheck="false" placeholder="e.g., alex@example.com…">
                         </div>
                         <div class="form-group">
                             <label for="form-subject">Subject</label>
-                            <input type="text" id="form-subject" name="subject" required placeholder="Electrical Power Systems / Engineering Inquiry">
+                            <input type="text" id="form-subject" name="subject" required autocomplete="off" placeholder="e.g., Electrical Power Systems / Engineering Inquiry…">
                         </div>
                         <div class="form-group">
                             <label for="form-message">Message</label>
-                            <textarea id="form-message" name="message" required rows="4" placeholder="Write your message here..."></textarea>
+                            <textarea id="form-message" name="message" required rows="4" autocomplete="off" placeholder="Write your message here…"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary" id="btn-submit">
                             <span>Send Message</span>
-                            <i data-lucide="send"></i>
+                            <i data-lucide="send" aria-hidden="true"></i>
                         </button>
                     </form>
-                    <div class="form-status" id="form-status"></div>
+                    <div class="form-status" id="form-status" aria-live="polite"></div>
                 </div>
             </div>
         </section>
@@ -566,13 +576,13 @@
         <div class="footer-content">
             <p>&copy; 2026 Ritik Sharma. B.Tech Electrical Engineering (SVNIT Surat).</p>
             <div class="footer-links">
-                <a href="https://www.instagram.com/ritik96.in/?hl=en" target="_blank" rel="noopener noreferrer"><i data-lucide="instagram" class="footer-icon"></i> @ritik96.in</a>
+                <a href="https://www.instagram.com/ritik96.in/?hl=en" target="_blank" rel="noopener noreferrer"><i data-lucide="instagram" class="footer-icon" aria-hidden="true"></i> @ritik96.in</a>
                 <span>•</span>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin" class="footer-icon"></i> LinkedIn</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin" class="footer-icon" aria-hidden="true"></i> LinkedIn</a>
                 <span>•</span>
-                <a href="https://github.com/ritiksharma2005" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="footer-icon"></i> GitHub</a>
+                <a href="https://github.com/ritiksharma2005" target="_blank" rel="noopener noreferrer"><i data-lucide="github" class="footer-icon" aria-hidden="true"></i> GitHub</a>
                 <span>•</span>
-                <a href="index.html"><i data-lucide="home" class="footer-icon"></i> Main Portfolio Home ↑</a>
+                <a href="index.html"><i data-lucide="home" class="footer-icon" aria-hidden="true"></i> Main Portfolio Home ↑</a>
             </div>
         </div>
     </footer>
