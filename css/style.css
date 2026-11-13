@@ -1,9 +1,12 @@
 /* ==========================================================================
-   RITIK SHARMA PORTFOLIO — VERCEL DESIGN SYSTEM & WEB INTERFACE GUIDELINES
-   Guided by vercel-labs/agent-skills (Web Interface Guidelines & Writing Guidelines)
+   RITIK SHARMA PORTFOLIO — CRAFT SYSTEM
+   Synthesized from pbakaus/impeccable (Craft Floor, Polish, Delight)
+   and vercel-labs/agent-skills (Web Interface Guidelines & Writing Guidelines).
+   
    Direction: Technical, exact, calm, high-performance, accessible.
    Palette: Graphite neutral ramp with single disciplined accent.
-   Grid: Strict 4px spacing scale, nested radius math, hairline depth.
+   Grid: Strict 4px spacing scale, nested radius math, physical light depth.
+   Browser surfaces: Themed selection, custom caret, tabular figures, focus rings.
    ========================================================================== */
 
 :root {
@@ -14,9 +17,9 @@
     --bg-page: #111111;
     --bg-card: #171717;
     --bg-raised: #202022;
-    --bg-raised-hover: #2a2a2e;
+    --bg-raised-hover: #28282c;
     
-    --border-hairline: rgba(255, 255, 255, 0.09);
+    --border-hairline: rgba(255, 255, 255, 0.08);
     --border-subtle: rgba(255, 255, 255, 0.16);
     --border-hover: rgba(255, 255, 255, 0.28);
     
@@ -24,7 +27,12 @@
     --text-secondary: #a1a1aa;
     --text-muted: #71717a;
     
-    /* Vercel Disciplined Blue Accent */
+    /* Layered Physical Depth System (Offset + Soft Blur + Specular Highlight) */
+    --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.35), 0 4px 16px -2px rgba(0, 0, 0, 0.25);
+    --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.35), 0 12px 28px -4px rgba(0, 0, 0, 0.45);
+    --highlight-specular: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    
+    /* Disciplined Blue Accent */
     --accent: #3b82f6;
     --accent-hover: #2563eb;
     --accent-subtle: rgba(59, 130, 246, 0.12);
@@ -57,9 +65,9 @@
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     --font-mono: 'JetBrains Mono', 'IBM Plex Mono', Menlo, Consolas, monospace;
     
-    /* Motion (Compositor-Friendly Standard Easing) */
+    /* Motion (Authored Exponential Easing) */
     --ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
-    --duration-fast: 140ms;
+    --duration-fast: 150ms;
     --duration-normal: 220ms;
 }
 
@@ -81,6 +89,10 @@
     --text-secondary: #52525b;
     --text-muted: #71717a;
     
+    --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.05), 0 6px 18px -2px rgba(0, 0, 0, 0.04);
+    --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.08), 0 14px 28px -4px rgba(0, 0, 0, 0.08);
+    --highlight-specular: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    
     --accent: #2563eb;
     --accent-hover: #1d4ed8;
     --accent-subtle: rgba(37, 99, 235, 0.08);
@@ -98,6 +110,27 @@
     --accent-dev: #9333ea;
     --accent-dev-subtle: rgba(147, 51, 234, 0.08);
     --accent-dev-border: rgba(147, 51, 234, 0.20);
+}
+
+/* ==========================================================================
+   BROWSER SURFACES (THEMED CRAFT FLOOR)
+   ========================================================================== */
+::selection {
+    background: rgba(59, 130, 246, 0.28);
+    color: #ffffff;
+}
+
+.light-theme ::selection {
+    background: rgba(37, 99, 235, 0.20);
+    color: #000000;
+}
+
+input, textarea {
+    caret-color: var(--accent);
+}
+
+a {
+    text-underline-offset: 4px;
 }
 
 /* ==========================================================================
@@ -135,7 +168,7 @@ body {
                 color var(--duration-normal) var(--ease-standard);
 }
 
-/* Vercel Ambient Background Grid Texture */
+/* Ambient Background Grid Texture */
 body::before {
     content: "";
     position: fixed;
@@ -199,6 +232,15 @@ h1, h2, h3, h4, h5, h6 {
 
 body, p, h1, h2, h3, h4, span, a {
     overflow-wrap: break-word;
+}
+
+/* Optimal Prose Measure (45–75ch) & Pretty Wrapping */
+p, .item-desc, .achievement-card-text, .project-desc, .timeline-text, .bio-text {
+    text-wrap: pretty;
+}
+
+.item-desc, .achievement-card-text, .project-desc, .timeline-text, .bio-text {
+    max-width: 68ch;
 }
 
 a {
@@ -285,7 +327,7 @@ select, input, textarea {
     width: 100%;
     z-index: 100;
     height: 60px;
-    background: rgba(17, 17, 17, 0.8);
+    background: rgba(17, 17, 17, 0.82);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--border-hairline);
@@ -380,13 +422,18 @@ select, input, textarea {
     color: var(--text-secondary);
     transition: color var(--duration-fast) var(--ease-standard),
                 background-color var(--duration-fast) var(--ease-standard),
-                border-color var(--duration-fast) var(--ease-standard);
+                border-color var(--duration-fast) var(--ease-standard),
+                transform var(--duration-fast) var(--ease-standard);
 }
 
 .btn-icon:hover {
     color: var(--text-primary);
     border-color: var(--border-subtle);
     background: var(--bg-raised-hover);
+}
+
+.btn-icon:active {
+    transform: scale(0.96);
 }
 
 .sun-icon { display: none; width: 15px; height: 15px; }
@@ -445,7 +492,7 @@ section, .section {
     font-size: 13.5px;
     color: var(--text-secondary);
     margin-top: 6px;
-    max-width: 640px;
+    max-width: 68ch;
     line-height: 1.5;
 }
 
@@ -461,9 +508,10 @@ section, .section {
     border: 1px solid var(--border-hairline);
     border-radius: var(--radius-lg);
     padding: 24px;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    box-shadow: var(--shadow-card), var(--highlight-specular);
     transition: border-color var(--duration-fast) var(--ease-standard),
                 background-color var(--duration-fast) var(--ease-standard),
+                box-shadow var(--duration-fast) var(--ease-standard),
                 transform var(--duration-fast) var(--ease-standard);
 }
 
@@ -495,14 +543,17 @@ section, .section {
     object-fit: cover;
     border-radius: 50%;
     border: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-card);
     cursor: pointer;
     transition: transform var(--duration-fast) var(--ease-standard),
-                border-color var(--duration-fast) var(--ease-standard);
+                border-color var(--duration-fast) var(--ease-standard),
+                box-shadow var(--duration-fast) var(--ease-standard);
 }
 
 .profile-img:hover {
     transform: scale(1.03);
     border-color: var(--border-hover);
+    box-shadow: var(--shadow-hover);
 }
 
 .profile-info-box {
@@ -607,13 +658,15 @@ section, .section {
     touch-action: manipulation;
     transition: color var(--duration-fast) var(--ease-standard),
                 border-color var(--duration-fast) var(--ease-standard),
-                background-color var(--duration-fast) var(--ease-standard);
+                background-color var(--duration-fast) var(--ease-standard),
+                transform var(--duration-fast) var(--ease-standard);
 }
 
 .pill-link:hover {
     color: var(--text-primary);
     border-color: var(--border-subtle);
     background: var(--bg-raised-hover);
+    transform: translateY(-1px);
 }
 
 .pill-link svg, .pill-text svg, .pill-icon {
@@ -679,17 +732,19 @@ section, .section {
     text-decoration: none;
     color: inherit;
     cursor: pointer;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    box-shadow: var(--shadow-card), var(--highlight-specular);
     touch-action: manipulation;
     transition: border-color var(--duration-fast) var(--ease-standard),
                 background-color var(--duration-fast) var(--ease-standard),
+                box-shadow var(--duration-fast) var(--ease-standard),
                 transform var(--duration-fast) var(--ease-standard);
 }
 
 .square-card:hover {
     border-color: var(--border-subtle);
     background: var(--bg-raised);
-    transform: translateY(-1px);
+    box-shadow: var(--shadow-hover), var(--highlight-specular);
+    transform: translateY(-2px);
 }
 
 .square-header {
@@ -760,6 +815,14 @@ section, .section {
     width: 100%;
 }
 
+.square-action svg {
+    transition: transform var(--duration-fast) var(--ease-standard);
+}
+
+.square-card:hover .square-action svg {
+    transform: translateX(3px);
+}
+
 /* ==========================================================================
    BUTTONS
    ========================================================================== */
@@ -779,20 +842,23 @@ section, .section {
     background: var(--bg-raised);
     color: var(--text-primary);
     touch-action: manipulation;
+    box-shadow: var(--shadow-card);
     transition: background-color var(--duration-fast) var(--ease-standard),
                 border-color var(--duration-fast) var(--ease-standard),
                 color var(--duration-fast) var(--ease-standard),
+                box-shadow var(--duration-fast) var(--ease-standard),
                 transform var(--duration-fast) var(--ease-standard);
 }
 
 .btn:active {
-    transform: scale(0.985);
+    transform: scale(0.98);
 }
 
 .btn:hover {
     background: var(--bg-raised-hover);
     border-color: var(--border-subtle);
     color: var(--text-primary);
+    box-shadow: var(--shadow-hover);
 }
 
 .btn-primary {
@@ -906,7 +972,14 @@ section, .section {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    box-shadow: var(--shadow-card), var(--highlight-specular);
+    transition: border-color var(--duration-fast) var(--ease-standard),
+                transform var(--duration-fast) var(--ease-standard);
+}
+
+.edu-card-item:hover {
+    border-color: var(--border-subtle);
+    transform: translateY(-1px);
 }
 
 .edu-card-badge {
@@ -965,7 +1038,7 @@ section, .section {
     border: 1px solid var(--border-hairline);
     border-radius: var(--radius-lg);
     padding: 32px;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    box-shadow: var(--shadow-card), var(--highlight-specular);
 }
 
 .achievements-tagline {
@@ -993,11 +1066,14 @@ section, .section {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    transition: border-color var(--duration-fast) var(--ease-standard);
+    box-shadow: var(--shadow-card);
+    transition: border-color var(--duration-fast) var(--ease-standard),
+                transform var(--duration-fast) var(--ease-standard);
 }
 
 .achievement-card:hover {
     border-color: var(--border-subtle);
+    transform: translateY(-1px);
 }
 
 .achievement-header-row {
@@ -1276,6 +1352,7 @@ section, .section {
     border-radius: var(--radius-lg);
     padding: 20px 24px;
     min-width: 0;
+    box-shadow: var(--shadow-card), var(--highlight-specular);
 }
 
 .timeline-header-row {
@@ -1335,13 +1412,16 @@ section, .section {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    box-shadow: var(--shadow-card), var(--highlight-specular);
     transition: border-color var(--duration-fast) var(--ease-standard),
+                box-shadow var(--duration-fast) var(--ease-standard),
                 transform var(--duration-fast) var(--ease-standard);
 }
 
 .project-card:hover {
     border-color: var(--border-subtle);
-    transform: translateY(-1px);
+    box-shadow: var(--shadow-hover), var(--highlight-specular);
+    transform: translateY(-2px);
 }
 
 .project-img-box {
@@ -1429,11 +1509,16 @@ section, .section {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    transition: border-color var(--duration-fast) var(--ease-standard);
+    box-shadow: var(--shadow-card), var(--highlight-specular);
+    transition: border-color var(--duration-fast) var(--ease-standard),
+                box-shadow var(--duration-fast) var(--ease-standard),
+                transform var(--duration-fast) var(--ease-standard);
 }
 
 .por-card-item:hover {
     border-color: var(--border-subtle);
+    box-shadow: var(--shadow-hover), var(--highlight-specular);
+    transform: translateY(-1px);
 }
 
 .por-header-row {
@@ -1511,6 +1596,7 @@ section, .section {
     display: flex;
     align-items: center;
     gap: 14px;
+    box-shadow: var(--shadow-card), var(--highlight-specular);
 }
 
 .info-icon-box {
@@ -1551,6 +1637,7 @@ section, .section {
     border: 1px solid var(--border-hairline);
     border-radius: var(--radius-lg);
     padding: 24px;
+    box-shadow: var(--shadow-card), var(--highlight-specular);
 }
 
 .contact-form {
