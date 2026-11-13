@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function updateThemeColorMeta(theme) {
         if (themeColorMeta) {
-            themeColorMeta.setAttribute("content", theme === "light-theme" ? "#fafafa" : "#111111");
+            themeColorMeta.setAttribute("content", theme === "light-theme" ? "#fafafa" : "#08090d");
         }
     }
 
