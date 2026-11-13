@@ -27,10 +27,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // 0. 3D Intro Splash & Domain Jump Screen
     initSplashScreen();
 
-    // 1. Theme Toggle & theme-color sync
+    // 1. Theme Toggle & theme-color sync (CodeWithHarry Light Default)
     const themeToggleBtn = document.getElementById("theme-toggle");
     const themeColorMeta = document.querySelector('meta[name="theme-color"]');
-    const savedTheme = localStorage.getItem("portfolio_theme") || "dark-theme";
+    const savedTheme = localStorage.getItem("portfolio_theme") || "light-theme";
     document.body.className = savedTheme;
     updateThemeColorMeta(savedTheme);
 
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function updateThemeColorMeta(theme) {
         if (themeColorMeta) {
-            themeColorMeta.setAttribute("content", theme === "light-theme" ? "#fafafa" : "#08090d");
+            themeColorMeta.setAttribute("content", theme === "dark-theme" ? "#09090B" : "#FAFAFA");
         }
     }
 
