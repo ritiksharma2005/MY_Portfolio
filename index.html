@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://images.unsplash.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     
     <!-- Style Sheets -->
     <link rel="stylesheet" href="css/style.css">
@@ -20,74 +21,140 @@
 </head>
 <body class="light-theme">
 
-    <!-- 3D INTRO SPLASH & DIRECT DOMAIN JUMP ANIMATION SCREEN -->
-    <div id="splash-screen" class="splash-screen" role="dialog" aria-modal="true" aria-label="Welcome screen">
-        <canvas id="splash-canvas" class="splash-canvas"></canvas>
-        <div class="splash-content">
-            <!-- 3D Orbiting Gyro Rings with Profile Photo in Center -->
-            <div class="splash-logo-box">
-                <div class="splash-3d-ring ring-analytics"></div>
-                <div class="splash-3d-ring ring-electrical"></div>
-                <div class="splash-3d-ring ring-dev"></div>
-                <div class="splash-avatar-frame">
-                    <img src="assets/profile.jpg" alt="Ritik Sharma Profile Avatar" width="76" height="76" class="splash-avatar-img">
-                </div>
-            </div>
+    <!-- ==========================================================================
+         PROFESSIONAL PORTFOLIO LOADING SCREEN (Minimalist & Modern)
+         ========================================================================== -->
+    <div id="loading-screen" class="loading-screen" role="dialog" aria-modal="true" aria-label="Loading Ritik Sharma's Portfolio">
+        
+        <!-- BackgroundWaves Component: Top-Left & Bottom-Right Layered Ambient Wave Shapes -->
+        <div class="background-waves" aria-hidden="true">
+            <!-- Top-Left Flowing Wave Ribbon -->
+            <svg class="wave-shape wave-top-left" viewBox="0 0 600 450" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <defs>
+                    <linearGradient id="tlGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#EFF6FF" stop-opacity="0.95"/>
+                        <stop offset="55%" stop-color="#DBEAFE" stop-opacity="0.75"/>
+                        <stop offset="100%" stop-color="#BFDBFE" stop-opacity="0.35"/>
+                    </linearGradient>
+                    <linearGradient id="tlGrad2" x1="10%" y1="0%" x2="90%" y2="80%">
+                        <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+                        <stop offset="50%" stop-color="#EFF6FF" stop-opacity="0.85"/>
+                        <stop offset="100%" stop-color="#DBEAFE" stop-opacity="0.5"/>
+                    </linearGradient>
+                    <filter id="tlWaveShadow" x="-10%" y="-10%" width="120%" height="120%" filterUnits="userSpaceOnUse">
+                        <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0F172A" flood-opacity="0.04"/>
+                    </filter>
+                </defs>
+                <path d="M-50 -50 L420 -50 C360 80 430 180 320 280 C240 350 120 340 -50 420 Z" fill="url(#tlGrad1)"/>
+                <path d="M-50 -50 L340 -50 C290 60 350 140 260 220 C180 290 80 270 -50 330 Z" fill="url(#tlGrad2)" filter="url(#tlWaveShadow)"/>
+            </svg>
 
-            <div class="splash-header-text">
-                <h1 class="splash-title">RITIK SHARMA</h1>
-                <p class="splash-subtitle">B.Tech Electrical Engineering • NIT Surat (SVNIT)</p>
-            </div>
-
-            <!-- Direct 3-Domain Interactive Navigation Options -->
-            <div class="splash-options-grid">
-                <a href="data-analyst.html" class="splash-opt-card opt-analytics" id="splash-btn-analytics">
-                    <div class="splash-opt-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" x2="12" y1="20" y2="10"/><line x1="18" x2="18" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="16"/></svg>
-                    </div>
-                    <div class="splash-opt-info">
-                        <span class="splash-opt-title">Data Analyst</span>
-                        <span class="splash-opt-meta">BI Dashboards &amp; Metrics</span>
-                    </div>
-                    <span class="splash-opt-arrow">&rarr;</span>
-                </a>
-
-                <a href="developer.html" class="splash-opt-card opt-dev" id="splash-btn-dev">
-                    <div class="splash-opt-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                    </div>
-                    <div class="splash-opt-info">
-                        <span class="splash-opt-title">Software Development</span>
-                        <span class="splash-opt-meta">Full-Stack &amp; AI Engines</span>
-                    </div>
-                    <span class="splash-opt-arrow">&rarr;</span>
-                </a>
-
-                <a href="electrical-engineering.html" class="splash-opt-card opt-electrical" id="splash-btn-electrical">
-                    <div class="splash-opt-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                    </div>
-                    <div class="splash-opt-info">
-                        <span class="splash-opt-title">Electrical Engineer</span>
-                        <span class="splash-opt-meta">Power Systems &amp; Control</span>
-                    </div>
-                    <span class="splash-opt-arrow">&rarr;</span>
-                </a>
-            </div>
-
-            <!-- Auto-dismiss Loader Progress Bar & Timer Notice -->
-            <div class="splash-footer-control">
-                <div class="splash-loader-bar">
-                    <div id="splash-progress" class="splash-loader-progress"></div>
-                </div>
-                <div class="splash-timer-row">
-                    <span class="splash-timer-text">Auto-entering home in <strong id="splash-timer-sec">4</strong>s or select a path above</span>
-                    <button id="splash-enter-btn" class="btn btn-splash-enter">
-                        <span>Enter Home Now</span> &rarr;
-                    </button>
-                </div>
-            </div>
+            <!-- Bottom-Right Flowing Wave Ribbon -->
+            <svg class="wave-shape wave-bottom-right" viewBox="0 0 600 450" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <defs>
+                    <linearGradient id="brGrad1" x1="100%" y1="100%" x2="0%" y2="0%">
+                        <stop offset="0%" stop-color="#EFF6FF" stop-opacity="0.95"/>
+                        <stop offset="50%" stop-color="#DBEAFE" stop-opacity="0.75"/>
+                        <stop offset="100%" stop-color="#BFDBFE" stop-opacity="0.35"/>
+                    </linearGradient>
+                    <linearGradient id="brGrad2" x1="90%" y1="100%" x2="10%" y2="20%">
+                        <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+                        <stop offset="60%" stop-color="#EFF6FF" stop-opacity="0.8"/>
+                        <stop offset="100%" stop-color="#DBEAFE" stop-opacity="0.45"/>
+                    </linearGradient>
+                    <filter id="brWaveShadow" x="-10%" y="-10%" width="120%" height="120%" filterUnits="userSpaceOnUse">
+                        <feDropShadow dx="0" dy="-10" stdDeviation="16" flood-color="#0F172A" flood-opacity="0.04"/>
+                    </filter>
+                </defs>
+                <path d="M650 500 L180 500 C240 370 170 270 280 170 C360 100 480 110 650 30 Z" fill="url(#brGrad1)"/>
+                <path d="M650 500 L260 500 C310 390 250 310 340 230 C420 160 520 180 650 120 Z" fill="url(#brGrad2)" filter="url(#brWaveShadow)"/>
+            </svg>
         </div>
+
+        <!-- Main Center Loading Container -->
+        <main class="loading-container">
+            
+            <!-- ProfilePortrait Component: Circular Photo with White Border & Rotating Orbit Arc with Dot -->
+            <div class="profile-portrait-wrap">
+                <div class="profile-portrait-frame">
+                    <img src="assets/profile.jpg" alt="Ritik Sharma" class="profile-portrait-img" width="250" height="250" loading="eager" decoding="async">
+                </div>
+                <!-- Orbit Arc with Circular Dot -->
+                <svg class="profile-orbit-svg" viewBox="0 0 320 320" width="320" height="320" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="orbitGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.2"/>
+                            <stop offset="60%" stop-color="#2563EB" stop-opacity="0.85"/>
+                            <stop offset="100%" stop-color="#1D4ED8" stop-opacity="1"/>
+                        </linearGradient>
+                    </defs>
+                    <g class="orbit-rotator">
+                        <path class="orbit-path" d="M 160 14 A 146 146 0 0 1 300 120" fill="none" stroke="url(#orbitGradient)" stroke-width="2.75" stroke-linecap="round"/>
+                        <circle class="orbit-dot" cx="300" cy="120" r="5.5" fill="#2563EB"/>
+                    </g>
+                </svg>
+            </div>
+
+            <!-- MainHeading Component: Ritik (Black/Navy) Sharma (Royal Blue) + Subtitle with Lateral Lines -->
+            <header class="loading-heading-box">
+                <h1 class="loading-title">
+                    <span class="title-first">Ritik</span> <span class="title-last">Sharma</span>
+                </h1>
+                <div class="loading-subtitle-row">
+                    <span class="subtitle-line" aria-hidden="true"></span>
+                    <span class="loading-subtitle">PERSONAL PORTFOLIO</span>
+                    <span class="subtitle-line" aria-hidden="true"></span>
+                </div>
+            </header>
+
+            <!-- LoadingProgress Component: Real Progress Track, Percentage, & Status -->
+            <div class="loading-progress-component">
+                <div class="loading-bar-row">
+                    <div class="loading-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="loading-track">
+                        <div class="loading-fill" id="loading-fill"></div>
+                    </div>
+                    <span class="loading-percentage" id="loading-percentage" aria-live="polite">0%</span>
+                </div>
+                <p class="loading-status" id="loading-status">Loading my portfolio...</p>
+            </div>
+
+            <!-- TechnologyIcons Component: 4 Soft Elevated Cards with Domain SVGs -->
+            <nav class="technology-icons-row" aria-label="Engineering &amp; Technology Disciplines">
+                <!-- Icon 1: Bar chart — Data Analytics -->
+                <div class="tech-icon-tile" title="Data Analytics">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M18 20V10"/>
+                        <path d="M12 20V4"/>
+                        <path d="M6 20v-6"/>
+                    </svg>
+                </div>
+
+                <!-- Icon 2: Code brackets — Software Development -->
+                <div class="tech-icon-tile" title="Software Development">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="m9 18-6-6 6-6"/>
+                        <path d="m15 6 6 6-6 6"/>
+                        <path d="m14 4-4 16"/>
+                    </svg>
+                </div>
+
+                <!-- Icon 3: Lightning bolt — Electrical Engineering -->
+                <div class="tech-icon-tile" title="Electrical Engineering">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                    </svg>
+                </div>
+
+                <!-- Icon 4: Layers — Technology & Projects -->
+                <div class="tech-icon-tile" title="Technology &amp; Projects">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/>
+                        <path d="m22 12.5-8.58 3.91a2 2 0 0 1-1.66 0L2 12.5"/>
+                        <path d="m22 17.5-8.58 3.91a2 2 0 0 1-1.66 0L2 17.5"/>
+                    </svg>
+                </div>
+            </nav>
+        </main>
     </div>
 
     <!-- Keyboard Skip Link for Accessibility -->

@@ -24,8 +24,8 @@ setTimeout(initLucideIcons, 1000);
 document.addEventListener("DOMContentLoaded", () => {
     initLucideIcons();
 
-    // 0. 3D Intro Splash & Domain Jump Screen
-    initSplashScreen();
+    // 0. Professional Portfolio Loading Screen (Minimalist & Modern)
+    initLoadingScreen();
 
     // 1. Theme Toggle & theme-color sync (CodeWithHarry Light Default)
     const themeToggleBtn = document.getElementById("theme-toggle");
@@ -257,150 +257,132 @@ function initProfileImageLightbox() {
 }
 
 /**
- * 3D Intro Splash Animation & Direct Domain Jump
+ * Professional Portfolio Loading Screen Controller
+ * Tracks genuine DOM parsing, web font readiness, critical image assets,
+ * and window load state with smooth requestAnimationFrame interpolation.
  */
-function initSplashScreen() {
-    const splashScreen = document.getElementById("splash-screen");
-    if (!splashScreen) return;
+function initLoadingScreen() {
+    const loadingScreen = document.getElementById("loading-screen");
+    if (!loadingScreen) return;
 
-    const progressBar = document.getElementById("splash-progress");
-    const timerSec = document.getElementById("splash-timer-sec");
-    const enterBtn = document.getElementById("splash-enter-btn");
+    const loadingTrack = document.getElementById("loading-track");
+    const loadingFill = document.getElementById("loading-fill");
+    const loadingPercentage = document.getElementById("loading-percentage");
+    const loadingStatus = document.getElementById("loading-status");
 
-    initSplashCanvas();
+    let displayedProgress = 0;
+    let targetProgress = 12; // Initial seed for DOM execution
+    let isCompleted = false;
 
-    // Start progress bar animation (fills smoothly over 4.5 seconds)
-    if (progressBar) {
-        setTimeout(() => {
-            progressBar.style.width = "100%";
-        }, 80);
+    // Track weight contributions:
+    // Initial DOM run: 12%
+    // DOMContentLoaded: +20% (-> 32%)
+    // Fonts ready: +24% (-> 56%)
+    // Profile photo ready: +24% (-> 80%)
+    // Hero image ready: +10% (-> 90%)
+    // Window full load: +10% (-> 100%)
+    let accumulatedWeight = 12;
+
+    function reportProgress(increment) {
+        accumulatedWeight = Math.min(100, accumulatedWeight + increment);
+        targetProgress = accumulatedWeight;
     }
 
-    // Countdown timer (4s -> 0s)
-    let secondsLeft = 4;
-    const countdownInterval = setInterval(() => {
-        secondsLeft--;
-        if (timerSec && secondsLeft >= 0) {
-            timerSec.textContent = secondsLeft;
-        }
-        if (secondsLeft <= 0) {
-            clearInterval(countdownInterval);
-        }
-    }, 1000);
+    // 1. DOM Content Interactive State
+    if (document.readyState === "interactive" || document.readyState === "complete") {
+        reportProgress(20);
+    } else {
+        document.addEventListener("DOMContentLoaded", () => reportProgress(20), { once: true });
+    }
 
-    // Auto dismiss after 4.5s
-    const autoDismissTimer = setTimeout(() => {
-        dismissSplash();
+    // 2. Google Web Fonts Resolution
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(() => {
+            reportProgress(24);
+        }).catch(() => {
+            reportProgress(24);
+        });
+    } else {
+        reportProgress(24);
+    }
+
+    // 3. Profile Photograph Asset Preload
+    const profileImg = new Image();
+    profileImg.src = "assets/profile.jpg";
+    if (profileImg.complete) {
+        reportProgress(24);
+    } else {
+        profileImg.onload = () => reportProgress(24);
+        profileImg.onerror = () => reportProgress(24);
+    }
+
+    // 4. Secondary Key Visual Asset Preload
+    const heroCover = new Image();
+    heroCover.src = "assets/phonepe_cover.jpg";
+    if (heroCover.complete) {
+        reportProgress(10);
+    } else {
+        heroCover.onload = () => reportProgress(10);
+        heroCover.onerror = () => reportProgress(10);
+    }
+
+    // 5. Full Window Resources Loaded
+    if (document.readyState === "complete") {
+        reportProgress(10);
+    } else {
+        window.addEventListener("load", () => reportProgress(10), { once: true });
+    }
+
+    // Safety fallback: ensure loading never hangs even on slow networks
+    const safetyTimeout = setTimeout(() => {
+        reportProgress(100);
     }, 4500);
 
-    function dismissSplash() {
-        clearInterval(countdownInterval);
-        clearTimeout(autoDismissTimer);
-        splashScreen.classList.add("hidden");
+    // Smooth physics-based interpolation loop
+    function updateProgressFrame() {
+        if (displayedProgress < targetProgress) {
+            const delta = targetProgress - displayedProgress;
+            displayedProgress += Math.max(0.6, delta * 0.14);
+            if (displayedProgress >= targetProgress) {
+                displayedProgress = targetProgress;
+            }
+
+            const currentInt = Math.min(100, Math.round(displayedProgress));
+            if (loadingFill) loadingFill.style.width = currentInt + "%";
+            if (loadingPercentage) loadingPercentage.textContent = currentInt + "%";
+            if (loadingTrack) loadingTrack.setAttribute("aria-valuenow", currentInt);
+        }
+
+        if (displayedProgress >= 100 && !isCompleted) {
+            isCompleted = true;
+            clearTimeout(safetyTimeout);
+            if (loadingStatus) {
+                loadingStatus.textContent = "Loading complete";
+            }
+
+            // Elegant pause to appreciate 100% completion before smooth reveal
+            setTimeout(() => {
+                finishLoading();
+            }, 360);
+        } else if (!isCompleted) {
+            requestAnimationFrame(updateProgressFrame);
+        }
     }
 
-    if (enterBtn) {
-        enterBtn.addEventListener("click", () => {
-            dismissSplash();
-        });
+    requestAnimationFrame(updateProgressFrame);
+
+    function finishLoading() {
+        loadingScreen.classList.add("hidden");
+        setTimeout(() => {
+            loadingScreen.style.display = "none";
+            loadingScreen.setAttribute("aria-hidden", "true");
+        }, 700);
     }
 
-    // Dismiss on Escape or Enter
+    // Keyboard Skip for accessibility (Escape or Enter key)
     window.addEventListener("keydown", (e) => {
-        if (!splashScreen.classList.contains("hidden") && (e.key === "Escape" || e.key === "Enter")) {
-            dismissSplash();
+        if (!loadingScreen.classList.contains("hidden") && (e.key === "Escape" || e.key === "Enter")) {
+            finishLoading();
         }
     });
-}
-
-/**
- * High-Performance Triple Particle Canvas for Splash Screen
- */
-function initSplashCanvas() {
-    const canvas = document.getElementById("splash-canvas");
-    if (!canvas) return;
-
-    const ctx = canvas.getContext("2d");
-    let width = canvas.width = window.innerWidth;
-    let height = canvas.height = window.innerHeight;
-
-    window.addEventListener("resize", () => {
-        width = canvas.width = window.innerWidth;
-        height = canvas.height = window.innerHeight;
-    });
-
-    const particles = [];
-    const numParticles = 75;
-
-    for (let i = 0; i < numParticles; i++) {
-        const type = i % 3;
-        const color = type === 0 ? "#38bdf8" : (type === 1 ? "#3b82f6" : "#60a5fa");
-        particles.push({
-            x: Math.random() * width,
-            y: Math.random() * height,
-            z: Math.random() * 2 + 0.5,
-            radius: Math.random() * 2.2 + 1,
-            color: color,
-            vx: (Math.random() - 0.5) * 1.4,
-            vy: (Math.random() - 0.5) * 1.4
-        });
-    }
-
-    let mouseX = -1000;
-    let mouseY = -1000;
-    window.addEventListener("mousemove", (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-    });
-
-    function animate() {
-        ctx.clearRect(0, 0, width, height);
-
-        for (let i = 0; i < particles.length; i++) {
-            for (let j = i + 1; j < particles.length; j++) {
-                const dx = particles[i].x - particles[j].x;
-                const dy = particles[i].y - particles[j].y;
-                const dist = Math.sqrt(dx * dx + dy * dy);
-
-                if (dist < 130) {
-                    ctx.beginPath();
-                    ctx.moveTo(particles[i].x, particles[i].y);
-                    ctx.lineTo(particles[j].x, particles[j].y);
-                    ctx.strokeStyle = particles[i].color;
-                    ctx.globalAlpha = (1 - dist / 130) * 0.22;
-                    ctx.lineWidth = 1;
-                    ctx.stroke();
-                }
-            }
-        }
-
-        particles.forEach(p => {
-            const dx = mouseX - p.x;
-            const dy = mouseY - p.y;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-            if (dist < 120) {
-                p.x -= (dx / dist) * 1.5;
-                p.y -= (dy / dist) * 1.5;
-            }
-
-            p.x += p.vx;
-            p.y += p.vy;
-
-            if (p.x < 0 || p.x > width) p.vx *= -1;
-            if (p.y < 0 || p.y > height) p.vy *= -1;
-
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, p.radius * p.z, 0, Math.PI * 2);
-            ctx.fillStyle = p.color;
-            ctx.globalAlpha = 0.85;
-            ctx.shadowBlur = 10;
-            ctx.shadowColor = p.color;
-            ctx.fill();
-            ctx.shadowBlur = 0;
-        });
-
-        requestAnimationFrame(animate);
-    }
-
-    animate();
 }
