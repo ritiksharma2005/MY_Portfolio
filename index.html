@@ -279,9 +279,13 @@
             <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
                 <ul>
                     <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#explore-work" class="nav-link">Projects</a></li>
+                    <li><a href="#projects-preview" class="nav-link">Projects</a></li>
+                    <li><a href="data-analyst.html" class="nav-link">Analytics</a></li>
+                    <li><a href="developer.html" class="nav-link">Developer</a></li>
+                    <li><a href="electrical-engineering.html" class="nav-link">Electrical</a></li>
                     <li><a href="#por-section" class="nav-link">Experience</a></li>
-                    <li><a href="#social-section" class="nav-link">Contact</a></li>
+                    <li><a href="#social-section" class="nav-link">Social</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
 
@@ -463,6 +467,318 @@
                     <div class="mono-card-link-row">
                         <span class="mono-card-link">Explore Projects <span class="link-arrow">&rarr;</span></span>
                     </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             FEATURED PROJECTS & ARCHITECTURE SHOWCASE (INTEGRATED DOMAIN PREVIEWS)
+             ========================================================================== -->
+        <section class="section projects-preview-section" id="projects-preview">
+            <div class="section-header">
+                <span class="section-tagline">Flagship Implementations &amp; Real-World Engineering</span>
+                <h2 class="section-title">Featured Projects &amp; Live Previews</h2>
+                <p class="section-desc">Direct showcases from Data Analytics, Software Development, and Electrical Engineering</p>
+            </div>
+
+            <!-- Domain Filter Switcher Tabs -->
+            <div class="domain-tabs-nav" role="tablist" aria-label="Filter Projects by Domain">
+                <button class="domain-tab-btn active" data-filter="all" role="tab" aria-selected="true">
+                    <span>All Disciplines</span>
+                    <span class="tab-count">7</span>
+                </button>
+                <button class="domain-tab-btn" data-filter="analytics" role="tab" aria-selected="false">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+                    <span>Data Analytics</span>
+                    <span class="tab-count">3</span>
+                </button>
+                <button class="domain-tab-btn" data-filter="developer" role="tab" aria-selected="false">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18-6-6 6-6"/><path d="m15 6 6 6-6 6"/><path d="m14 4-4 16"/></svg>
+                    <span>Software Development</span>
+                    <span class="tab-count">2</span>
+                </button>
+                <button class="domain-tab-btn" data-filter="electrical" role="tab" aria-selected="false">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    <span>Electrical Engineering</span>
+                    <span class="tab-count">2</span>
+                </button>
+            </div>
+
+            <div class="project-grid">
+                <!-- 1. PhonePe Annual Report Analysis (Analytics) -->
+                <div class="card project-card" data-domain="analytics">
+                    <div class="project-img-box">
+                        <img src="assets/phonepe_cover.jpg" alt="PhonePe Annual Report Analysis Dashboard" class="project-img" width="800" height="500" loading="lazy">
+                    </div>
+                    <div class="project-details-box">
+                        <div class="project-title-row">
+                            <h3 class="project-card-title">PhonePe Annual Report Analysis</h3>
+                            <span class="badge">FinTech &amp; BI</span>
+                        </div>
+                        <p class="project-desc">
+                            Analyzed PhonePe Pulse data across India to decode digital payment volumes versus values, loan disbursements, user growth trends, and state-wise transaction concentrations into an executive Power BI dashboard.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Power BI</span>
+                            <span class="tag">MS Excel</span>
+                            <span class="tag">FinTech Analytics</span>
+                            <span class="tag">DAX</span>
+                            <span class="tag">KPI Modeling</span>
+                        </div>
+                        <div class="domain-stats-row" style="margin-top: 4px;">
+                            <span class="badge">Payment Trends</span>
+                            <span class="badge">Volume vs Value</span>
+                            <span class="badge">Loan Disbursement</span>
+                            <span class="badge">Geographical Patterns</span>
+                        </div>
+                        <div class="project-actions" style="margin-top: auto; border-top: 1px solid var(--border-hairline); padding-top: 14px; display: flex; gap: 10px; flex-wrap: wrap;">
+                            <a href="https://github.com/ritiksharma2005/PhonePe-Annual-Repoart-Analysis" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                <i data-lucide="github" aria-hidden="true"></i> View on GitHub
+                            </a>
+                            <a href="data-analyst.html" class="btn btn-secondary btn-sm">
+                                <span>Data Analyst Page</span> &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. AI-Powered News Automation (Developer) -->
+                <div class="card project-card" data-domain="developer">
+                    <div class="project-img-box">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?fit=crop&amp;w=800&amp;h=500&amp;q=80" alt="AI-Powered News Automation Platform" class="project-img" width="800" height="500" loading="lazy">
+                    </div>
+                    <div class="project-details-box">
+                        <div class="project-title-row">
+                            <h3 class="project-card-title">AI-Powered News Automation Engine</h3>
+                            <span class="badge">AI &amp; Workflows</span>
+                        </div>
+                        <p class="project-desc">
+                            Automated pipeline collecting news from Apify and external news APIs, ranking stories via Google Gemini &amp; Groq LLMs, dynamically generating branded Instagram posters with Pillow, and publishing with Telegram approval.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Google Gemini API</span>
+                            <span class="tag">Groq LLM</span>
+                            <span class="tag">Pillow (PIL)</span>
+                            <span class="tag">Telegram Bot API</span>
+                            <span class="tag">GitHub Actions</span>
+                        </div>
+                        <div class="domain-stats-row" style="margin-top: 4px;">
+                            <span class="badge">Multi-Source Ingestion</span>
+                            <span class="badge">GenAI Summaries</span>
+                            <span class="badge">Dynamic Posters</span>
+                            <span class="badge">Automated Cron</span>
+                        </div>
+                        <div class="project-actions" style="margin-top: auto; border-top: 1px solid var(--border-hairline); padding-top: 14px; display: flex; gap: 10px; flex-wrap: wrap;">
+                            <a href="https://github.com/ritiksharma2005/news_post" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                                <i data-lucide="github" aria-hidden="true"></i> View on GitHub
+                            </a>
+                            <a href="developer.html" class="btn btn-secondary btn-sm">
+                                <span>Developer Page</span> &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. GHG Emission Analytics Dashboard (Analytics) -->
+                <div class="card project-card" data-domain="analytics">
+                    <div class="project-img-box">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?fit=crop&amp;w=800&amp;h=500&amp;q=80" alt="GHG Emission Analytics Dashboard" class="project-img" width="800" height="500" loading="lazy">
+                    </div>
+                    <div class="project-details-box">
+                        <div class="project-title-row">
+                            <h3 class="project-card-title">GHG Emission Analytics Dashboard</h3>
+                            <span class="badge">ESG &amp; Sustainability</span>
+                        </div>
+                        <p class="project-desc">
+                            Developed an interactive Power BI dashboard tracking Greenhouse Gas (GHG) emissions across Scope 1, Scope 2, and Scope 3 for industrial manufacturing, supporting ESG compliance, reduction targets, and monthly audit metrics.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Power BI</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">DAX</span>
+                            <span class="tag">Power Query</span>
+                            <span class="tag">ESG Metrics</span>
+                        </div>
+                        <div class="domain-stats-row" style="margin-top: 4px;">
+                            <span class="badge">Scope 1, 2 &amp; 3</span>
+                            <span class="badge">Departmental Breakdown</span>
+                            <span class="badge">Monthly Trends</span>
+                        </div>
+                        <div class="project-actions" style="margin-top: auto; border-top: 1px solid var(--border-hairline); padding-top: 14px; display: flex; gap: 10px; flex-wrap: wrap;">
+                            <a href="data-analyst.html" class="btn btn-secondary btn-sm">
+                                <span>Open in Data Analyst</span> &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. SETU Crude Oil Risk Intelligence (Developer) -->
+                <div class="card project-card" data-domain="developer">
+                    <div class="project-img-box">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?fit=crop&amp;w=800&amp;h=500&amp;q=80" alt="SETU Energy Risk Intelligence Platform" class="project-img" width="800" height="500" loading="lazy">
+                    </div>
+                    <div class="project-details-box">
+                        <div class="project-title-row">
+                            <h3 class="project-card-title">SETU — Energy Supply Chain Risk Platform</h3>
+                            <span class="badge">Full-Stack &amp; APIs</span>
+                        </div>
+                        <p class="project-desc">
+                            An end-to-end analytics platform monitoring India's crude oil supply chain risks. Features Python data pipelines, exponential time-decay risk algorithms, FastAPI REST endpoints, and an interactive React dashboard with Leaflet maps.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">React.js</span>
+                            <span class="tag">Leaflet Maps</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">REST APIs</span>
+                        </div>
+                        <div class="domain-stats-row" style="margin-top: 4px;">
+                            <span class="badge">Time-Decay Risk</span>
+                            <span class="badge">Leaflet World Map</span>
+                            <span class="badge">Real-Time Ingestion</span>
+                        </div>
+                        <div class="project-actions" style="margin-top: auto; border-top: 1px solid var(--border-hairline); padding-top: 14px; display: flex; gap: 10px; flex-wrap: wrap;">
+                            <a href="developer.html" class="btn btn-secondary btn-sm">
+                                <span>Open in Developer</span> &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Earthing Sizing Calculator (Electrical) -->
+                <div class="card project-card" data-domain="electrical">
+                    <div class="project-img-box">
+                        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?fit=crop&amp;w=800&amp;h=500&amp;q=80" alt="Earthing Sizing Calculator IEEE 80-2013" class="project-img" width="800" height="500" loading="lazy">
+                    </div>
+                    <div class="project-details-box">
+                        <div class="project-title-row">
+                            <h3 class="project-card-title">Substation Earthing Sizing Calculator</h3>
+                            <span class="badge">IEEE 80-2013</span>
+                        </div>
+                        <p class="project-desc">
+                            Automated substation ground-grid sizing tool built in Python. Computes mesh voltage, step voltage, Ground Potential Rise (GPR), and grid resistance with automated ReportLab PDF calculation reports.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">CustomTkinter</span>
+                            <span class="tag">ReportLab PDF</span>
+                            <span class="tag">IEEE 80-2013</span>
+                            <span class="tag">Substation Design</span>
+                        </div>
+                        <div class="domain-stats-row" style="margin-top: 4px;">
+                            <span class="badge">Mesh Voltage</span>
+                            <span class="badge">Step Voltage</span>
+                            <span class="badge">Auto PDF Report</span>
+                        </div>
+                        <div class="project-actions" style="margin-top: auto; border-top: 1px solid var(--border-hairline); padding-top: 14px; display: flex; gap: 10px; flex-wrap: wrap;">
+                            <a href="electrical-engineering.html" class="btn btn-secondary btn-sm">
+                                <span>Electrical Page</span> &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Fashion 1972NE Sales & Inventory Optimization (Analytics) -->
+                <div class="card project-card" data-domain="analytics">
+                    <div class="project-img-box">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?fit=crop&amp;w=800&amp;h=500&amp;q=80" alt="Fashion 1972NE Sales Optimization" class="project-img" width="800" height="500" loading="lazy">
+                    </div>
+                    <div class="project-details-box">
+                        <div class="project-title-row">
+                            <h3 class="project-card-title">Fashion 1972NE Sales &amp; Inventory BI</h3>
+                            <span class="badge">Corporate Internship</span>
+                        </div>
+                        <p class="project-desc">
+                            Built Power BI retail intelligence model during corporate internship. Tracked multi-channel retail margins, regional SKU velocity, reorder point automation, and seasonal product demand forecasting.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Power BI</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">DAX Modeling</span>
+                            <span class="tag">Inventory Turnover</span>
+                            <span class="tag">Retail BI</span>
+                        </div>
+                        <div class="domain-stats-row" style="margin-top: 4px;">
+                            <span class="badge">Inventory Turnover</span>
+                            <span class="badge">SKU Velocity</span>
+                            <span class="badge">Reorder Automation</span>
+                        </div>
+                        <div class="project-actions" style="margin-top: auto; border-top: 1px solid var(--border-hairline); padding-top: 14px; display: flex; gap: 10px; flex-wrap: wrap;">
+                            <a href="data-analyst.html" class="btn btn-secondary btn-sm">
+                                <span>Open in Data Analyst</span> &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Water Level Indicator & Sensing Prototype (Electrical) -->
+                <div class="card project-card" data-domain="electrical">
+                    <div class="project-img-box">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?fit=crop&amp;w=800&amp;h=500&amp;q=80" alt="Water Level Indicator Hardware Prototype" class="project-img" width="800" height="500" loading="lazy">
+                    </div>
+                    <div class="project-details-box">
+                        <div class="project-title-row">
+                            <h3 class="project-card-title">Water Level Indicator &amp; Sensing Circuit</h3>
+                            <span class="badge">Hardware Prototype</span>
+                        </div>
+                        <p class="project-desc">
+                            Low-voltage water sensing circuit designed using BC547 transistors for multi-stage liquid level detection with visual LED status and high-level acoustic buzzer alert.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">BC547 Transistors</span>
+                            <span class="tag">Circuit Design</span>
+                            <span class="tag">LED Indicators</span>
+                            <span class="tag">9V Low-Voltage</span>
+                        </div>
+                        <div class="domain-stats-row" style="margin-top: 4px;">
+                            <span class="badge">BC547 Sensing</span>
+                            <span class="badge">Visual Feedback</span>
+                            <span class="badge">Audio Alarm</span>
+                        </div>
+                        <div class="project-actions" style="margin-top: auto; border-top: 1px solid var(--border-hairline); padding-top: 14px; display: flex; gap: 10px; flex-wrap: wrap;">
+                            <a href="electrical-engineering.html" class="btn btn-secondary btn-sm">
+                                <span>Open in Electrical</span> &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Domain Spotlight Call-to-Action Grid -->
+            <div class="domain-cta-grid">
+                <a href="data-analyst.html" class="domain-cta-card">
+                    <div class="domain-cta-header">
+                        <div class="domain-cta-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+                        </div>
+                        <h4 class="domain-cta-title">Data Analytics Portfolio</h4>
+                    </div>
+                    <p class="domain-cta-desc">10+ interactive business intelligence dashboards, corporate internship projects at Tata &amp; Fashion 1972NE, DAX, Power Query &amp; SQL modeling.</p>
+                    <span class="domain-cta-link">Explore 10+ Analytics Projects &rarr;</span>
+                </a>
+
+                <a href="developer.html" class="domain-cta-card">
+                    <div class="domain-cta-header">
+                        <div class="domain-cta-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18-6-6 6-6"/><path d="m15 6 6 6-6 6"/><path d="m14 4-4 16"/></svg>
+                        </div>
+                        <h4 class="domain-cta-title">Software Developer Portfolio</h4>
+                    </div>
+                    <p class="domain-cta-desc">AI-powered automated newsroom engine, SETU crude oil risk platform, Python, FastAPI REST APIs, and full-stack web applications.</p>
+                    <span class="domain-cta-link">Explore Developer Projects &rarr;</span>
+                </a>
+
+                <a href="electrical-engineering.html" class="domain-cta-card">
+                    <div class="domain-cta-header">
+                        <div class="domain-cta-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                        </div>
+                        <h4 class="domain-cta-title">Electrical Engineering Portfolio</h4>
+                    </div>
+                    <p class="domain-cta-desc">IEEE 80-2013 ground-grid sizing, industrial MCC &amp; VFD motor control, Tata Power industrial training, and MATLAB simulations.</p>
+                    <span class="domain-cta-link">Explore Electrical Projects &rarr;</span>
                 </a>
             </div>
         </section>
@@ -962,6 +1278,89 @@
                             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
                         </a>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             CONTACT & INQUIRIES SECTION
+             ========================================================================== -->
+        <section class="section" id="contact">
+            <div class="section-header">
+                <span class="section-tagline">Communication &amp; Inquiries</span>
+                <h2 class="section-title">Contact &amp; Connect</h2>
+                <p class="section-desc">Reach out for data analytics opportunities, software development roles, or engineering consultations</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="card info-card">
+                        <div class="info-icon-box">
+                            <i data-lucide="mail" aria-hidden="true"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Email Address</h4>
+                            <p><a href="mailto:ritiknit96@gmail.com">ritiknit96@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="card info-card">
+                        <div class="info-icon-box">
+                            <i data-lucide="phone" aria-hidden="true"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Phone / Mobile</h4>
+                            <p><a href="tel:+919594396048">+91 9594396048</a></p>
+                        </div>
+                    </div>
+
+                    <div class="card info-card">
+                        <div class="info-icon-box">
+                            <i data-lucide="map-pin" aria-hidden="true"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Location</h4>
+                            <p>SVNIT Surat, Gujarat, India</p>
+                        </div>
+                    </div>
+
+                    <div class="card info-card">
+                        <div class="info-icon-box">
+                            <i data-lucide="file-text" aria-hidden="true"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Official Resume</h4>
+                            <p><a href="https://drive.google.com/file/d/1WcKcySJjRskFgzxfBzun6OHB9D8XvNWC/view?usp=sharing" target="_blank" rel="noopener noreferrer">View Google Drive PDF ↗</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card contact-form-card">
+                    <h3 class="card-title">Send a Direct Message</h3>
+                    <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="de851278-1e55-4f8c-be2b-cb0ef5bcbc7a">
+                        <div class="form-group">
+                            <label for="form-name">Your Name</label>
+                            <input type="text" id="form-name" name="name" required autocomplete="name" placeholder="e.g., Alex Johnson…">
+                        </div>
+                        <div class="form-group">
+                            <label for="form-email">Your Email</label>
+                            <input type="email" id="form-email" name="email" required autocomplete="email" spellcheck="false" placeholder="e.g., alex@example.com…">
+                        </div>
+                        <div class="form-group">
+                            <label for="form-subject">Subject</label>
+                            <input type="text" id="form-subject" name="subject" required autocomplete="off" placeholder="e.g., Role Opportunity / Technical Inquiry…">
+                        </div>
+                        <div class="form-group">
+                            <label for="form-message">Message</label>
+                            <textarea id="form-message" name="message" required rows="4" autocomplete="off" placeholder="Write your message here…"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="btn-submit">
+                            <span>Send Message</span>
+                            <i data-lucide="send" aria-hidden="true"></i>
+                        </button>
+                        <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+                    </form>
                 </div>
             </div>
         </section>

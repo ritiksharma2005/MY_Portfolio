@@ -153,7 +153,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 5. Interactive Profile Image Full-Screen Lightbox
     initProfileImageLightbox();
+
+    // 6. Interactive Domain Filter for Projects Showcase
+    initDomainTabsFilter();
 });
+
+/**
+ * Interactive Domain Filter for Projects Showcase
+ */
+function initDomainTabsFilter() {
+    const tabButtons = document.querySelectorAll(".domain-tab-btn");
+    const projectCards = document.querySelectorAll(".projects-preview-section .project-card");
+    if (!tabButtons.length || !projectCards.length) return;
+
+    tabButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const filter = btn.getAttribute("data-filter");
+            tabButtons.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+
+            projectCards.forEach(card => {
+                const domain = card.getAttribute("data-domain");
+                if (filter === "all" || domain === filter) {
+                    card.style.display = "flex";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+            initLucideIcons();
+        });
+    });
+}
 
 /**
  * Highlights active navbar link on scroll
