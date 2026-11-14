@@ -368,4 +368,19 @@ function initLoadingScreen() {
             finishLoading();
         }
     });
+
+    // Interactive Skip to Projects from loading icon
+    const skipProjectsBtn = document.getElementById("loading-skip-projects");
+    if (skipProjectsBtn) {
+        skipProjectsBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            finishLoading();
+            const targetSection = document.getElementById("explore-work");
+            if (targetSection) {
+                setTimeout(() => {
+                    targetSection.scrollIntoView({ behavior: "smooth" });
+                }, 100);
+            }
+        });
+    }
 }
